@@ -2332,8 +2332,7 @@
       <a class="section-nav-link is-active" href="#memory-graph-section" data-target="memory-graph-section"><span class="section-nav-index">01</span><span>Memory Graph</span></a>
       <a class="section-nav-link" href="#overview-section" data-target="overview-section"><span class="section-nav-index">02</span><span>Introduction</span></a>
       <a class="section-nav-link" href="#pipeline-section" data-target="pipeline-section"><span class="section-nav-index">03</span><span>Pipeline</span></a>
-      <a class="section-nav-link" href="#repair-learning-section" data-target="repair-learning-section"><span class="section-nav-index">04</span><span>Repair Learning</span></a>
-      <a class="section-nav-link" href="#evaluation-section" data-target="evaluation-section"><span class="section-nav-index">05</span><span>Evaluation</span></a>
+      <a class="section-nav-link" href="#evaluation-section" data-target="evaluation-section"><span class="section-nav-index">04</span><span>Evaluation</span></a>
     </nav>
   </div>
 
@@ -2746,94 +2745,6 @@
     </div>
   </section>
 
-  <section class="section page-section" id="repair-learning-section">
-    <div class="container is-max-desktop">
-      <div class="section-heading">
-        <h2 class="title is-3 has-text-centered">VerdiWM Repair Learning</h2>
-        <span class="section-heading-bar" aria-hidden="true"></span>
-      </div>
-      <p class="section-copy has-text-centered">
-        This paper figure shows how VerdiWM turns settled experiments into repair memory:
-        confirmed effects, nulls, harmful transfers, gate failures, and geometry collisions
-        all become searchable evidence for the next campaign.
-      </p>
-      <div class="feature-media">
-        <div class="pipeline-figure-shell concept-figure-shell">
-          <span class="figure-eyebrow">Repair Evidence Memory</span>
-          <figure class="architecture-figure">
-            <a class="architecture-link" href="assets/figures/paper-acwm-knowledge-evidence-memory.png" target="_blank" rel="noopener">
-              <img
-                src="assets/figures/paper-acwm-knowledge-evidence-memory.png"
-                alt="Paper figure: retained VerdiWM repair evidence memory over ACWM-Phys environments and repair primitives."
-                width="7204"
-                height="3971"
-                loading="lazy"
-              >
-            </a>
-          </figure>
-          <div class="architecture-caption">
-            <div class="architecture-caption-copy">
-              <strong>Repair memory from the paper.</strong>
-              Evaluation does not merely rank models. It stores which intervention
-              changed which metric, where the evidence is accepted or provisional,
-              and which retained record can be reused in a later campaign.
-            </div>
-            <a class="architecture-action" href="assets/figures/paper-acwm-knowledge-evidence-memory.png" target="_blank" rel="noopener">
-              <span>Open full resolution</span>
-              <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="skill-example-shell">
-        <div class="skill-example-header">
-          <div>
-            <span class="figure-eyebrow">Repair Learning Output</span>
-            <h3>Generated Strategy Example: Ctrl-World + LaMo Fusion</h3>
-            <p>
-              This generated skill is an example output of the VerdiWM repair-learning
-              loop. It turns a Ctrl-World physical-consistency diagnosis into a concrete,
-              typed intervention that can be checked by replay and metric gates.
-            </p>
-          </div>
-          <a class="architecture-action" href="assets/docs/Lamo_SKILL.md" target="_blank" rel="noopener">
-            <span>Open generated skill</span>
-            <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="skill-example-grid">
-          <article class="skill-example-card">
-            <strong>Problem Found</strong>
-            <p>
-              Action conditioning was diluted by full-UNet training. The loss oscillated,
-              and the model tended to copy the current frame instead of responding to action.
-            </p>
-          </article>
-          <article class="skill-example-card">
-            <strong>VerdiWM Repair</strong>
-            <p>
-              Add a LaMo latent motion prior, drift loss, and action-conditioned consistency
-              so predicted motion is constrained by both latent dynamics and control input.
-            </p>
-          </article>
-          <article class="skill-example-card">
-            <strong>Training Recipe</strong>
-            <p>
-              Use hierarchical learning rates, freeze stable SVD/VAE parts, monitor gradient
-              flow, and verify the change with targeted ablations.
-            </p>
-          </article>
-        </div>
-        <div class="skill-example-footer">
-          <p>
-            The full document includes architecture changes, loss terms, parameter groups,
-            training loop notes, inference guidance, ablation plan, and implementation checklist.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section page-section" id="evaluation-section">
     <div class="container is-max-desktop">
       <div class="section-heading">
@@ -2864,32 +2775,6 @@
             rollout fidelity, protected trade-off metrics, and policy-level outcomes.
           </p>
         </article>
-      </div>
-
-      <div class="pipeline-figure-shell improvement-figure-shell">
-        <span class="figure-eyebrow">Paper Figure / Repair Geometry</span>
-        <figure class="architecture-figure">
-          <a class="architecture-link" href="assets/figures/paper-acwm-fingerprint-geometry.png" target="_blank" rel="noopener">
-            <img
-              src="assets/figures/paper-acwm-fingerprint-geometry.png"
-              alt="Paper figure: ACWM-Phys fingerprint geometry and IRG distances across target environments."
-              width="7204"
-              height="3915"
-              loading="lazy"
-            >
-          </a>
-        </figure>
-        <div class="architecture-caption">
-          <div class="architecture-caption-copy">
-            <strong>Interventional Repair Geometry.</strong>
-            The paper measures how probes expose repair-relevant model behavior before a
-            repair is transferred or retrained.
-          </div>
-          <a class="architecture-action" href="assets/figures/paper-acwm-fingerprint-geometry.png" target="_blank" rel="noopener">
-            <span>Open full resolution</span>
-            <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
-          </a>
-        </div>
       </div>
 
       <div class="pipeline-figure-shell improvement-figure-shell">
