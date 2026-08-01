@@ -2330,7 +2330,7 @@
     </div>
     <nav class="section-nav" aria-label="Page navigation">
       <a class="section-nav-link is-active" href="#memory-graph-section" data-target="memory-graph-section"><span class="section-nav-index">01</span><span>Memory Graph</span></a>
-      <a class="section-nav-link" href="#overview-section" data-target="overview-section"><span class="section-nav-index">02</span><span>Overview</span></a>
+      <a class="section-nav-link" href="#overview-section" data-target="overview-section"><span class="section-nav-index">02</span><span>Introduction</span></a>
       <a class="section-nav-link" href="#pipeline-section" data-target="pipeline-section"><span class="section-nav-index">03</span><span>Pipeline</span></a>
       <a class="section-nav-link" href="#repair-learning-section" data-target="repair-learning-section"><span class="section-nav-index">04</span><span>Repair Learning</span></a>
       <a class="section-nav-link" href="#evaluation-section" data-target="evaluation-section"><span class="section-nav-index">05</span><span>Evaluation</span></a>
@@ -2548,40 +2548,55 @@
     <div class="container is-max-desktop">
       <div class="overview-panel">
         <div class="section-heading">
-          <h2 class="title is-3 has-text-centered">Motivation and Innovation</h2>
+          <h2 class="title is-3 has-text-centered">Introduction</h2>
           <span class="section-heading-bar" aria-hidden="true"></span>
         </div>
         <p class="contributions-intro has-text-centered">
-          VerdiWM treats world-model improvement as verifiable differential repair:
-          experiments may change a model, but only licensed evidence can update
-          the research claim frontier.
+          The paper starts from a practical bottleneck in world-model research: the
+          hard part is not only scaling a backbone, but reliably turning a model
+          failure, a code change, and a noisy experiment into a defensible research
+          conclusion.
         </p>
+        <figure class="architecture-figure">
+          <a class="architecture-link" href="assets/figures/paper-introduction-excerpt.png" target="_blank" rel="noopener">
+            <img
+              src="assets/figures/paper-introduction-excerpt.png"
+              alt="PDF screenshot of the VerdiWM paper introduction opening."
+              width="1275"
+              height="606"
+              loading="lazy"
+            >
+          </a>
+          <figcaption class="agent-overview-caption">
+            Introduction excerpt cropped directly from the VerdiWM PDF.
+          </figcaption>
+        </figure>
         <div class="contributions-grid">
           <article class="contribution-card">
             <span class="contribution-index">01</span>
-            <h3>Claim-Licensed Research</h3>
+            <h3>Research-Loop Reliability</h3>
             <p>
-              Operational execution is separated from epistemic authority. Budgets,
-              fenced runs, immutable receipts, and frozen verification decide when
-              a result can become a formal claim.
+              A world-model improvement may require diagnosing long-horizon failure,
+              editing objectives or conditioning paths, running distributed jobs, and
+              deciding whether the measurements really support the intended conclusion.
             </p>
           </article>
           <article class="contribution-card">
             <span class="contribution-index">02</span>
-            <h3>Repair Geometry</h3>
+            <h3>Claim-Licensed Repair</h3>
             <p>
-              Interventional Repair Geometry measures how a frozen model responds
-              to small, reversible probes, producing fingerprints that can be compared
-              across backbones.
+              VerdiWM separates the authority to execute experiments from the authority
+              to update claims. Actions change models; only fenced evidence, receipts,
+              and frozen verification can move the claim frontier.
             </p>
           </article>
           <article class="contribution-card">
             <span class="contribution-index">03</span>
-            <h3>Certified Transfer</h3>
+            <h3>Measured Reuse</h3>
             <p>
-              A repair moves to a new backbone only when compilation, response
-              alignment, support overlap, sign agreement, and effect bounds pass;
-              otherwise VerdiWM abstains to cold start.
+              Verified repair experience is not copied by name or intuition. It moves
+              to a new backbone only when probe responses, support, sign agreement,
+              and effect bounds license transfer; otherwise the system abstains.
             </p>
           </article>
         </div>
