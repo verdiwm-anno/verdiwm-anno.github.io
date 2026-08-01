@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="WorldClaw: an automated research system for world models, covering training, evaluation, diagnosis, patch planning, and experiment memory.">
-  <meta name="keywords" content="World Models, ACWM, Evaluation, Research Infrastructure, Control Plane">
+  <meta name="description" content="VerdiWM: verifiable differential repair for world models, with claim-licensed evidence, interventional repair geometry, certified transfer, and frozen verification.">
+  <meta name="keywords" content="World Models, VerdiWM, Verifiable Differential Repair, Interventional Repair Geometry, Certified Transfer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WorldClaw: An Automated Research System for World Models</title>
+  <title>VerdiWM: Verifiable Differential Repair for World Models</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -2332,7 +2332,7 @@
       <a class="section-nav-link is-active" href="#memory-graph-section" data-target="memory-graph-section"><span class="section-nav-index">01</span><span>Memory Graph</span></a>
       <a class="section-nav-link" href="#overview-section" data-target="overview-section"><span class="section-nav-index">02</span><span>Overview</span></a>
       <a class="section-nav-link" href="#pipeline-section" data-target="pipeline-section"><span class="section-nav-index">03</span><span>Pipeline</span></a>
-      <a class="section-nav-link" href="#active-learning-section" data-target="active-learning-section"><span class="section-nav-index">04</span><span>Active Learning</span></a>
+      <a class="section-nav-link" href="#repair-learning-section" data-target="repair-learning-section"><span class="section-nav-index">04</span><span>Repair Learning</span></a>
       <a class="section-nav-link" href="#evaluation-section" data-target="evaluation-section"><span class="section-nav-index">05</span><span>Evaluation</span></a>
     </nav>
   </div>
@@ -2344,7 +2344,7 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-2 publication-title">
-                <span class="title-color">WorldClaw</span>: An Automated Research System
+                <span class="title-color">VerdiWM</span>: Verifiable Differential Repair
                 <span class="title-line-break"></span>
                 for World Models
               </h1>
@@ -2381,12 +2381,12 @@
     <section class="section page-section memory-front-section" id="memory-graph-section">
       <div class="container is-max-desktop">
         <div class="memory-system-panel memory-brain-panel">
-          <div class="memory-map memory-brain-map" aria-label="Animated clickable WorldClaw research memory graph">
+          <div class="memory-map memory-brain-map" aria-label="Animated clickable VerdiWM repair memory graph">
             <div class="memory-map-inner memory-brain-stage">
               <div class="memory-brain-glow" aria-hidden="true"></div>
               <div class="memory-brain-label">
                 <i class="fas fa-brain" aria-hidden="true"></i>
-                Agent Knowledge Core
+                Repair Knowledge Core
               </div>
               <div class="memory-neural-field" aria-hidden="true">
               <span style="--x: 13%; --y: 20%; --s: 7px; --d: 6s; --delay: -1s;"></span>
@@ -2429,15 +2429,15 @@
                 <button class="memory-sphere-node is-active" type="button" data-memory-node="core" aria-label="Open Evidence-Licensed Memory documents" style="--rx: -8deg; --ry: 0deg; --irx: 8deg; --iry: 0deg;">
                   <span class="memory-sphere-node-content">
                     <span class="memory-sphere-node-date">Core</span>
-                    <span class="memory-sphere-node-title">WorldClaw</span>
-                    <span class="memory-sphere-node-meta">Memory</span>
+                    <span class="memory-sphere-node-title">VerdiWM</span>
+                    <span class="memory-sphere-node-meta">Claim DAG</span>
                   </span>
                 </button>
-                <button class="memory-sphere-node" type="button" data-memory-node="ctrlworld-lamo" aria-label="Open CtrlWorld LaMo memory documents" style="--rx: -34deg; --ry: -62deg; --irx: 34deg; --iry: 62deg;">
+                <button class="memory-sphere-node" type="button" data-memory-node="ctrlworld-lamo" aria-label="Open Ctrl-World LaMo memory documents" style="--rx: -34deg; --ry: -62deg; --irx: 34deg; --iry: 62deg;">
                   <span class="memory-sphere-node-content">
                     <span class="memory-sphere-node-date">Jun 15</span>
                     <span class="memory-sphere-node-title">LaMo</span>
-                    <span class="memory-sphere-node-meta">CtrlWorld</span>
+                    <span class="memory-sphere-node-meta">Ctrl-World</span>
                   </span>
                 </button>
                 <button class="memory-sphere-node" type="button" data-memory-node="dino-rep" aria-label="Open DINO REP memory documents" style="--rx: -46deg; --ry: 42deg; --irx: 46deg; --iry: -42deg;">
@@ -2526,7 +2526,7 @@
         <div class="memory-skill-list" id="memory-skill-list"></div>
         <div class="memory-doc-preview">
           <span class="memory-doc-type" id="memory-doc-type">Skill Document</span>
-          <h4 id="memory-doc-title">WorldClaw Research Memory Graph</h4>
+          <h4 id="memory-doc-title">VerdiWM Research Memory Graph</h4>
           <p id="memory-doc-summary">
             A project-page memory graph that indexes experiments by model,
             dataset, intervention, and evidence gate.
@@ -2535,7 +2535,7 @@
             <li>Click a graph node to jump to this document area.</li>
             <li>Click a skill card to inspect the relevant procedure.</li>
           </ul>
-          <a class="memory-doc-link" id="memory-doc-link" href="assets/docs/worldclaw-memory-graph.md" target="_blank" rel="noopener">
+          <a class="memory-doc-link" id="memory-doc-link" href="assets/docs/verdiwm-memory-graph.md" target="_blank" rel="noopener">
             <span>Open document</span>
             <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
           </a>
@@ -2552,33 +2552,36 @@
           <span class="section-heading-bar" aria-hidden="true"></span>
         </div>
         <p class="contributions-intro has-text-centered">
-          World-model research still spends too much effort on manual experiment
-          stitching: choosing a target, running training, collecting rollouts,
-          judging failures, and deciding what to try next.
+          VerdiWM treats world-model improvement as verifiable differential repair:
+          experiments may change a model, but only licensed evidence can update
+          the research claim frontier.
         </p>
         <div class="contributions-grid">
           <article class="contribution-card">
             <span class="contribution-index">01</span>
-            <h3>Closed-Loop Research</h3>
+            <h3>Claim-Licensed Research</h3>
             <p>
-              WorldClaw treats research, training, and evaluation as one feedback
-              loop instead of three separate scripts that have to be coordinated by hand.
+              Operational execution is separated from epistemic authority. Budgets,
+              fenced runs, immutable receipts, and frozen verification decide when
+              a result can become a formal claim.
             </p>
           </article>
           <article class="contribution-card">
             <span class="contribution-index">02</span>
-            <h3>Failure-Driven Iteration</h3>
+            <h3>Repair Geometry</h3>
             <p>
-              Evaluation is not just a final score. It produces diagnosis and patch
-              plans that can drive the next training or replay attempt.
+              Interventional Repair Geometry measures how a frozen model responds
+              to small, reversible probes, producing fingerprints that can be compared
+              across backbones.
             </p>
           </article>
           <article class="contribution-card">
             <span class="contribution-index">03</span>
-            <h3>Experiment Memory</h3>
+            <h3>Certified Transfer</h3>
             <p>
-              Structured records preserve targets, outputs, failures, and decisions,
-              so later iterations can reuse evidence instead of reconstructing context.
+              A repair moves to a new backbone only when compilation, response
+              alignment, support overlap, sign agreement, and effect bounds pass;
+              otherwise VerdiWM abstains to cold start.
             </p>
           </article>
         </div>
@@ -2595,20 +2598,19 @@
         </div>
         <p class="agent-contrast-intro">
           General software agents can edit files, run scripts, and report scores.
-          WorldClaw targets a different control surface: it uses evaluation evidence
-          to intervene in representation geometry, loss design, gradient flow, and
-          data selection.
+          VerdiWM targets a stricter control surface: execution can propose evidence,
+          but frozen claim gates decide whether a repair becomes reusable knowledge.
         </p>
         <figure class="agent-overview-figure">
-          <a class="agent-overview-link" href="assets/figures/worldclaw-agent-comparison-overview.png" target="_blank" rel="noopener">
+          <a class="agent-overview-link" href="assets/figures/verdiwm-agent-comparison-overview.png" target="_blank" rel="noopener">
             <img
-              src="assets/figures/worldclaw-agent-comparison-overview.png"
-              alt="Overview diagram comparing conventional research agents with WorldClaw's evidence-constrained dual control plane."
+              src="assets/figures/verdiwm-agent-comparison-overview.png"
+              alt="Overview diagram comparing conventional research agents with VerdiWM's evidence-constrained dual control plane."
               loading="lazy"
             >
           </a>
           <figcaption class="agent-overview-caption">
-            WorldClaw differs from execution-reflection agents by attaching every
+            VerdiWM differs from execution-reflection agents by attaching every
             action, run, receipt, and claim to an evidence lineage before a research
             conclusion is licensed.
           </figcaption>
@@ -2619,25 +2621,25 @@
             <div class="agent-contrast-card">
               <span class="agent-contrast-label">Existing Agent Example</span>
               <p>
-                A Devin-style workflow sees that CtrlWorld lacks an action module,
+                A Devin-style workflow sees that Ctrl-World lacks an action module,
                 opens <strong>models/unet.py</strong>, inserts an ActionEncoder with an LLM,
                 and restarts <strong>python train.py</strong>. The intervention stays at
                 the file-system and code-text layer.
               </p>
             </div>
             <div class="agent-contrast-card">
-              <span class="agent-contrast-label">WorldClaw Example</span>
+              <span class="agent-contrast-label">VerdiWM Example</span>
               <p>
-                In Plan 1, the diagnosis is that <strong>action gradients are drowned by
-                the visual branch</strong>. The patch adds a LaMo latent motion prior,
-                drift loss, frozen SVD/VAE components, and hierarchical learning rates.
+                In the Ctrl-World campaign, VerdiWM diagnoses copy-current-frame
+                behavior as weak action-driven latent transition, then adds a LaMo
+                motion prior and drift regularization under the original backbone interface.
               </p>
             </div>
             <div class="agent-contrast-card">
               <span class="agent-contrast-label">Core Difference</span>
               <p>
-                Existing agents act like external programmers. WorldClaw acts like an
-                internal trainer that changes the learning process.
+                Existing agents act like external programmers. VerdiWM changes the
+                measured repair geometry while preserving hook contracts and verifier scope.
               </p>
             </div>
           </article>
@@ -2653,19 +2655,19 @@
               </p>
             </div>
             <div class="agent-contrast-card">
-              <span class="agent-contrast-label">WorldClaw Example</span>
+              <span class="agent-contrast-label">VerdiWM Example</span>
               <p>
-                In Plan 2, DINO-REP evaluation finds <strong>Depth up</strong> and
-                <strong>Motion up</strong>, but <strong>Background</strong> and
-                <strong>Subject consistency</strong> down. The next patch targets an
-                appearance branch, REP injection, and replay data with complex backgrounds.
+                In the Cosmos-Predict2 campaign, REP improves depth, flow, and
+                motion smoothness, but background and subject consistency fall. The
+                claim is narrowed to structure-related coordinates instead of reported
+                as an unconditional win.
               </p>
             </div>
             <div class="agent-contrast-card">
               <span class="agent-contrast-label">Core Difference</span>
               <p>
-                Existing agents run and read a score. WorldClaw runs, diagnoses, attributes,
-                proposes a patch, selects data, and runs again.
+                Existing agents run and read a score. VerdiWM runs, diagnoses,
+                attributes, freezes verification, updates a bounded claim, or abstains.
               </p>
             </div>
           </article>
@@ -2681,18 +2683,18 @@
               </p>
             </div>
             <div class="agent-contrast-card">
-              <span class="agent-contrast-label">WorldClaw Example</span>
+              <span class="agent-contrast-label">VerdiWM Example</span>
               <p>
-                ACWM Bench fixes the initial frame, swaps action A and action B, and
-                measures latent-trajectory separation after the action encoder. Low
-                separation indicates diluted action conditioning in the UNet attention path.
+                VerdiWM applies paired intervention probes around the frozen model:
+                action scaling, context retention, first-frame anchoring, and sampler
+                stress form a response fingerprint before any expensive transfer.
               </p>
             </div>
             <div class="agent-contrast-card">
               <span class="agent-contrast-label">Core Difference</span>
               <p>
-                Existing agents diagnose symptoms. WorldClaw diagnoses mechanisms inside
-                the representation and gradient path.
+                Existing agents diagnose symptoms. VerdiWM measures whether the target
+                model has the deficiency that a stored repair actually addresses.
               </p>
             </div>
           </article>
@@ -2704,22 +2706,22 @@
   <section class="section page-section" id="pipeline-section">
     <div class="container is-max-desktop">
       <div class="section-heading">
-        <h2 class="title is-3 has-text-centered">WorldClaw Pipeline</h2>
+        <h2 class="title is-3 has-text-centered">VerdiWM Pipeline</h2>
         <span class="section-heading-bar" aria-hidden="true"></span>
       </div>
       <p class="section-copy has-text-centered">
-        WorldClaw runs an online decision loop that probes the model, builds local
-        evidence charts, selects candidate repairs, executes trials, and freezes
-        verification before updating the next selection.
+        A campaign starts from a goal and validity gates, fingerprints the model with
+        paired probes, compiles typed repairs, verifies effects under a frozen evaluator,
+        and updates the claim DAG only when evidence obligations are satisfied.
       </p>
       <div class="feature-media">
         <div class="pipeline-figure-shell concept-figure-shell">
           <span class="figure-eyebrow">Online Decision Loop</span>
           <figure class="architecture-figure">
-            <a class="architecture-link" href="assets/figures/worldclaw-online-decision-loop-pipeline.png" target="_blank" rel="noopener">
+            <a class="architecture-link" href="assets/figures/verdiwm-online-decision-loop-pipeline.png" target="_blank" rel="noopener">
               <img
-                src="assets/figures/worldclaw-online-decision-loop-pipeline.png"
-                alt="WorldClaw online decision loop for probing a world model, selecting repairs, executing trials, verifying outcomes, and accumulating repair knowledge."
+                src="assets/figures/verdiwm-online-decision-loop-pipeline.png"
+                alt="VerdiWM online decision loop for probing a world model, selecting repairs, executing trials, verifying outcomes, and accumulating repair knowledge."
                 loading="lazy"
               >
             </a>
@@ -2727,11 +2729,11 @@
           <div class="architecture-caption">
             <div class="architecture-caption-copy">
               <strong>Pipeline overview.</strong>
-              The loop separates probing, selection, trial execution, frozen
-              verification, and accumulated repair memory, so each next action is
-              constrained by prior evidence instead of free-form reflection.
+              The loop separates operational side effects from epistemic claim updates.
+              Every trial produces a receipt; every reusable repair needs a gate-passing
+              settlement vector rather than a single favorable score.
             </div>
-            <a class="architecture-action" href="assets/figures/worldclaw-online-decision-loop-pipeline.png" target="_blank" rel="noopener">
+            <a class="architecture-action" href="assets/figures/verdiwm-online-decision-loop-pipeline.png" target="_blank" rel="noopener">
               <span>Open full resolution</span>
               <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
             </a>
@@ -2741,37 +2743,37 @@
     </div>
   </section>
 
-  <section class="section page-section" id="active-learning-section">
+  <section class="section page-section" id="repair-learning-section">
     <div class="container is-max-desktop">
       <div class="section-heading">
-        <h2 class="title is-3 has-text-centered">WorldClaw Active Learning</h2>
+        <h2 class="title is-3 has-text-centered">VerdiWM Repair Learning</h2>
         <span class="section-heading-bar" aria-hidden="true"></span>
       </div>
       <p class="section-copy has-text-centered">
-        This flowchart shows how WorldClaw closes the active-learning loop:
-        identify uncertain or failing cases, select the next data or replay target,
-        retrain or adapt the model, and feed the new evidence back into evaluation.
+        This flowchart shows how VerdiWM turns a settled experiment into repair memory:
+        confirmed effects, nulls, harmful transfers, gate failures, and geometry collisions
+        all become searchable evidence for the next campaign.
       </p>
       <div class="feature-media">
         <div class="pipeline-figure-shell concept-figure-shell">
-          <span class="figure-eyebrow">Active Learning Flow</span>
+          <span class="figure-eyebrow">Repair Learning Flow</span>
           <figure class="architecture-figure">
-            <a class="architecture-link" href="assets/figures/worldclaw-active-learning-flow.png" target="_blank" rel="noopener">
+            <a class="architecture-link" href="assets/figures/verdiwm-repair-learning-flow.png" target="_blank" rel="noopener">
               <img
-                src="assets/figures/worldclaw-active-learning-flow.png"
-                alt="WorldClaw active learning flowchart showing selection, training, evaluation, and feedback stages."
+                src="assets/figures/verdiwm-repair-learning-flow.png"
+                alt="VerdiWM repair learning flowchart showing selection, training, evaluation, and feedback stages."
                 loading="lazy"
               >
             </a>
           </figure>
           <div class="architecture-caption">
             <div class="architecture-caption-copy">
-              <strong>Active-learning workflow.</strong>
-              The loop turns evaluation evidence into the next intervention target,
-              so WorldClaw can prioritize cases that most directly expose model
-              weakness instead of sampling new trials blindly.
+              <strong>Repair-learning workflow.</strong>
+              Evaluation does not merely rank models. It records which intervention
+              changed which metric, where the claim is valid, and when transfer should
+              be refused.
             </div>
-            <a class="architecture-action" href="assets/figures/worldclaw-active-learning-flow.png" target="_blank" rel="noopener">
+            <a class="architecture-action" href="assets/figures/verdiwm-repair-learning-flow.png" target="_blank" rel="noopener">
               <span>Open full resolution</span>
               <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
             </a>
@@ -2781,12 +2783,12 @@
       <div class="skill-example-shell">
         <div class="skill-example-header">
           <div>
-            <span class="figure-eyebrow">Active Learning Output</span>
-            <h3>Generated Strategy Example: CtrlWorld + LaMo Fusion</h3>
+            <span class="figure-eyebrow">Repair Learning Output</span>
+            <h3>Generated Strategy Example: Ctrl-World + LaMo Fusion</h3>
             <p>
-              This generated skill is an example output of the WorldClaw active-learning
-              loop. It turns a failure diagnosis from CtrlWorld training into a concrete
-              next-round intervention.
+              This generated skill is an example output of the VerdiWM repair-learning
+              loop. It turns a Ctrl-World physical-consistency diagnosis into a concrete,
+              typed intervention that can be checked by replay and metric gates.
             </p>
           </div>
           <a class="architecture-action" href="assets/docs/Lamo_SKILL.md" target="_blank" rel="noopener">
@@ -2803,7 +2805,7 @@
             </p>
           </article>
           <article class="skill-example-card">
-            <strong>WorldClaw Proposal</strong>
+            <strong>VerdiWM Repair</strong>
             <p>
               Add a LaMo latent motion prior, drift loss, and action-conditioned consistency
               so predicted motion is constrained by both latent dynamics and control input.
@@ -2834,8 +2836,9 @@
         <span class="section-heading-bar" aria-hidden="true"></span>
       </div>
       <p class="section-copy has-text-centered">
-        Evaluation combines benchmark-facing checks, qualitative replay, transfer
-        tests, and policy-rollout comparisons.
+        The experiments test whether VerdiWM can diagnose a world-model failure,
+        select a localized repair, preserve validity gates, and transfer only when
+        the target backbone passes a certificate.
       </p>
 
       <div class="capability-grid">
@@ -2843,42 +2846,41 @@
           <span class="contribution-index">WA</span>
           <h3>WorldArena</h3>
           <p>
-            External or score-oriented evaluation entry with suboptions such as
-            <span class="inline-code">video-quality</span>, <span class="inline-code">vlm-judge</span>,
-            <span class="inline-code">jepa-similarity</span>, and
-            <span class="inline-code">embodied-task</span>.
+            Benchmark-facing metrics cover semantic alignment, depth accuracy, flow,
+            motion smoothness, subject/background consistency, PSNR, SSIM, LPIPS,
+            and FID.
           </p>
         </article>
         <article class="capability-card">
-          <span class="contribution-index">AC</span>
-          <h3>ACWM Bench</h3>
+          <span class="contribution-index">VG</span>
+          <h3>Validity Gates</h3>
           <p>
-            Native diagnosis entry for <span class="inline-code">action-sensitivity</span>,
-            <span class="inline-code">rollout-fidelity</span>, <span class="inline-code">stability-guard</span>,
-            <span class="inline-code">policy-alignment</span>, and more.
+            Campaign-level gates prevent score-only claims by tracking action sensitivity,
+            rollout fidelity, protected trade-off metrics, and policy-level outcomes.
           </p>
         </article>
       </div>
 
       <div class="pipeline-figure-shell improvement-figure-shell">
-        <span class="figure-eyebrow">WorldClaw Improvement Plan</span>
+        <span class="figure-eyebrow">Experiment 1 / Ctrl-World Physical Consistency</span>
         <figure class="architecture-figure">
-          <a class="architecture-link" href="assets/figures/worldclaw-ctrlworld-improvement-plan.png" target="_blank" rel="noopener">
+          <a class="architecture-link" href="assets/figures/verdiwm-ctrlworld-improvement-plan.png" target="_blank" rel="noopener">
             <img
-              src="assets/figures/worldclaw-ctrlworld-improvement-plan.png"
-              alt="WorldClaw improvement plan for CtrlWorld, showing the proposed closed-loop enhancement strategy before qualitative replay comparison."
+              src="assets/figures/verdiwm-ctrlworld-improvement-plan.png"
+              alt="VerdiWM LaMo and drift-loss repair plan for Ctrl-World physical consistency."
               loading="lazy"
             >
           </a>
         </figure>
         <div class="architecture-caption">
           <div class="architecture-caption-copy">
-            <strong>Improvement target.</strong>
-            This figure summarizes how WorldClaw modifies the CtrlWorld workflow.
-            The replay videos below compare GT, the WorldClaw-improved output, and
-            the CtrlWorld baseline under the same three-row layout.
+            <strong>LaMo + drift repair.</strong>
+            VerdiWM diagnoses the Ctrl-World baseline as over-preserving static appearance
+            and under-using action-conditioned motion. The repair adds a LaMo latent
+            motion prior and drift regularization while keeping the backbone interface
+            fixed. Motion smoothness rises from 68.75 to 81.53; LPIPS and FID also improve.
           </div>
-          <a class="architecture-action" href="assets/figures/worldclaw-ctrlworld-improvement-plan.png" target="_blank" rel="noopener">
+          <a class="architecture-action" href="assets/figures/verdiwm-ctrlworld-improvement-plan.png" target="_blank" rel="noopener">
             <span>Open full resolution</span>
             <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
           </a>
@@ -2890,8 +2892,9 @@
           <div>
             <h3>Qualitative Replay</h3>
             <p>
-              Three-row replay from the Ctrl-World checkpoint comparison run.
-              The clip is unlabeled in the raw export, so the row order is documented here.
+              Three-row replay for the Ctrl-World physical-consistency campaign.
+              The comparison follows the paper-style layout: ground truth, VerdiWM repair,
+              then the original baseline.
             </p>
           </div>
           <span class="replay-meta">4 samples / 960x576</span>
@@ -2907,9 +2910,9 @@
                 loop
                 playsinline
                 preload="metadata"
-                poster="assets/videos/gt_worldclaw_ctrlworld_three_rows_seed20260610_poster.jpg"
+                poster="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610_poster.jpg"
               >
-                <source src="assets/videos/gt_worldclaw_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4">
+                <source src="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -2924,9 +2927,9 @@
                 loop
                 playsinline
                 preload="metadata"
-                poster="assets/videos/sample02_original_ep2799_start14_gt_worldclaw_ctrlworld_three_rows_poster.jpg"
+                poster="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows_poster.jpg"
               >
-                <source src="assets/videos/sample02_original_ep2799_start14_gt_worldclaw_ctrlworld_three_rows.mp4" type="video/mp4">
+                <source src="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -2941,9 +2944,9 @@
                 loop
                 playsinline
                 preload="metadata"
-                poster="assets/videos/sample03_gt_worldclaw_ctrlworld_three_rows_seed20260610_poster.jpg"
+                poster="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610_poster.jpg"
               >
-                <source src="assets/videos/sample03_gt_worldclaw_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4">
+                <source src="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -2958,9 +2961,9 @@
                 loop
                 playsinline
                 preload="metadata"
-                poster="assets/videos/sample04_gt_worldclaw_ctrlworld_three_rows_seed20260610_poster.jpg"
+                poster="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610_poster.jpg"
               >
-                <source src="assets/videos/sample04_gt_worldclaw_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4">
+                <source src="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -2982,11 +2985,11 @@
           </div>
           <div class="replay-row-label">
             <strong>Middle row</strong>
-            WorldClaw output.
+            VerdiWM-improved output.
           </div>
           <div class="replay-row-label">
             <strong>Bottom row</strong>
-            CtrlWorld output.
+            Ctrl-World baseline.
           </div>
         </div>
         <figure class="replay-guide">
@@ -3001,24 +3004,26 @@
       </div>
 
       <div class="pipeline-figure-shell improvement-figure-shell">
-        <span class="figure-eyebrow">WorldClaw Plan 2</span>
+        <span class="figure-eyebrow">Experiment 2 / Cosmos-Predict2 REP</span>
         <figure class="architecture-figure">
-          <a class="architecture-link" href="assets/figures/worldclaw-plan2-dino-rep-cosmos3-framework.png" target="_blank" rel="noopener">
+          <a class="architecture-link" href="assets/figures/verdiwm-plan2-dino-rep-cosmos3-framework.png" target="_blank" rel="noopener">
             <img
-              src="assets/figures/worldclaw-plan2-dino-rep-cosmos3-framework.png"
-              alt="WorldClaw Plan 2 method framework for improving COSMOS3 with train-test aligned DINO-REP conditioning."
+              src="assets/figures/verdiwm-plan2-dino-rep-cosmos3-framework.png"
+              alt="VerdiWM REP method framework for injecting DINO representations into Cosmos-Predict2."
               loading="lazy"
             >
           </a>
         </figure>
         <div class="architecture-caption">
           <div class="architecture-caption-copy">
-            <strong>COSMOS3 improvement plan.</strong>
-            This figure is the Plan 2 method framework: WorldClaw improves COSMOS3
-            by adding train-test aligned DINO-REP conditioning while keeping the
-            video generation objective unchanged.
+            <strong>DINO-REP repair.</strong>
+            VerdiWM identifies unstable object boundaries, scene layout, and semantic
+            relations in Cosmos-Predict2, then injects DINO features as higher-level
+            representation targets. The repair improves semantic alignment, depth,
+            flow, and motion smoothness, while background and subject consistency remain
+            explicit claim-boundary coordinates.
           </div>
-          <a class="architecture-action" href="assets/figures/worldclaw-plan2-dino-rep-cosmos3-framework.png" target="_blank" rel="noopener">
+          <a class="architecture-action" href="assets/figures/verdiwm-plan2-dino-rep-cosmos3-framework.png" target="_blank" rel="noopener">
             <span>Open full resolution</span>
             <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
           </a>
@@ -3026,9 +3031,10 @@
       </div>
 
       <div class="pipeline-figure-shell improvement-figure-shell">
-        <span class="figure-eyebrow">Plan 2 Trends</span>
+        <span class="figure-eyebrow">REP Replay and Trends</span>
         <p class="trend-video-note">
-          Qualitative replay above the trend chart: `comparison_with_baseline_right.mp4` with baseline on the right.
+          Qualitative replay above the trend chart: baseline is shown on the right, while the
+          VerdiWM REP prediction is compared under the same context.
         </p>
         <figure class="architecture-figure">
           <div class="trend-video-shell">
@@ -3058,12 +3064,12 @@
       </div>
 
       <div class="pipeline-figure-shell improvement-figure-shell">
-        <span class="figure-eyebrow">Plan 2 Metrics</span>
+        <span class="figure-eyebrow">REP Video Metrics</span>
         <figure class="architecture-figure">
-          <a class="architecture-link" href="assets/figures/worldclaw-plan2-cosmos3-metrics-table.png" target="_blank" rel="noopener">
+          <a class="architecture-link" href="assets/figures/verdiwm-plan2-cosmos3-metrics-table.png" target="_blank" rel="noopener">
             <img
-              src="assets/figures/worldclaw-plan2-cosmos3-metrics-table.png"
-              alt="Metrics table comparing COSMOS3 and REP(ours) on PSNR, SSIM, LPIPS, and FID."
+              src="assets/figures/verdiwm-plan2-cosmos3-metrics-table.png"
+              alt="Replay-level metrics comparing the baseline with VerdiWM REP on PSNR, SSIM, LPIPS, and FID."
               loading="lazy"
             >
           </a>
@@ -3071,10 +3077,11 @@
         <div class="architecture-caption">
           <div class="architecture-caption-copy">
             <strong>Summary table.</strong>
-            REP(ours) improves PSNR, SSIM, and LPIPS, while FID stays in the same
-            range as the COSMOS3 baseline.
+            REP improves PSNR, SSIM, and LPIPS in this replay set, while FID stays
+            close to the Cosmos baseline. The paper-level claim is kept conditional
+            because background consistency can degrade on static-background-heavy scenes.
           </div>
-          <a class="architecture-action" href="assets/figures/worldclaw-plan2-cosmos3-metrics-table.png" target="_blank" rel="noopener">
+          <a class="architecture-action" href="assets/figures/verdiwm-plan2-cosmos3-metrics-table.png" target="_blank" rel="noopener">
             <span>Open full resolution</span>
             <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
           </a>
@@ -3084,8 +3091,8 @@
       <div class="worldarena-panel">
         <span class="figure-eyebrow">WorldArena Metrics</span>
         <p class="worldarena-intro">
-          WorldArena-style scoring gives a broader view of the Plan 2 rollout than
-          PSNR and SSIM alone. The table compares COSMOS3 with REP on semantic,
+          WorldArena-style scoring gives a broader view of the REP rollout than
+          PSNR and SSIM alone. The table compares Cosmos-Predict2 with REP on semantic,
           geometric, aesthetic, background, dynamics, flow, smoothness, and subject
           consistency metrics.
         </p>
@@ -3108,10 +3115,11 @@
           </article>
           <article class="worldarena-card">
             <span class="worldarena-card-kicker">Remaining Gap</span>
-            <strong>COSMOS3 still keeps stronger identity and background consistency.</strong>
+            <strong>The baseline still keeps stronger identity and background consistency.</strong>
             <p>
               Background consistency and subject consistency remain lower for REP,
-              which marks the next failure mode for WorldClaw to target.
+              which is logged as a boundary of the REP repair rather than hidden
+              inside a single aggregate score.
             </p>
           </article>
         </div>
@@ -3119,7 +3127,7 @@
           <a class="architecture-link worldarena-table-shell" href="assets/figures/worldarena-cosmos3-rep-metrics.png" target="_blank" rel="noopener">
             <img
               src="assets/figures/worldarena-cosmos3-rep-metrics.png"
-              alt="WorldArena metrics table comparing COSMOS3 and REP across semantic alignment, depth accuracy, aesthetic quality, background consistency, dynamic degree, flow score, motion smoothness, and subject consistency."
+              alt="WorldArena metrics table comparing Cosmos-Predict2 and VerdiWM REP across semantic alignment, depth accuracy, aesthetic quality, background consistency, dynamic degree, flow score, motion smoothness, and subject consistency."
               loading="lazy"
             >
           </a>
@@ -3138,34 +3146,35 @@
       </div>
 
       <div class="transfer-panel">
-        <span class="figure-eyebrow">Experiment 3 / RoboCOIN Transfer</span>
+        <span class="figure-eyebrow">Experiment 3 / RoboCOIN Dataset Adaptation</span>
         <p class="transfer-intro">
-          This experiment tests whether the agent can adapt a world-model repository
-          to a new robot dataset without hand-designing a fresh project page or model
-          wrapper. The target dataset is
+          This experiment follows the paper's automatic-adaptation setting: given a new
+          robot embodiment, action interface, camera layout, and task distribution,
+          VerdiWM constructs the training and replay contract without a hand-written
+          adapter. The target dataset is
           <a href="https://flagopen.github.io/RoboCOIN-DataManager/" target="_blank" rel="noopener">RoboCOIN-DataManager</a>.
           The robot embodiment is <strong>Agilex Cobot Magic</strong>. From the dataset
           structure, embodiment metadata, camera viewpoint, and action interface, the
-          agent selects a compatible base model and continues training
+          system selects a compatible base model and continues training
           <strong>DreamDojo/Cosmos Predict2 action-conditioned video-to-world</strong>
           from the <strong>AgiBot post-train 2B</strong> weights.
         </p>
         <div class="transfer-facts">
           <div class="transfer-fact">
-            <strong>Dataset Adaptation</strong>
+            <strong>Dataset Parsing</strong>
             RoboCOIN introduces Agilex Cobot Magic rollouts, a new task distribution,
             object layout, and camera setup; the agent maps those signals into the
             training and replay contract.
           </div>
           <div class="transfer-fact">
             <strong>Base Model Choice</strong>
-            The selected structure keeps Cosmos Predict2 video-to-world generation,
-            but adds action conditioning so planned robot actions affect rollout motion.
+            The selected structure keeps Cosmos Predict2 video-to-world generation and
+            adds action conditioning so predicted future frames respond to robot actions.
           </div>
           <div class="transfer-fact">
             <strong>Control Check</strong>
-            Each video includes a no-action-injection prediction. This separates
-            action-conditioned behavior from memorized visual rollout.
+            Each video includes a no-action prediction. This checks that the model
+            is using action input rather than performing unconditional visual completion.
           </div>
         </div>
         <div class="transfer-video-grid">
@@ -3214,7 +3223,7 @@
           <article class="transfer-video-card">
             <h3>Three-View Consistency</h3>
             <p>
-              This mosaic replay stresses cross-view agreement. WorldClaw keeps the
+              This mosaic replay stresses cross-view agreement. VerdiWM keeps the
               object interaction and motion progression coherent across three views,
               showing that the adaptation is not limited to a single camera stream.
             </p>
@@ -3242,28 +3251,28 @@
       </div>
 
       <div class="transfer-panel">
-        <span class="figure-eyebrow">Experiment 4 / Cosmos3-DROID Policy RL</span>
+        <span class="figure-eyebrow">Experiment 4 / Action-Quality Rollouts</span>
         <p class="transfer-intro">
-          This block-stacking overview shows the Cosmos3-DROID policy after RL in
-          RoboLab120. The eight clips are arranged as baseline/RL pairs: columns 1
-          and 3 are the original Cosmos3 policy, and the columns immediately to
-          their right are the RL-updated results.
+          The paper tests whether video-level repair translates into action quality:
+          the repaired Cosmos3 policy is evaluated as a closed-loop action generator.
+          This block-stacking overview adds a RoboLab120 rollout view, with baseline
+          and repaired/RL-updated behavior shown as paired clips.
         </p>
         <div class="transfer-facts">
           <div class="transfer-fact">
-            <strong>Reward</strong>
+            <strong>Environment-Grounded Reward</strong>
             R = 10 * terminal_success + 2 * verified_progress - bounded invalid_action_penalty - bounded trusted_safety_penalty.
           </div>
           <div class="transfer-fact">
             <strong>Signal Source</strong>
             Terminal success comes from RoboLab, and progress comes only from verified
-            subtask/progress fields.
+            subtask/progress fields, matching the paper's rule that video scores do
+            not substitute for environment success.
           </div>
           <div class="transfer-fact">
             <strong>Claim Boundary</strong>
-            Failed trajectories are capped below success; safety events enter the
-            final quality gate; video/VLM checks are audit-only and never enter
-            the training reward.
+            Failed trajectories are capped below successful trajectories; safety events
+            enter the final quality gate; video/VLM checks remain audit-only evidence.
           </div>
         </div>
         <div class="transfer-video-grid">
@@ -3314,12 +3323,12 @@
       </div>
 
       <div class="transfer-panel">
-        <span class="figure-eyebrow">Experiment 5 / FRANKA Real-Robot COSMOS3 Comparison</span>
+        <span class="figure-eyebrow">Experiment 5 / FRANKA Real-Robot Comparison</span>
         <p class="transfer-intro">
-          Real-robot FRANKA comparisons on three manipulation tasks. All clips are
-          shown at 4x speed. The stacking task tests interference handling around
-          a blue bowl, the tablecloth task tests path quality, and the drawer task
-          tests occlusion-aware grasping from inside a bowl.
+          Real-robot FRANKA comparisons provide qualitative evidence for the action-quality
+          claim. All clips are shown at 4x speed. The stacking task tests interference
+          handling around a blue bowl, the tablecloth task tests path quality, and the
+          drawer task tests occlusion-aware grasping from inside a bowl.
         </p>
         <div class="transfer-facts">
           <div class="transfer-fact">
@@ -3335,7 +3344,8 @@
           <div class="transfer-fact">
             <strong>Improved COSMOS3</strong>
             The improved policy completes the stack, shortens the folding path, and
-            finishes the occluded pick-place-close sequence.
+            finishes the occluded pick-place-close sequence. These clips complement
+            the paper's closed-loop success-rate comparison rather than replacing it.
           </div>
         </div>
         <div class="transfer-video-grid comparison-video-grid">
@@ -3476,17 +3486,17 @@
       core: {
         title: "Evidence-Licensed Memory",
         date: "Persistent",
-        status: "WorldClaw stores actions, receipts, model context, and claim boundaries so later decisions are grounded in evidence rather than free-form reflection.",
-        model: "Evidence control plane over world-model runs",
-        dataset: "Run receipts, replay artifacts, metrics, and patches",
-        intervention: "Claim licensing before reuse",
-        evidence: "Traceable action -> artifact -> claim chain",
+        status: "VerdiWM stores actions, receipts, model context, validity gates, and claim boundaries so repairs are reused only when evidence licenses transfer.",
+        model: "Operational and epistemic control planes over world-model repair campaigns",
+        dataset: "Run receipts, paired probes, replay artifacts, metrics, and verifier outputs",
+        intervention: "Claim-licensed repair memory and certified transfer",
+        evidence: "Action -> receipt -> settlement vector -> claim-frontier update",
         docs: [
           {
             type: "Memory Contract",
-            title: "WorldClaw Research Memory Graph",
-            href: "assets/docs/worldclaw-memory-graph.md",
-            summary: "Defines each node as a bounded research episode with time, model, dataset, intervention, and evidence gate.",
+            title: "VerdiWM Research Memory Graph",
+            href: "assets/docs/verdiwm-memory-graph.md",
+            summary: "Defines each node as a bounded repair episode with time, model, dataset, intervention, gate status, and claim scope.",
             points: [
               "Indexes model changes by claim scope rather than by loose chat history.",
               "Connects experiment artifacts to reusable repair decisions.",
@@ -3496,8 +3506,8 @@
           {
             type: "Claim Gate",
             title: "Evidence Claim Gate Skill",
-            href: "assets/docs/worldclaw-claim-gate-skill.md",
-            summary: "Defines when a WorldClaw result is allowed to become a reusable research claim.",
+            href: "assets/docs/verdiwm-claim-gate-skill.md",
+            summary: "Defines when a VerdiWM result is allowed to become a reusable repair claim.",
             points: [
               "Separates environment success from video or VLM audit evidence.",
               "Requires action requests, execution receipts, and verification artifacts.",
@@ -3507,19 +3517,19 @@
         ]
       },
       "ctrlworld-lamo": {
-        title: "CtrlWorld + LaMo Fusion",
+        title: "Ctrl-World LaMo Repair",
         date: "2026-06-15",
-        status: "A failure diagnosis found that action gradients were drowned by the visual branch, causing copy-current-frame behavior.",
-        model: "CtrlWorld SVD-UNet with action encoder",
-        dataset: "CtrlWorld action-conditioned rollout data",
+        status: "A physical-consistency diagnosis found copy-current-frame behavior and weak action-driven latent transition.",
+        model: "Ctrl-World SVD-UNet with action encoder",
+        dataset: "Ctrl-World action-conditioned rollout data",
         intervention: "LaMo latent motion prior, drift loss, frozen SVD/VAE parts, hierarchical LR",
-        evidence: "Loss behavior, gradient-path diagnosis, generated LaMo skill document",
+        evidence: "WorldArena metrics, PSNR/SSIM/LPIPS/FID, qualitative replay, and validity-gate annotations",
         docs: [
           {
             type: "Generated Skill",
-            title: "CtrlWorld + LaMo Fusion Training Skill",
+            title: "Ctrl-World + LaMo Fusion Training Skill",
             href: "assets/docs/Lamo_SKILL.md",
-            summary: "A concrete architecture and training recipe for adding latent motion priors to CtrlWorld.",
+            summary: "A concrete architecture and training recipe for adding latent motion priors to Ctrl-World.",
             points: [
               "Adds a motion-prior branch and drift readout in latent space.",
               "Keeps stable SVD/VAE components frozen while training action-sensitive layers.",
@@ -3529,30 +3539,30 @@
           {
             type: "Claim Gate",
             title: "Evidence Claim Gate Skill",
-            href: "assets/docs/worldclaw-claim-gate-skill.md",
+            href: "assets/docs/verdiwm-claim-gate-skill.md",
             summary: "Records how the LaMo intervention should be promoted only after evidence clears the claim gate.",
             points: [
               "Do not treat a lower scalar loss as sufficient mechanism evidence.",
               "Require replay or latent-separation checks before widening the claim.",
-              "Keep the intervention scoped to the CtrlWorld failure mode."
+              "Keep the intervention scoped to the Ctrl-World physical-consistency failure mode."
             ]
           }
         ]
       },
       "dino-rep": {
-        title: "COSMOS3 DINO-REP Plan",
+        title: "Cosmos-Predict2 REP Repair",
         date: "2026-06-16",
-        status: "Plan 2 used representation signals to improve geometry and motion while exposing a remaining appearance-consistency gap.",
-        model: "COSMOS3 video-to-world rollout model",
-        dataset: "Plan 2 replay set with 13024 comparison and WorldArena-style metrics",
+        status: "REP uses representation signals to improve structure, geometry, and motion while exposing an appearance-consistency boundary.",
+        model: "Cosmos-Predict2 video-to-world rollout model",
+        dataset: "BridgeData replay set with WorldArena-style metrics",
         intervention: "Train-test aligned DINO-REP conditioning",
-        evidence: "PSNR, SSIM, LPIPS, FID, qualitative replay, WorldArena-style scores",
+        evidence: "Semantic alignment, depth, flow, motion smoothness, qualitative replay, and gate-limited claim scope",
         docs: [
           {
             type: "Repair Skill",
-            title: "DINO-REP COSMOS3 Repair Skill",
-            href: "assets/docs/worldclaw-dino-rep-skill.md",
-            summary: "Encodes the REP-token intervention and the next-patch rule for appearance failure modes.",
+            title: "DINO-REP Cosmos-Predict2 Repair Skill",
+            href: "assets/docs/verdiwm-dino-rep-skill.md",
+            summary: "Encodes the REP intervention and the next-patch rule for appearance-consistency boundaries.",
             points: [
               "Treats depth and motion gains separately from appearance consistency.",
               "Uses metric deltas to route the next patch rather than stopping at a score.",
@@ -3573,7 +3583,7 @@
           {
             type: "Transfer Skill",
             title: "RoboCOIN Transfer Adapter Skill",
-            href: "assets/docs/worldclaw-robocoin-transfer-skill.md",
+            href: "assets/docs/verdiwm-robocoin-transfer-skill.md",
             summary: "Documents how the transfer node maps dataset and robot metadata into a model adaptation decision.",
             points: [
               "Uses embodiment and camera metadata before choosing the base model.",
@@ -3584,9 +3594,9 @@
         ]
       },
       "robolab-rl": {
-        title: "RoboLab120 Policy RL",
+        title: "Action-Quality Rollouts",
         date: "2026-07-22",
-        status: "The RL node uses environment-grounded terminal success and verified progress, while keeping video and VLM outputs as audit-only evidence.",
+        status: "The action-quality node checks whether long-horizon world-model repair improves policy rollouts under environment-grounded success criteria.",
         model: "Cosmos3-DROID policy",
         dataset: "RoboLab120 block-stacking rollouts",
         intervention: "Reward-bounded RL with safety and invalid-action penalties",
@@ -3595,7 +3605,7 @@
           {
             type: "Reward Skill",
             title: "RoboLab120 Policy-RL Reward Skill",
-            href: "assets/docs/worldclaw-robolab-rl-skill.md",
+            href: "assets/docs/verdiwm-robolab-rl-skill.md",
             summary: "Defines the RL reward and its constraints so progress cannot fake terminal success.",
             points: [
               "Terminal success comes from RoboLab, not VLM scoring.",
@@ -3608,8 +3618,8 @@
       "franka-real": {
         title: "FRANKA Real-Robot Trials",
         date: "2026-07-27",
-        status: "The real-robot node compares original COSMOS3 and improved COSMOS3 on stack, fold, and occluded drawer manipulation.",
-        model: "Improved COSMOS3 real-robot policy stack",
+        status: "The real-robot node compares original Cosmos3 and repaired Cosmos3 on stack, fold, and occluded drawer manipulation.",
+        model: "Repaired Cosmos3 real-robot policy stack",
         dataset: "FRANKA real-world task videos",
         intervention: "Real-robot transfer with improved grasping, path planning, and occlusion handling",
         evidence: "4x H.264 comparison videos for stack, tablecloth, and drawer tasks",
@@ -3617,8 +3627,8 @@
           {
             type: "Real-Robot Skill",
             title: "FRANKA Real-Robot Transfer Skill",
-            href: "assets/docs/worldclaw-franka-real-robot-skill.md",
-            summary: "Summarizes the task set, observed original failures, and improved COSMOS3 behavior.",
+            href: "assets/docs/verdiwm-franka-real-robot-skill.md",
+            summary: "Summarizes the task set, observed original failures, and repaired Cosmos3 behavior.",
             points: [
               "Tracks stack, fold, and drawer tasks under the same real-robot section.",
               "Uses accelerated public videos for presentation, not for changing task labels.",
@@ -3639,7 +3649,7 @@
           {
             type: "Claim Gate",
             title: "Evidence Claim Gate Skill",
-            href: "assets/docs/worldclaw-claim-gate-skill.md",
+            href: "assets/docs/verdiwm-claim-gate-skill.md",
             summary: "Defines the gate logic for promoting a result into a reusable memory.",
             points: [
               "Record the proposed intervention and execution receipt.",
@@ -3649,8 +3659,8 @@
           },
           {
             type: "Memory Contract",
-            title: "WorldClaw Research Memory Graph",
-            href: "assets/docs/worldclaw-memory-graph.md",
+            title: "VerdiWM Research Memory Graph",
+            href: "assets/docs/verdiwm-memory-graph.md",
             summary: "Explains how the graph indexes evidence by model, dataset, intervention, and claim scope.",
             points: [
               "Prevents score-only memory from hiding mechanism failures.",

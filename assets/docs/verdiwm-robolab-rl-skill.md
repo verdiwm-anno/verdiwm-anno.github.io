@@ -1,4 +1,4 @@
-# RoboLab120 Policy-RL Reward Skill
+# Action-Quality Rollout Reward Skill
 
 ## Time
 
@@ -6,7 +6,7 @@
 
 ## Target
 
-Improve a Cosmos3-DROID policy in RoboLab120 block-stacking rollouts.
+Evaluate whether a repaired Cosmos3-DROID policy improves action-quality rollouts in RoboLab120 block-stacking tasks.
 
 ## Reward Contract
 
@@ -27,4 +27,4 @@ R = 10 * terminal_success
 
 ## Evidence Use
 
-The published block-stacking videos are qualitative audit artifacts. The training reward is defined by environment success and verified progress.
+The published block-stacking videos are qualitative audit artifacts. The reward and claim boundary are defined by environment success, verified progress, and the final safety gate.

@@ -6,7 +6,7 @@
 
 ## Target
 
-Compare original COSMOS3 and improved COSMOS3 on FRANKA real-robot tasks.
+Compare original Cosmos3 and repaired Cosmos3 on FRANKA real-robot tasks.
 
 ## Task Set
 
@@ -22,8 +22,8 @@ Compare original COSMOS3 and improved COSMOS3 on FRANKA real-robot tasks.
 
 ## Improved Behavior
 
-The improved COSMOS3 policy completes the stack, shortens the tablecloth path, and completes the occluded pick-place-close drawer sequence.
+The repaired Cosmos3 policy completes the stack, shortens the tablecloth path, and completes the occluded pick-place-close drawer sequence.
 
 ## Page Encoding
 
-The public videos are accelerated 4x and converted to H.264 for browser compatibility. The acceleration is presentation-only and does not change the task label.
+The public videos are accelerated 4x and converted to H.264 for browser compatibility. The acceleration is presentation-only and does not change the task label or act as training evidence.

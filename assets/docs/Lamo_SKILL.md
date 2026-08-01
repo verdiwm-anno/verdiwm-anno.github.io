@@ -1,14 +1,14 @@
-# CtrlWorld + LaMo Fusion Training Skill
+# Ctrl-World + LaMo Fusion Training Skill
 
 > **Version**: v1.0
 > **Date**: 2026-06-15 8:00
-> **Purpose**: Integrate LaMo (Latent Motion Prior) into CtrlWorld (SVD-UNet backbone) to enhance physical consistency in action-conditioned world models via hierarchical learning rates and multi-objective training.
+> **Purpose**: Integrate LaMo (Latent Motion Prior) into Ctrl-World (SVD-UNet backbone) to enhance physical consistency in action-conditioned world models via hierarchical learning rates and multi-objective training.
 
 ---
 
 ## 1. Overview
 
-This skill describes how to modify CtrlWorld's training pipeline to incorporate LaMo's self-supervised latent motion priors. The key insight is that **latent-space frame differences carry physical motion signals** that can break the 'copy-current-frame' collapse inherent in pure MSE denoising objectives.
+This skill describes how to modify Ctrl-World's training pipeline to incorporate LaMo's self-supervised latent motion priors. The key insight is that **latent-space frame differences carry physical motion signals** that can break the 'copy-current-frame' collapse inherent in pure MSE denoising objectives.
 
 ### 1.1 Problem Diagnosis from Previous Training
 
@@ -58,7 +58,7 @@ INPUT LAYER:
 
 ### 2.2 Component Specifications
 
-#### Action Encoder (Inherited from CtrlWorld)
+#### Action Encoder (Inherited from Ctrl-World)
 
 ```python
 # 3-layer MLP, newly initialized (not from SVD checkpoint)
@@ -68,7 +68,7 @@ action_hidden = self.action_encoder(action_cartesian)  # [B,T,7] → [B,T,1024]
 action_emb = temporal_downsample(action_hidden)  # [B,5,1024]
 ```
 
-**Note**: Cartesian-space actions (end-effector pose) are more stable than joint angles. CtrlWorld already performs this conversion.
+**Note**: Cartesian-space actions (end-effector pose) are more stable than joint angles. Ctrl-World already performs this conversion.
 
 #### Motion Prior Network (New, from LaMo)
 
@@ -129,14 +129,14 @@ L_total = L_mse + λ_drift · L_drift + λ_phi · L_phi
 
   L_mse        L_drift        L_phi
  (denoising)  (motion drift)  (action consistency)
- CtrlWorld     LaMo (new)     Extension (new)
+ Ctrl-World     LaMo (new)     Extension (new)
   original      training        training
 ```
 
 ### 3.2 L_mse — Base Diffusion Denoising Loss
 
 ```python
-# Standard diffusion training (inherited from CtrlWorld)
+# Standard diffusion training (inherited from Ctrl-World)
 # x0: clean target latent, t: diffusion timestep, noise: Gaussian
 xt = sqrt(alpha_bar[t]) * x0 + sqrt(1 - alpha_bar[t]) * noise
 pred = unet(xt, t, encoder_hidden_states=action_emb, ...)
@@ -340,7 +340,7 @@ for step in range(total_steps):
     # -- 3. Action encoding --
     action_emb = action_encoder(batch["action_sequence"])   # [B, 5, 1024]
 
-    # -- 4. Diffusion forward (CtrlWorld) --
+    # -- 4. Diffusion forward (Ctrl-World) --
     t = torch.randint(0, num_timesteps, (B,))
     noise = torch.randn_like(z_target)
     z_noised = sqrt_alpha_bar[t] * z_target + sqrt_one_minus_alpha_bar[t] * noise
@@ -399,7 +399,7 @@ for step in range(total_steps):
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
-| Total steps | 100k | CtrlWorld original config |
+| Total steps | 100k | Ctrl-World original config |
 | Batch size | 64 | Original config (2×8 H100) |
 | Resolution | 192×320 | 3-camera joint prediction |
 | History frames | 7 | 1-2s interval |
@@ -415,11 +415,11 @@ for step in range(total_steps):
 
 ## 6. Inference and Sampling
 
-### 6.1 Standard Diffusion Sampling (CtrlWorld)
+### 6.1 Standard Diffusion Sampling (Ctrl-World)
 
 ```python
 def sample_ctrlworld(initial_frame, action_sequence, num_steps=50):
-    """Standard CtrlWorld sampling pipeline."""
+    """Standard Ctrl-World sampling pipeline."""
     z = vae.encode(initial_frame)
     for t in reversed(range(num_steps)):
         t_tensor = torch.full((B,), t)
@@ -471,7 +471,7 @@ def rollout_policy_in_loop(policy, world_model, initial_obs, max_steps=100):
         )
         observations.append(future_frames[0])
 
-        # Optional: Memory Retrieval (CtrlWorld)
+        # Optional: Memory Retrieval (Ctrl-World)
         if step % memory_interval == 0:
             retrieved = memory_bank.retrieve_similar_pose(observations[-1])
             observations.extend(retrieved)
@@ -498,7 +498,7 @@ def rollout_policy_in_loop(policy, world_model, initial_obs, max_steps=100):
 ### 7.2 Ablation Study Design
 
 ```
-Exp 1: Baseline (CtrlWorld original)
+Exp 1: Baseline (Ctrl-World original)
   - L_mse only, full UNet LR=1e-5
 
 Exp 2: + LaMo Drift Loss
@@ -579,7 +579,7 @@ Exp 5: Train from scratch vs. resume from checkpoint
   [ ] Per-module gradient norm monitoring
 
 [ ] EVALUATION LEVEL
-  [ ] Comparison with original CtrlWorld (same seed)
+  [ ] Comparison with original Ctrl-World (same seed)
   [ ] Long-horizon rollout video saving
   [ ] FVD computation script ready
 ```
@@ -588,11 +588,11 @@ Exp 5: Train from scratch vs. resume from checkpoint
 
 ## 10. References
 
-- **CtrlWorld**: Guo et al., "A Controllable Generative World Model for Robot Manipulation", ICLR 2026
+- **Ctrl-World**: Guo et al., "A Controllable Generative World Model for Robot Manipulation", ICLR 2026
 - **LaMo**: Jiang et al., "Self-Supervised Latent Motion Priors for Physical Realism in Video Generation", 2026
 - **SVD**: Blattmann et al., "Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets", 2023
 - **DROID**: Khazatsky et al., "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset", 2024
 
 ---
 
-> **Note**: This skill is based on CtrlWorld's official implementation and LaMo's paper methodology. Specific implementations should be adjusted according to actual codebase. It is recommended to validate each component on a small dataset (1k clips) before scaling to full DROID training.
+> **Note**: This skill is based on Ctrl-World's official implementation and LaMo's paper methodology. Specific implementations should be adjusted according to actual codebase. It is recommended to validate each component on a small dataset (1k clips) before scaling to full DROID training.

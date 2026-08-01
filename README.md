@@ -1,3 +1,3 @@
-# WorldClaw Project Page
+# VerdiWM Anonymous Project Page
 
-Static project page for WorldClaw.
+Static anonymous project page for VerdiWM: Verifiable Differential Repair for World Models.

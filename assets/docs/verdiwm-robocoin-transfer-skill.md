@@ -17,11 +17,11 @@ Adapt an action-conditioned video-to-world model to RoboCOIN rollouts.
 
 ## Adapter Decision
 
-WorldClaw uses dataset structure, embodiment metadata, camera viewpoint, and action interface to select the compatible base model and training wrapper.
+VerdiWM uses episode boundaries, camera identifiers, temporal alignment, embodiment metadata, and the action interface to select the compatible base model and training wrapper.
 
 ## Verification Pattern
 
-Each replay includes a no-action-injection control. The control separates action-conditioned behavior from memorized visual continuation.
+Each replay includes a no-action control. The control separates action-conditioned behavior from memorized visual continuation.
 
 ## Claim Boundary
 
