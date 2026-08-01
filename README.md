@@ -1,1 +1,3 @@
-# verdiwm-anno.github.io
+# WorldClaw Project Page
+
+Static project page for WorldClaw.
