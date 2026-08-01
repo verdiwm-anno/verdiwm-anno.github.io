@@ -2601,20 +2601,6 @@
           VerdiWM targets a stricter control surface: execution can propose evidence,
           but frozen claim gates decide whether a repair becomes reusable knowledge.
         </p>
-        <figure class="agent-overview-figure">
-          <a class="agent-overview-link" href="assets/figures/verdiwm-agent-comparison-overview.png" target="_blank" rel="noopener">
-            <img
-              src="assets/figures/verdiwm-agent-comparison-overview.png"
-              alt="Overview diagram comparing conventional research agents with VerdiWM's evidence-constrained dual control plane."
-              loading="lazy"
-            >
-          </a>
-          <figcaption class="agent-overview-caption">
-            VerdiWM differs from execution-reflection agents by attaching every
-            action, run, receipt, and claim to an evidence lineage before a research
-            conclusion is licensed.
-          </figcaption>
-        </figure>
         <div class="agent-contrast-list">
           <article class="agent-contrast-row">
             <div class="agent-contrast-dimension">Intervention Level</div>
@@ -2718,10 +2704,12 @@
         <div class="pipeline-figure-shell concept-figure-shell">
           <span class="figure-eyebrow">Online Decision Loop</span>
           <figure class="architecture-figure">
-            <a class="architecture-link" href="assets/figures/verdiwm-online-decision-loop-pipeline.png" target="_blank" rel="noopener">
+            <a class="architecture-link" href="assets/figures/paper-verdiwm-overview.png" target="_blank" rel="noopener">
               <img
-                src="assets/figures/verdiwm-online-decision-loop-pipeline.png"
-                alt="VerdiWM online decision loop for probing a world model, selecting repairs, executing trials, verifying outcomes, and accumulating repair knowledge."
+                src="assets/figures/paper-verdiwm-overview.png"
+                alt="Paper figure: VerdiWM online decision loop for probing a world model, selecting repairs, executing trials, verifying outcomes, and accumulating repair knowledge."
+                width="4320"
+                height="2430"
                 loading="lazy"
               >
             </a>
@@ -2733,7 +2721,7 @@
               Every trial produces a receipt; every reusable repair needs a gate-passing
               settlement vector rather than a single favorable score.
             </div>
-            <a class="architecture-action" href="assets/figures/verdiwm-online-decision-loop-pipeline.png" target="_blank" rel="noopener">
+            <a class="architecture-action" href="assets/figures/paper-verdiwm-overview.png" target="_blank" rel="noopener">
               <span>Open full resolution</span>
               <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
             </a>
@@ -2750,30 +2738,32 @@
         <span class="section-heading-bar" aria-hidden="true"></span>
       </div>
       <p class="section-copy has-text-centered">
-        This flowchart shows how VerdiWM turns a settled experiment into repair memory:
+        This paper figure shows how VerdiWM turns settled experiments into repair memory:
         confirmed effects, nulls, harmful transfers, gate failures, and geometry collisions
         all become searchable evidence for the next campaign.
       </p>
       <div class="feature-media">
         <div class="pipeline-figure-shell concept-figure-shell">
-          <span class="figure-eyebrow">Repair Learning Flow</span>
+          <span class="figure-eyebrow">Repair Evidence Memory</span>
           <figure class="architecture-figure">
-            <a class="architecture-link" href="assets/figures/verdiwm-repair-learning-flow.png" target="_blank" rel="noopener">
+            <a class="architecture-link" href="assets/figures/paper-acwm-knowledge-evidence-memory.png" target="_blank" rel="noopener">
               <img
-                src="assets/figures/verdiwm-repair-learning-flow.png"
-                alt="VerdiWM repair learning flowchart showing selection, training, evaluation, and feedback stages."
+                src="assets/figures/paper-acwm-knowledge-evidence-memory.png"
+                alt="Paper figure: retained VerdiWM repair evidence memory over ACWM-Phys environments and repair primitives."
+                width="7204"
+                height="3971"
                 loading="lazy"
               >
             </a>
           </figure>
           <div class="architecture-caption">
             <div class="architecture-caption-copy">
-              <strong>Repair-learning workflow.</strong>
-              Evaluation does not merely rank models. It records which intervention
-              changed which metric, where the claim is valid, and when transfer should
-              be refused.
+              <strong>Repair memory from the paper.</strong>
+              Evaluation does not merely rank models. It stores which intervention
+              changed which metric, where the evidence is accepted or provisional,
+              and which retained record can be reused in a later campaign.
             </div>
-            <a class="architecture-action" href="assets/figures/verdiwm-repair-learning-flow.png" target="_blank" rel="noopener">
+            <a class="architecture-action" href="assets/figures/paper-acwm-knowledge-evidence-memory.png" target="_blank" rel="noopener">
               <span>Open full resolution</span>
               <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
             </a>
@@ -2862,25 +2852,78 @@
       </div>
 
       <div class="pipeline-figure-shell improvement-figure-shell">
-        <span class="figure-eyebrow">Experiment 1 / Ctrl-World Physical Consistency</span>
+        <span class="figure-eyebrow">Paper Figure / Repair Geometry</span>
         <figure class="architecture-figure">
-          <a class="architecture-link" href="assets/figures/verdiwm-ctrlworld-improvement-plan.png" target="_blank" rel="noopener">
+          <a class="architecture-link" href="assets/figures/paper-acwm-fingerprint-geometry.png" target="_blank" rel="noopener">
             <img
-              src="assets/figures/verdiwm-ctrlworld-improvement-plan.png"
-              alt="VerdiWM LaMo and drift-loss repair plan for Ctrl-World physical consistency."
+              src="assets/figures/paper-acwm-fingerprint-geometry.png"
+              alt="Paper figure: ACWM-Phys fingerprint geometry and IRG distances across target environments."
+              width="7204"
+              height="3915"
               loading="lazy"
             >
           </a>
         </figure>
         <div class="architecture-caption">
           <div class="architecture-caption-copy">
-            <strong>LaMo + drift repair.</strong>
+            <strong>Interventional Repair Geometry.</strong>
+            The paper measures how probes expose repair-relevant model behavior before a
+            repair is transferred or retrained.
+          </div>
+          <a class="architecture-action" href="assets/figures/paper-acwm-fingerprint-geometry.png" target="_blank" rel="noopener">
+            <span>Open full resolution</span>
+            <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pipeline-figure-shell improvement-figure-shell">
+        <span class="figure-eyebrow">Experiment 1 / Ctrl-World Physical Consistency</span>
+        <figure class="architecture-figure">
+          <a class="architecture-link" href="assets/figures/paper-ctrlworld-physical-consistency.png" target="_blank" rel="noopener">
+            <img
+              src="assets/figures/paper-ctrlworld-physical-consistency.png"
+              alt="Paper figure: Ctrl-World physical-consistency comparison with ground truth, VerdiWM, and Ctrl-World baseline."
+              width="1152"
+              height="756"
+              loading="lazy"
+            >
+          </a>
+        </figure>
+        <div class="architecture-caption">
+          <div class="architecture-caption-copy">
+            <strong>LaMo + drift repair from the paper.</strong>
             VerdiWM diagnoses the Ctrl-World baseline as over-preserving static appearance
             and under-using action-conditioned motion. The repair adds a LaMo latent
             motion prior and drift regularization while keeping the backbone interface
             fixed. Motion smoothness rises from 68.75 to 81.53; LPIPS and FID also improve.
           </div>
-          <a class="architecture-action" href="assets/figures/verdiwm-ctrlworld-improvement-plan.png" target="_blank" rel="noopener">
+          <a class="architecture-action" href="assets/figures/paper-ctrlworld-physical-consistency.png" target="_blank" rel="noopener">
+            <span>Open full resolution</span>
+            <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pipeline-figure-shell improvement-figure-shell">
+        <span class="figure-eyebrow">Paper Tables 1-2 / Ctrl-World Metrics</span>
+        <figure class="architecture-figure">
+          <a class="architecture-link" href="assets/figures/paper-table-ctrlworld-metrics.png" target="_blank" rel="noopener">
+            <img
+              src="assets/figures/paper-table-ctrlworld-metrics.png"
+              alt="PDF screenshot of paper tables comparing Ctrl-World and VerdiWM metrics."
+              width="1242"
+              height="720"
+              loading="lazy"
+            >
+          </a>
+        </figure>
+        <div class="architecture-caption">
+          <div class="architecture-caption-copy">
+            <strong>Direct paper screenshot.</strong>
+            The table screenshot is cropped from the VerdiWM PDF rather than redrawn.
+          </div>
+          <a class="architecture-action" href="assets/figures/paper-table-ctrlworld-metrics.png" target="_blank" rel="noopener">
             <span>Open full resolution</span>
             <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
           </a>
@@ -2969,15 +3012,6 @@
             </div>
           </div>
         </div>
-        <figure class="replay-guide">
-          <a class="architecture-link" href="assets/figures/qualitative-replay-row-guide.png" target="_blank" rel="noopener">
-            <img
-              src="assets/figures/qualitative-replay-row-guide.png"
-              alt="Qualitative replay row guide explaining the three-row comparison layout."
-              loading="lazy"
-            >
-          </a>
-        </figure>
         <div class="replay-rows" aria-label="Replay row order">
           <div class="replay-row-label">
             <strong>Top row</strong>
@@ -2993,37 +3027,45 @@
           </div>
         </div>
         <figure class="replay-guide">
-          <a class="architecture-link" href="assets/figures/qualitative-replay-detail.png" target="_blank" rel="noopener">
+          <a class="architecture-link" href="assets/figures/paper-ctrlworld-multiview-consistency.png" target="_blank" rel="noopener">
             <img
-              src="assets/figures/qualitative-replay-detail.png"
-              alt="Additional qualitative replay comparison detail."
+              src="assets/figures/paper-ctrlworld-multiview-consistency.png"
+              alt="Paper figure: multi-view consistency comparison for the Ctrl-World experiment."
+              width="1420"
+              height="736"
               loading="lazy"
             >
           </a>
+          <figcaption class="agent-overview-caption">
+            Paper figure for the same Ctrl-World campaign: VerdiWM improves two views
+            while the paper records the remaining view-specific trade-offs.
+          </figcaption>
         </figure>
       </div>
 
       <div class="pipeline-figure-shell improvement-figure-shell">
         <span class="figure-eyebrow">Experiment 2 / Cosmos-Predict2 REP</span>
         <figure class="architecture-figure">
-          <a class="architecture-link" href="assets/figures/verdiwm-plan2-dino-rep-cosmos3-framework.png" target="_blank" rel="noopener">
+          <a class="architecture-link" href="assets/figures/paper-cosmos-predict-rep.png" target="_blank" rel="noopener">
             <img
-              src="assets/figures/verdiwm-plan2-dino-rep-cosmos3-framework.png"
-              alt="VerdiWM REP method framework for injecting DINO representations into Cosmos-Predict2."
+              src="assets/figures/paper-cosmos-predict-rep.png"
+              alt="Paper figure: Cosmos-Predict2 baseline vs VerdiWM REP qualitative comparison and trend curves."
+              width="1152"
+              height="764"
               loading="lazy"
             >
           </a>
         </figure>
         <div class="architecture-caption">
           <div class="architecture-caption-copy">
-            <strong>DINO-REP repair.</strong>
+            <strong>DINO-REP repair from the paper.</strong>
             VerdiWM identifies unstable object boundaries, scene layout, and semantic
             relations in Cosmos-Predict2, then injects DINO features as higher-level
             representation targets. The repair improves semantic alignment, depth,
             flow, and motion smoothness, while background and subject consistency remain
             explicit claim-boundary coordinates.
           </div>
-          <a class="architecture-action" href="assets/figures/verdiwm-plan2-dino-rep-cosmos3-framework.png" target="_blank" rel="noopener">
+          <a class="architecture-action" href="assets/figures/paper-cosmos-predict-rep.png" target="_blank" rel="noopener">
             <span>Open full resolution</span>
             <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
           </a>
@@ -3033,8 +3075,8 @@
       <div class="pipeline-figure-shell improvement-figure-shell">
         <span class="figure-eyebrow">REP Replay and Trends</span>
         <p class="trend-video-note">
-          Qualitative replay above the trend chart: baseline is shown on the right, while the
-          VerdiWM REP prediction is compared under the same context.
+          Qualitative replay for the REP campaign: baseline is shown on the right, while the
+          VerdiWM REP prediction is compared under the same context as the paper figure above.
         </p>
         <figure class="architecture-figure">
           <div class="trend-video-shell">
@@ -3052,43 +3094,9 @@
             </video>
           </div>
         </figure>
-        <figure class="architecture-figure plan2-trend-guide">
-          <a class="architecture-link" href="assets/figures/plan2-trends-replay-guide.png" target="_blank" rel="noopener">
-            <img
-              src="assets/figures/plan2-trends-replay-guide.png"
-              alt="Plan 2 qualitative replay guide placed below the replay video."
-              loading="lazy"
-            >
-          </a>
-        </figure>
       </div>
 
-      <div class="pipeline-figure-shell improvement-figure-shell">
-        <span class="figure-eyebrow">REP Video Metrics</span>
-        <figure class="architecture-figure">
-          <a class="architecture-link" href="assets/figures/verdiwm-plan2-cosmos3-metrics-table.png" target="_blank" rel="noopener">
-            <img
-              src="assets/figures/verdiwm-plan2-cosmos3-metrics-table.png"
-              alt="Replay-level metrics comparing the baseline with VerdiWM REP on PSNR, SSIM, LPIPS, and FID."
-              loading="lazy"
-            >
-          </a>
-        </figure>
-        <div class="architecture-caption">
-          <div class="architecture-caption-copy">
-            <strong>Summary table.</strong>
-            REP improves PSNR, SSIM, and LPIPS in this replay set, while FID stays
-            close to the Cosmos baseline. The paper-level claim is kept conditional
-            because background consistency can degrade on static-background-heavy scenes.
-          </div>
-          <a class="architecture-action" href="assets/figures/verdiwm-plan2-cosmos3-metrics-table.png" target="_blank" rel="noopener">
-            <span>Open full resolution</span>
-            <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="worldarena-panel">
+      <div class="worldarena-panel" id="worldarena-section">
         <span class="figure-eyebrow">WorldArena Metrics</span>
         <p class="worldarena-intro">
           WorldArena-style scoring gives a broader view of the REP rollout than
@@ -3124,28 +3132,30 @@
           </article>
         </div>
         <figure class="architecture-figure">
-          <a class="architecture-link worldarena-table-shell" href="assets/figures/worldarena-cosmos3-rep-metrics.png" target="_blank" rel="noopener">
+          <a class="architecture-link worldarena-table-shell" href="assets/figures/paper-table-cosmos-rep-worldarena.png" target="_blank" rel="noopener">
             <img
-              src="assets/figures/worldarena-cosmos3-rep-metrics.png"
-              alt="WorldArena metrics table comparing Cosmos-Predict2 and VerdiWM REP across semantic alignment, depth accuracy, aesthetic quality, background consistency, dynamic degree, flow score, motion smoothness, and subject consistency."
+              src="assets/figures/paper-table-cosmos-rep-worldarena.png"
+              alt="PDF screenshot of the paper table comparing Cosmos-Predict2 and VerdiWM REP on WorldArena metrics."
+              width="1275"
+              height="444"
               loading="lazy"
             >
           </a>
         </figure>
         <div class="architecture-caption">
           <div class="architecture-caption-copy">
-            <strong>WorldArena-style evaluation.</strong>
-            Scores are reported on a 0-100 scale where higher is better. Bold entries
-            in the table indicate the stronger result for each metric.
+            <strong>Paper Table 3 screenshot.</strong>
+            Scores are reported on a 0-100 scale where higher is better. The image is
+            a direct crop from the VerdiWM PDF, not a redrawn table.
           </div>
-          <a class="architecture-action" href="assets/figures/worldarena-cosmos3-rep-metrics.png" target="_blank" rel="noopener">
+          <a class="architecture-action" href="assets/figures/paper-table-cosmos-rep-worldarena.png" target="_blank" rel="noopener">
             <span>Open full resolution</span>
             <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
           </a>
         </div>
       </div>
 
-      <div class="transfer-panel">
+      <div class="transfer-panel" id="robocoin-section">
         <span class="figure-eyebrow">Experiment 3 / RoboCOIN Dataset Adaptation</span>
         <p class="transfer-intro">
           This experiment follows the paper's automatic-adaptation setting: given a new
@@ -3177,6 +3187,17 @@
             is using action input rather than performing unconditional visual completion.
           </div>
         </div>
+        <figure class="architecture-figure">
+          <a class="architecture-link" href="assets/figures/paper-robocoin-action-conditioning.png" target="_blank" rel="noopener">
+            <img
+              src="assets/figures/paper-robocoin-action-conditioning.png"
+              alt="Paper figure: RoboCOIN action-conditioned adaptation with ground truth, VerdiWM, and no-action injection rows."
+              width="1300"
+              height="780"
+              loading="lazy"
+            >
+          </a>
+        </figure>
         <div class="transfer-video-grid">
           <article class="transfer-video-card">
             <h3>Open the Green Folder</h3>
@@ -3248,9 +3269,20 @@
           <span><strong>Middle column</strong>Action-conditioned world-model prediction.</span>
           <span><strong>Right column</strong>No-action-injection prediction, used as an overfitting control.</span>
         </div>
+        <figure class="architecture-figure">
+          <a class="architecture-link" href="assets/figures/paper-robocoin-heldout-tasks.png" target="_blank" rel="noopener">
+            <img
+              src="assets/figures/paper-robocoin-heldout-tasks.png"
+              alt="Paper figure: held-out RoboCOIN task comparisons between ground truth and VerdiWM predictions."
+              width="1520"
+              height="980"
+              loading="lazy"
+            >
+          </a>
+        </figure>
       </div>
 
-      <div class="transfer-panel">
+      <div class="transfer-panel" id="action-quality-section">
         <span class="figure-eyebrow">Experiment 4 / Action-Quality Rollouts</span>
         <p class="transfer-intro">
           The paper tests whether video-level repair translates into action quality:
@@ -3275,6 +3307,17 @@
             enter the final quality gate; video/VLM checks remain audit-only evidence.
           </div>
         </div>
+        <figure class="architecture-figure">
+          <a class="architecture-link" href="assets/figures/paper-cosmos3-long-horizon-self-forcing.png" target="_blank" rel="noopener">
+            <img
+              src="assets/figures/paper-cosmos3-long-horizon-self-forcing.png"
+              alt="Paper figure: COSMOS3 long-horizon self-forcing comparison with ground truth, VerdiWM, and COSMOS3."
+              width="1152"
+              height="800"
+              loading="lazy"
+            >
+          </a>
+        </figure>
         <div class="transfer-video-grid">
           <article class="transfer-video-card">
             <h3>Block Stacking: Original vs RL</h3>
@@ -3322,7 +3365,7 @@
         </div>
       </div>
 
-      <div class="transfer-panel">
+      <div class="transfer-panel" id="franka-section">
         <span class="figure-eyebrow">Experiment 5 / FRANKA Real-Robot Comparison</span>
         <p class="transfer-intro">
           Real-robot FRANKA comparisons provide qualitative evidence for the action-quality
@@ -3348,6 +3391,28 @@
             the paper's closed-loop success-rate comparison rather than replacing it.
           </div>
         </div>
+        <figure class="architecture-figure">
+          <a class="architecture-link" href="assets/figures/paper-cosmos3-real-robot-rollouts.png" target="_blank" rel="noopener">
+            <img
+              src="assets/figures/paper-cosmos3-real-robot-rollouts.png"
+              alt="Paper figure: real-robot Franka head-to-head rollouts comparing COSMOS3 and VerdiWM."
+              width="1620"
+              height="960"
+              loading="lazy"
+            >
+          </a>
+        </figure>
+        <figure class="architecture-figure">
+          <a class="architecture-link" href="assets/figures/paper-table-robot-success.png" target="_blank" rel="noopener">
+            <img
+              src="assets/figures/paper-table-robot-success.png"
+              alt="PDF screenshot of the paper table reporting closed-loop manipulation success rates."
+              width="1251"
+              height="327"
+              loading="lazy"
+            >
+          </a>
+        </figure>
         <div class="transfer-video-grid comparison-video-grid">
           <article class="transfer-video-card">
             <h3>Stack Three Blocks / Original COSMOS3</h3>
