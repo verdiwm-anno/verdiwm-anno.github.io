@@ -78,3 +78,62 @@ video{width:100%;height:auto;aspect-ratio:auto !important;object-fit:contain;bac
 .archive-figure-grid .paper-figure figcaption{padding:2px 3px 4px}
 .memory-section{border-top:1px solid #c5dbe7}
 @media(max-width:850px){.site-header nav a:nth-child(4){display:none}.archive-block{margin-inline:-17px;padding-inline:17px}.campaign-tabs{border-radius:5px}}
+
+/* RoboCoach-inspired project-page system: quiet sections, one clear accent, no heavy bars. */
+:root{--ink:#142b3b;--muted:#5d7180;--paper:#f7fbfd;--paper2:#edf6fb;--card:#fff;--line:#cfdee7;--red:#1769ad;--red2:#0e568e;--green:#0c7d84;--soft-green:#dff2f2;--blue:#1769ad;--shadow:0 14px 34px rgba(20,67,96,.08)}
+body{background:var(--paper);font-family:Inter,'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+body:before{display:none}
+.site-header{position:fixed;top:0;left:0;right:0;height:66px;background:rgba(247,251,253,.92);border-bottom:1px solid rgba(207,222,231,.86);backdrop-filter:blur(14px)}
+.header-inner{height:66px}
+.brand{font-family:Inter,'DM Sans',sans-serif;font-size:20px;letter-spacing:-.045em}
+.site-header nav{gap:22px;margin-left:20px}
+.site-header nav a{font-size:12px;font-weight:650}
+.anonymous{font-size:9px;opacity:.68;letter-spacing:.08em}
+.hero{padding-top:138px;background:linear-gradient(180deg,#dfeff8 0%,#f7fbfd 82%);border-bottom:1px solid #d3e3ec}
+.hero-heading{gap:64px}
+.hero h1{font-size:clamp(48px,6.2vw,86px);letter-spacing:-.075em}
+.hero-intro>p:not(.hero-paper-title){font-size:16px}
+.comparison{margin-top:52px;border-radius:8px;overflow:hidden;box-shadow:0 18px 44px rgba(35,87,116,.12)}
+.comparison-heading{background:#edf7fb;padding:13px 18px}
+.facts-strip{background:transparent;color:var(--ink);padding:28px 0 10px}
+.facts-grid{gap:0}
+.facts-grid{background:#e2f1f8;border:1px solid #c8dfe9;border-radius:8px;padding:20px 0}
+.facts-grid>div{padding:0 28px;border-right:1px solid #bed5e1}
+.fact-number{color:var(--blue);font-size:34px}
+.fact-number span,.fact-source{color:#567487}
+.section{padding:112px 0 100px}
+.section-top{border-top:0;padding-top:0}
+.section-aside{opacity:.7}
+.section-intro{margin-top:34px;gap:56px}
+.section-intro h2,.closing h2{font-size:clamp(34px,4.2vw,58px);letter-spacing:-.065em}
+.method-section{background:#eef7fb;border-block:1px solid #d7e7ef}
+.method-layout{margin-top:46px;border-radius:7px;overflow:hidden;box-shadow:var(--shadow)}
+.method-steps button[aria-selected=true]{background:#d9edf7;color:var(--ink)}
+.method-steps button[aria-selected=true] small{color:var(--muted)}
+.method-detail{background:#fff}
+.campaign-tabs{margin-top:48px}
+.campaign-panel{padding-top:43px}
+.campaign-heading{gap:52px}
+.campaign-heading h3{font-size:clamp(30px,3.5vw,52px)}
+.replay-workbench{margin-top:34px;padding:0;border-radius:8px;overflow:hidden;background:#f7fbfd;border:1px solid #c6dce8;box-shadow:0 14px 32px rgba(20,67,96,.09)}
+.media-toolbar{margin:0;padding:14px 17px;background:#dceef7;color:#37627c}
+.replay-workbench>video{max-height:none;border:0;border-radius:0;background:#0b2234}
+.media-legend{padding:12px 17px;margin:0;background:#f7fbfd;color:#537287}
+.result-grid{margin-top:42px;padding-top:26px}
+.protocol-row>div,.archive-metrics>div{background:#fff}
+.boundary-note{background:#e8f5fa}
+.evidence-archive{padding-top:12px}
+.archive-ledger{margin-top:42px;margin-bottom:54px;border-radius:7px;overflow:hidden;box-shadow:var(--shadow)}
+.archive-block{background:rgba(255,255,255,.58);border-top:1px solid #c8dce7}
+.memory-section{background:#eaf5fa}
+.memory-layout{box-shadow:var(--shadow);border-radius:7px;overflow:hidden}
+.memory-index button[aria-selected=true]{background:#d8edf7}
+.closing{padding-top:110px}
+.site-footer{border-top:1px solid #d3e3eb}
+.text-link:hover,.site-header nav a:hover{color:var(--blue)}
+.accent-square,.reading-progress,.accent-dot{background:var(--blue)}
+.status-dot{background:var(--green)}
+.status-dot.baseline{background:#8ca0ad}
+.campaign-tabs button[aria-selected=true]{background:#dceef8}
+.campaign-tabs button[aria-selected=true] span,.campaign-tabs span{color:var(--blue)}
+@media(max-width:850px){.site-header{height:62px}.header-inner{height:62px}.hero{padding-top:105px}.facts-grid>div{padding:18px 0;border-right:0;border-bottom:1px solid #bed5e1}.facts-grid>div:last-child{border-bottom:0}.section{padding:82px 0 72px}.site-header nav a:nth-child(4){display:none}}
