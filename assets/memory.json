@@ -1,0 +1,189 @@
+{
+  "core": {
+    "title": "Evidence-Licensed Memory",
+    "date": "Persistent",
+    "status": "VerdiWM stores actions, receipts, model context, validity gates, and claim boundaries so repairs are reused only when evidence licenses transfer.",
+    "model": "Operational and epistemic control planes over world-model repair campaigns",
+    "dataset": "Run receipts, paired probes, replay artifacts, metrics, and verifier outputs",
+    "intervention": "Claim-licensed repair memory and certified transfer",
+    "evidence": "Action -> receipt -> settlement vector -> claim-frontier update",
+    "docs": [
+      {
+        "type": "Memory Contract",
+        "title": "VerdiWM Research Memory Graph",
+        "href": "assets/docs/verdiwm-memory-graph.md",
+        "summary": "Defines each node as a bounded repair episode with time, model, dataset, intervention, gate status, and claim scope.",
+        "points": [
+          "Indexes model changes by claim scope rather than by loose chat history.",
+          "Connects experiment artifacts to reusable repair decisions.",
+          "Keeps the page-level visualization aligned with the evidence contract."
+        ]
+      },
+      {
+        "type": "Claim Gate",
+        "title": "Evidence Claim Gate Skill",
+        "href": "assets/docs/verdiwm-claim-gate-skill.md",
+        "summary": "Defines when a VerdiWM result is allowed to become a reusable repair claim.",
+        "points": [
+          "Separates environment success from video or VLM audit evidence.",
+          "Requires action requests, execution receipts, and verification artifacts.",
+          "Updates the claim frontier only when evidence is sufficient."
+        ]
+      }
+    ]
+  },
+  "ctrlworld-lamo": {
+    "title": "Ctrl-World LaMo Repair",
+    "date": "2026-06-15",
+    "status": "A physical-consistency diagnosis found copy-current-frame behavior and weak action-driven latent transition.",
+    "model": "Ctrl-World SVD-UNet with action encoder",
+    "dataset": "Ctrl-World action-conditioned rollout data",
+    "intervention": "LaMo latent motion prior, drift loss, frozen SVD/VAE parts, hierarchical LR",
+    "evidence": "WorldArena metrics, PSNR/SSIM/LPIPS/FID, qualitative replay, and validity-gate annotations",
+    "docs": [
+      {
+        "type": "Generated Skill",
+        "title": "Ctrl-World + LaMo Fusion Training Skill",
+        "href": "assets/docs/Lamo_SKILL.md",
+        "summary": "A concrete architecture and training recipe for adding latent motion priors to Ctrl-World.",
+        "points": [
+          "Adds a motion-prior branch and drift readout in latent space.",
+          "Keeps stable SVD/VAE components frozen while training action-sensitive layers.",
+          "Uses targeted ablations to test whether motion is action-conditioned."
+        ]
+      },
+      {
+        "type": "Claim Gate",
+        "title": "Evidence Claim Gate Skill",
+        "href": "assets/docs/verdiwm-claim-gate-skill.md",
+        "summary": "Records how the LaMo intervention should be promoted only after evidence clears the claim gate.",
+        "points": [
+          "Do not treat a lower scalar loss as sufficient mechanism evidence.",
+          "Require replay or latent-separation checks before widening the claim.",
+          "Keep the intervention scoped to the Ctrl-World physical-consistency failure mode."
+        ]
+      }
+    ]
+  },
+  "dino-rep": {
+    "title": "Cosmos-Predict2 REP Repair",
+    "date": "2026-06-16",
+    "status": "REP uses representation signals to improve structure, geometry, and motion while exposing an appearance-consistency boundary.",
+    "model": "Cosmos-Predict2 video-to-world rollout model",
+    "dataset": "BridgeData replay set with WorldArena-style metrics",
+    "intervention": "Train-test aligned DINO-REP conditioning",
+    "evidence": "Semantic alignment, depth, flow, motion smoothness, qualitative replay, and gate-limited claim scope",
+    "docs": [
+      {
+        "type": "Repair Skill",
+        "title": "DINO-REP Cosmos-Predict2 Repair Skill",
+        "href": "assets/docs/verdiwm-dino-rep-skill.md",
+        "summary": "Encodes the REP intervention and the next-patch rule for appearance-consistency boundaries.",
+        "points": [
+          "Treats depth and motion gains separately from appearance consistency.",
+          "Uses metric deltas to route the next patch rather than stopping at a score.",
+          "Targets REP injection position and appearance retention when needed."
+        ]
+      }
+    ]
+  },
+  "robocoin": {
+    "title": "RoboCOIN Transfer",
+    "date": "2026-07-02",
+    "status": "The agent selected a compatible action-conditioned video-to-world setup from dataset structure, embodiment, viewpoint, and action interface.",
+    "model": "DreamDojo/Cosmos Predict2 action-conditioned video-to-world",
+    "dataset": "RoboCOIN-DataManager / Agilex Cobot Magic",
+    "intervention": "Dataset adapter, embodiment-aware base-model selection, no-action control replay",
+    "evidence": "Green-folder, red-folder, and three-view consistency qualitative comparisons",
+    "docs": [
+      {
+        "type": "Transfer Skill",
+        "title": "RoboCOIN Transfer Adapter Skill",
+        "href": "assets/docs/verdiwm-robocoin-transfer-skill.md",
+        "summary": "Documents how the transfer node maps dataset and robot metadata into a model adaptation decision.",
+        "points": [
+          "Uses embodiment and camera metadata before choosing the base model.",
+          "Keeps no-action prediction as an overfitting control.",
+          "Scopes the claim to selected RoboCOIN tasks and replay evidence."
+        ]
+      }
+    ]
+  },
+  "robolab-rl": {
+    "title": "Action-Quality Rollouts",
+    "date": "2026-07-22",
+    "status": "The action-quality node checks whether long-horizon world-model repair improves policy rollouts under environment-grounded success criteria.",
+    "model": "Cosmos3-DROID policy",
+    "dataset": "RoboLab120 block-stacking rollouts",
+    "intervention": "Reward-bounded RL with safety and invalid-action penalties",
+    "evidence": "Block-stack original-vs-RL paired rollouts and reward contract",
+    "docs": [
+      {
+        "type": "Reward Skill",
+        "title": "RoboLab120 Policy-RL Reward Skill",
+        "href": "assets/docs/verdiwm-robolab-rl-skill.md",
+        "summary": "Defines the RL reward and its constraints so progress cannot fake terminal success.",
+        "points": [
+          "Terminal success comes from RoboLab, not VLM scoring.",
+          "Failed trajectories are capped below successful trajectories.",
+          "Video and VLM checks remain audit-only."
+        ]
+      }
+    ]
+  },
+  "franka-real": {
+    "title": "FRANKA Real-Robot Trials",
+    "date": "2026-07-27",
+    "status": "The real-robot node compares original Cosmos3 and repaired Cosmos3 on stack, fold, and occluded drawer manipulation.",
+    "model": "Repaired Cosmos3 real-robot policy stack",
+    "dataset": "FRANKA real-world task videos",
+    "intervention": "Real-robot transfer with improved grasping, path planning, and occlusion handling",
+    "evidence": "4x H.264 comparison videos for stack, tablecloth, and drawer tasks",
+    "docs": [
+      {
+        "type": "Real-Robot Skill",
+        "title": "FRANKA Real-Robot Transfer Skill",
+        "href": "assets/docs/verdiwm-franka-real-robot-skill.md",
+        "summary": "Summarizes the task set, observed original failures, and repaired Cosmos3 behavior.",
+        "points": [
+          "Tracks stack, fold, and drawer tasks under the same real-robot section.",
+          "Uses accelerated public videos for presentation, not for changing task labels.",
+          "Links each qualitative claim to a visible comparison artifact."
+        ]
+      }
+    ]
+  },
+  "claim-gate": {
+    "title": "Frozen Verifier",
+    "date": "Gate",
+    "status": "The verifier node prevents the memory graph from turning every observation into a broad claim.",
+    "model": "Model-agnostic claim policy",
+    "dataset": "Execution receipts, metrics, replays, and environment outcomes",
+    "intervention": "Independent verification before claim-frontier update",
+    "evidence": "Pass/fail gates and bounded claim scopes",
+    "docs": [
+      {
+        "type": "Claim Gate",
+        "title": "Evidence Claim Gate Skill",
+        "href": "assets/docs/verdiwm-claim-gate-skill.md",
+        "summary": "Defines the gate logic for promoting a result into a reusable memory.",
+        "points": [
+          "Record the proposed intervention and execution receipt.",
+          "Verify success with the authority appropriate for the claim.",
+          "Keep video/VLM audit evidence separate from environment success."
+        ]
+      },
+      {
+        "type": "Memory Contract",
+        "title": "VerdiWM Research Memory Graph",
+        "href": "assets/docs/verdiwm-memory-graph.md",
+        "summary": "Explains how the graph indexes evidence by model, dataset, intervention, and claim scope.",
+        "points": [
+          "Prevents score-only memory from hiding mechanism failures.",
+          "Makes prior patches inspectable before selecting the next action.",
+          "Connects knowledge nodes to concrete skill documents."
+        ]
+      }
+    ]
+  }
+}

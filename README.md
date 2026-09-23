@@ -1,3 +1,5 @@
 # VerdiWM Anonymous Project Page
 
-Static anonymous project page for VerdiWM: Verifiable Differential Repair for World Models.
+A static anonymous project page for VerdiWM: Verifiable Differential Repair for World Models.
+
+The page is intentionally authored and published without personal names, emails, or author identifiers.
