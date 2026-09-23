@@ -97,3 +97,10 @@ img,video{max-width:100%;display:block}
 .paired-group .video-card{display:grid;grid-template-rows:subgrid;grid-row:span 3;row-gap:0}
 .paired-group .native-video{align-self:start}
 @media(max-width:720px){.paired-group .video-grid{row-gap:18px}.paired-group .video-card{display:block;grid-row:auto}}
+/* Upcoming project resources, separate from the section navigation. */
+.upcoming-resources{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:22px auto 0}
+.upcoming-resource{display:inline-flex;align-items:center;gap:11px;min-width:136px;padding:11px 18px;border:1px solid var(--line2);border-radius:16px;background:var(--surface2);color:var(--text);text-align:left;cursor:default;opacity:1}
+.upcoming-resource i{font-size:1.15rem;color:var(--cyan)}
+.upcoming-resource strong{display:block;font-size:.83rem;font-weight:750;line-height:1.4}
+.upcoming-resource small{display:block;font-size:.68rem;color:var(--muted);line-height:1.5;margin-top:2px}
+@media(max-width:720px){.upcoming-resources{max-width:330px;gap:10px}.upcoming-resource{flex:1 1 calc(50% - 10px);min-width:0;padding:10px 14px}}
