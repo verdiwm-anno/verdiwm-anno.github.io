@@ -54,3 +54,27 @@ body:before{opacity:.055;background-image:radial-gradient(#2b76b5 .45px,transpar
 .dialog-toolbar{border-color:rgba(220,239,249,.22)}
 .dialog-toolbar a{color:#a9d9ef}
 .noscript-notice{background:#e7f2f7}
+/* Reference-style rhythm and reliable video frames. */
+.hero{background:linear-gradient(180deg,#edf7fc 0%,#f4f9fc 72%)}
+.hero-heading{padding-top:18px}
+.hero h1{max-width:760px}
+.section-top{border-top-width:1px}
+.section-intro p,.campaign-heading>p,.archive-heading>p{max-width:560px}
+.campaign-tabs{background:rgba(255,255,255,.62);border:1px solid var(--line);border-bottom:2px solid #b8d2e1;padding:4px;border-radius:6px}
+.campaign-tabs button{border-radius:4px;padding:15px 14px}
+.campaign-tabs button[aria-selected=true]{background:#dceef8}
+.campaign-tabs button:after{display:none}
+.campaign-tabs span{color:var(--blue)}
+video{width:100%;height:auto;aspect-ratio:auto !important;object-fit:contain;background:#e5f1f7;border:1px solid #c5d9e5;border-radius:5px}
+.paired-media video,.replay-workbench>video,.replay-grid video,.archive-video-grid video,.archive-wide-media video{aspect-ratio:auto !important;object-fit:contain;background:#0b2234}
+.paired-media,.replay-grid,.archive-video-grid{background:transparent}
+.paired-media figure,.replay-grid figure,.archive-video-grid figure{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.replay-workbench{border-radius:7px;padding:14px}
+.replay-workbench>video{border-radius:5px}
+.archive-block{background:rgba(255,255,255,.38);padding:55px 24px 68px;margin:0 -24px;padding-inline:24px;border-color:#c4d9e5}
+.archive-block:first-of-type{border-top:0}
+.archive-video-grid figcaption,.archive-wide-media figcaption{background:#fff}
+.archive-figure-grid .paper-figure{background:#fff;border:1px solid var(--line);border-radius:6px;padding:9px;overflow:hidden}
+.archive-figure-grid .paper-figure figcaption{padding:2px 3px 4px}
+.memory-section{border-top:1px solid #c5dbe7}
+@media(max-width:850px){.site-header nav a:nth-child(4){display:none}.archive-block{margin-inline:-17px;padding-inline:17px}.campaign-tabs{border-radius:5px}}
