@@ -1,591 +1,524 @@
 <!DOCTYPE html>
+
 <html data-theme="light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
-  <meta content="VerdiWM: Verifiable Differential Repair for World Models. Five experimental campaigns, complete metrics, replay videos, and evidence-licensed research memory." name="description"/>
-  <meta content="#f3f8fd" name="theme-color"/>
-  <meta content="light dark" name="color-scheme"/>
-  <meta content="VerdiWM — Verifiable Differential Repair for World Models" property="og:title"/>
-  <meta content="website" property="og:type"/>
-  <meta content="https://verdiwm-anno.github.io/" property="og:url"/>
-  <meta content="https://verdiwm-anno.github.io/assets/social-preview.jpg" property="og:image"/>
-  <link href="https://verdiwm-anno.github.io/" rel="canonical"/>
-  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-  <title>
-   VerdiWM | Verifiable Differential Repair for World Models
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
-  <link href="assets/confal-template.css?v=1" rel="stylesheet"/>
-  <link href="assets/site.css?v=resources-1" rel="stylesheet"/>
-  <script defer="" src="assets/site.js?v=confal-1">
-  </script>
- </head>
- <body>
-  <a class="skip-link" href="#main">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="VERDI learns reusable world-model improvements from verified interventions. Nine-backbone transfer results, downstream visualizations, and paired Franka real-robot videos." name="description"/>
+<meta content="#f3f8fd" name="theme-color"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="VERDI: Verified Contradictions for Continual World-Model Optimization" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://verdiwm-anno.github.io/" property="og:url"/>
+<meta content="https://verdiwm-anno.github.io/assets/social-preview.jpg" property="og:image"/>
+<link href="https://verdiwm-anno.github.io/" rel="canonical"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<title>VERDI: Verified Contradictions for Continual World-Model Optimization</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<link href="assets/confal-template.css?v=1" rel="stylesheet"/>
+<link href="assets/site.css?v=iclr-revision-20261115" rel="stylesheet"/>
+<script defer="" src="assets/site.js?v=confal-1">
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">
    Skip to content
   </a>
-  <div class="progress-track">
-   <div class="progress-fill" id="progress">
-   </div>
-  </div>
-  <div class="nav-shell">
-   <nav aria-label="Project page sections" class="nav">
-    <a class="brand" href="#home">
-     Verdi
-     <span>
-      WM
-     </span>
-    </a>
-    <div class="nav-links" id="navLinks">
-     <a class="nav-link" href="#overview-section">
+<div class="progress-track">
+<div class="progress-fill" id="progress">
+</div>
+</div>
+<div class="nav-shell">
+<nav aria-label="Project page sections" class="nav">
+<a class="brand" href="#home">VERDI</a>
+<div class="nav-links" id="navLinks">
+<a class="nav-link" href="#overview-section">
       Overview
      </a>
-     <a class="nav-link" href="#pipeline-section">
+<a class="nav-link" href="#pipeline-section">
       Method
-     </a>
-     <a class="nav-link" href="#evaluation-section">
+     </a><a class="nav-link" href="#transfer-section">Transfer</a><a class="nav-link" href="#downstream-section">Downstream</a>
+<a class="nav-link" href="#evaluation-section">
       Ctrl-World
      </a>
-     <a class="nav-link" href="#worldarena-section">
+<a class="nav-link" href="#worldarena-section">
       REP
      </a>
-     <a class="nav-link" href="#robocoin-section">
+<a class="nav-link" href="#robocoin-section">
       RoboCOIN
      </a>
-     <a class="nav-link" href="#action-quality-section">
+<a class="nav-link" href="#action-quality-section">
       Policy RL
      </a>
-     <a class="nav-link" href="#franka-section">
+<a class="nav-link" href="#franka-section">
       Real robot
      </a>
-     <a class="nav-link" href="#memory-graph-section">
+<a class="nav-link" href="#memory-graph-section">
       Memory
      </a>
-    </div>
-    <button aria-label="Switch to dark mode" class="theme-toggle" id="themeToggle" title="Switch to dark mode" type="button">
-     <svg aria-hidden="true" class="theme-sun" viewbox="0 0 24 24">
-      <circle cx="12" cy="12" r="4">
-      </circle>
-      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42">
-      </path>
-     </svg>
-     <svg aria-hidden="true" class="theme-moon" viewbox="0 0 24 24">
-      <path d="M20.9 13.1A9 9 0 0 1 10.9 3.1a9 9 0 1 0 10 10Z">
-      </path>
-     </svg>
-    </button>
-   </nav>
-  </div>
-  <header class="hero" id="home">
-   <canvas aria-hidden="true" id="hero-canvas">
-   </canvas>
-   <div class="hero-vignette">
-   </div>
-   <div class="hero-content">
-    <div class="eyebrow">
-     World Models · Differential Repair · Frozen Verification
-    </div>
-    <h1 class="title">
-     Verdi
-     <span class="wm">
-      WM
-     </span>
-    </h1>
-    <div class="authors">
+</div>
+<button aria-label="Switch to dark mode" class="theme-toggle" id="themeToggle" title="Switch to dark mode" type="button">
+<svg aria-hidden="true" class="theme-sun" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="4">
+</circle>
+<path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42">
+</path>
+</svg>
+<svg aria-hidden="true" class="theme-moon" viewbox="0 0 24 24">
+<path d="M20.9 13.1A9 9 0 0 1 10.9 3.1a9 9 0 1 0 10 10Z">
+</path>
+</svg>
+</button>
+</nav>
+</div>
+<header class="hero" id="home">
+<canvas aria-hidden="true" id="hero-canvas">
+</canvas>
+<div class="hero-vignette">
+</div>
+<div class="hero-content">
+<div class="eyebrow">Verified Contradictions · Continual World-Model Optimization</div>
+<h1 class="title">VERDI</h1>
+<div class="authors">
      Anonymous authors
     </div>
-    <div class="hero-actions">
-     <a class="pill-link" href="#pipeline-section">
-      <i aria-hidden="true" class="fa-solid fa-diagram-project">
-      </i>
+<div class="hero-actions">
+<a class="pill-link" href="#pipeline-section">
+<i aria-hidden="true" class="fa-solid fa-diagram-project">
+</i>
       Method
      </a>
-     <a class="pill-link" href="#evaluation-section">
-      <i aria-hidden="true" class="fa-solid fa-chart-column">
-      </i>
+<a class="pill-link" href="#evaluation-section">
+<i aria-hidden="true" class="fa-solid fa-chart-column">
+</i>
       Experiments
      </a>
-     <a class="pill-link" href="#franka-section">
-      <i aria-hidden="true" class="fa-solid fa-play">
-      </i>
+<a class="pill-link" href="#franka-section">
+<i aria-hidden="true" class="fa-solid fa-play">
+</i>
       Robot videos
      </a>
-     <a class="pill-link" href="#memory-graph-section">
-      <i aria-hidden="true" class="fa-solid fa-book-open">
-      </i>
+<a class="pill-link" href="#memory-graph-section">
+<i aria-hidden="true" class="fa-solid fa-book-open">
+</i>
       Research memory
      </a>
-    </div>
-    <div class="resource-actions upcoming-resources" role="group" aria-label="Project resources — coming soon">
-     <button class="upcoming-resource" type="button" disabled>
-      <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
-      <span><strong>arXiv</strong><small>Coming soon</small></span>
-     </button>
-     <button class="upcoming-resource" type="button" disabled>
-      <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
-      <span><strong>Paper</strong><small>Coming soon</small></span>
-     </button>
-     <button class="upcoming-resource" type="button" disabled>
-      <i class="fa-brands fa-github" aria-hidden="true"></i>
-      <span><strong>GitHub</strong><small>Coming soon</small></span>
-     </button>
-    </div>
-   </div>
-   <a class="scroll-hint" href="#overview-section">
-    <span>
+</div>
+<div aria-label="Project resources" class="resource-actions upcoming-resources" role="group">
+<button class="upcoming-resource" disabled="" type="button">
+<i aria-hidden="true" class="fa-solid fa-file-lines"></i>
+<span><strong>arXiv</strong><small>Coming soon</small></span>
+</button>
+<a class="upcoming-resource available-resource" href="assets/docs/VERDI_ICLR2027_Revised_Paper.pdf" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-solid fa-file-pdf"></i><span><strong>Revised paper</strong><small>PDF · revisions in blue</small></span></a>
+<button class="upcoming-resource" disabled="" type="button">
+<i aria-hidden="true" class="fa-brands fa-github"></i>
+<span><strong>GitHub</strong><small>Coming soon</small></span>
+</button>
+</div>
+</div>
+<a class="scroll-hint" href="#overview-section">
+<span>
      Explore
     </span>
-    <i>
-    </i>
-   </a>
-  </header>
-  <main class="page" id="main">
-   <section class="section" id="overview-section">
-    <div class="section-head">
-     <div>
-      <div class="kicker">
-       01 · Overview
-      </div>
-      <h2>
-       Verifiable differential repair for world models.
-      </h2>
-     </div>
-     <p class="section-note">
-      Diagnose a model failure, execute a targeted intervention, and verify what the evidence supports.
-     </p>
-    </div>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: Figure 1 from the VerdiWM paper comparing VerdiWM with traditional research agents." data-lightbox="" href="assets/figures/paper-introduction-figure1.png">
-      <div class="asset-frame white-bg">
-       <img alt="Figure 1 from the VerdiWM paper comparing VerdiWM with traditional research agents." height="980" loading="lazy" src="assets/figures/paper-introduction-figure1.png" width="1730"/>
-      </div>
-     </a>
-     <figcaption>
-      Figure 1 from the VerdiWM paper comparing VerdiWM with traditional research agents.
-      <a href="assets/figures/paper-introduction-figure1.png" rel="noopener" target="_blank">
-       Full resolution ↗
-      </a>
-     </figcaption>
-    </figure>
-    <div class="contrib-grid">
-     <article class="contrib card">
-      <b>
-       Interventional diagnosis
-      </b>
-      <p>
-       Paired probes isolate action sensitivity, context retention, first-frame anchoring, and sampler stress.
-      </p>
-     </article>
-     <article class="contrib card">
-      <b>
-       Localized repair
-      </b>
-      <p>
-       Motion priors, representation targets, adapters, and policy updates address specific failure mechanisms.
-      </p>
-     </article>
-     <article class="contrib card">
-      <b>
-       Independent verification
-      </b>
-      <p>
-       Frozen evaluators assess metrics, replay fidelity, protected trade-offs, and environment outcomes.
-      </p>
-     </article>
-     <article class="contrib card">
-      <b>
-       Evidence-licensed memory
-      </b>
-      <p>
-       Repair knowledge is reused only within its supported claim scope; unsupported transfer leads to abstention.
-      </p>
-     </article>
-    </div>
-   </section>
-   <section class="section" id="pipeline-section">
-    <div class="section-head">
-     <div>
-      <div class="kicker">
-       02 · Method
-      </div>
-      <h2>
-       From diagnosis to claim-scoped memory.
-      </h2>
-     </div>
-     <p class="section-note">
-      The execution loop and verification loop have separate authority. Each intervention leaves a receipt before a claim is updated.
-     </p>
-    </div>
-    <div class="method-layout">
-     <figure class="paper-media card">
-      <a aria-label="Enlarge figure: Paper figure: VerdiWM online decision loop for probing a world model, selecting repairs, executing trials, verifying outcomes, and accumulating repair knowledge." data-lightbox="" href="assets/figures/paper-verdiwm-overview.png">
-       <div class="asset-frame white-bg">
-        <img alt="Paper figure: VerdiWM online decision loop for probing a world model, selecting repairs, executing trials, verifying outcomes, and accumulating repair knowledge." height="2430" loading="lazy" src="assets/figures/paper-verdiwm-overview.png" width="4320"/>
-       </div>
-      </a>
-      <figcaption>
-       Pipeline overview. The loop separates operational side effects from epistemic claim updates.
-              Every trial produces a receipt; every reusable repair needs a gate-passing
-              settlement vector rather than a single favorable score.
-       <a href="assets/figures/paper-verdiwm-overview.png" rel="noopener" target="_blank">
-        Full resolution ↗
-       </a>
-      </figcaption>
-     </figure>
-     <div class="method-cards">
-      <article class="method-card card">
-       <b>
+<i>
+</i>
+</a>
+</header>
+<main class="page" id="main">
+<section class="section" id="overview-section">
+<div class="section-head">
+<div>
+<div class="kicker">01 · Overview</div>
+<h2>Verified contradictions for continual world-model optimization.</h2>
+</div>
+<p class="section-note">Shared probes reveal how models respond to interventions. Verified outcomes guide operator reuse and refine the probes for subsequent optimization.</p>
+</div>
+<figure class="paper-media card">
+<a aria-label="Enlarge figure: Figure 1. VERDI characterizes interventional responses, verifies target-side outcomes, and uses contradictions to refine reusable optimization knowledge." data-lightbox="" href="assets/figures/revision_introduction.png">
+<div class="asset-frame white-bg">
+<img alt="Figure 1. VERDI characterizes interventional responses, verifies target-side outcomes, and uses contradictions to refine reusable optimization knowledge." height="1458" loading="lazy" src="assets/figures/revision_introduction.png" width="2592"/>
+</div>
+</a>
+<figcaption>Figure 1. VERDI characterizes interventional responses, verifies target-side outcomes, and uses contradictions to refine reusable optimization knowledge. <a href="assets/figures/revision_introduction.png" rel="noopener" target="_blank">Full resolution ↗</a></figcaption>
+</figure>
+<div class="contrib-grid">
+<article class="contrib card">
+<b>Interventional responses</b>
+<p>Shared probes measure action sensitivity, context dependence, and other responses that predict where an operator can help.</p>
+</article>
+<article class="contrib card">
+<b>Targeted optimization</b>
+<p>Model-specific operators address diagnosed failures while respecting the target model’s interfaces and evaluation contract.</p>
+</article>
+<article class="contrib card">
+<b>Frozen verification</b>
+<p>Paired target experiments classify positive, null, and harmful outcomes under fixed utility and protected-metric criteria.</p>
+</article>
+<article class="contrib card">
+<b>Continual refinement</b>
+<p>Verified contradictions motivate new probes; held-out replay and calibration determine which refinements enter the archive.</p>
+</article>
+</div>
+</section>
+<section class="section" id="pipeline-section">
+<div class="section-head">
+<div>
+<div class="kicker">02 · Method</div>
+<h2>Probe, retrieve, verify, and refine.</h2>
+</div>
+<p class="section-note">VERDI connects model-specific optimization to an archive of verified outcomes. Operator knowledge and the response geometry used for retrieval evolve together.</p>
+</div>
+<div class="method-layout">
+<figure class="paper-media card">
+<a aria-label="Enlarge figure: Figure 2. Shared probes, response-guided operator retrieval, frozen verification, and archive updates form the continual optimization loop." data-lightbox="" href="assets/figures/revision_method.png">
+<div class="asset-frame white-bg">
+<img alt="Figure 2. Shared probes, response-guided operator retrieval, frozen verification, and archive updates form the continual optimization loop." height="1458" loading="lazy" src="assets/figures/revision_method.png" width="2592"/>
+</div>
+</a>
+<figcaption>Figure 2. Shared probes, response-guided operator retrieval, frozen verification, and archive updates form the continual optimization loop. <a href="assets/figures/revision_method.png" rel="noopener" target="_blank">Full resolution ↗</a></figcaption>
+</figure>
+<div class="method-cards">
+<article class="method-card card">
+<b>
         01 · Probe
        </b>
-       <p>
+<p>
         Measure the model-specific response to controlled interventions.
        </p>
-      </article>
-      <article class="method-card card">
-       <b>
+</article>
+<article class="method-card card">
+<b>
         02 · Repair
        </b>
-       <p>
+<p>
         Choose a scoped intervention while preserving fixed interfaces and frozen components.
        </p>
-      </article>
-      <article class="method-card card">
-       <b>
+</article>
+<article class="method-card card">
+<b>
         03 · Verify
        </b>
-       <p>
+<p>
         Settle metrics, controls, validity gates, and environment success using an independent verifier.
        </p>
-      </article>
-      <article class="method-card card">
-       <b>
+</article>
+<article class="method-card card">
+<b>
         04 · Remember
        </b>
-       <p>
+<p>
         Store the model, intervention, receipt, evidence, and claim boundary for certified transfer.
        </p>
-      </article>
-     </div>
-    </div>
-   </section>
-   <section class="section" id="evaluation-section">
-    <div class="section-head">
-     <div>
-      <div class="kicker">
-       03 · Ctrl-World
-      </div>
-      <h2>
+</article>
+</div>
+</div>
+</section><section class="section" id="transfer-section"><div class="section-head"><div><div class="kicker">03 · Transfer</div><h2>Nine backbones. Verified transfer outcomes.</h2></div><p class="section-note">Leave-one-backbone-out evaluation covers 27 campaign–seed units and 216 transfer decisions. Each target contributes 24 decisions.</p></div><div class="result-highlights">
+<article class="card"><strong>82.9%</strong><span>Effect-sign accuracy · 179/216</span></article>
+<article class="card"><strong>66.5%</strong><span>Fewer trials than cold start</span></article>
+<article class="card"><strong>47.2%</strong><span>Coverage · 102/216 accepted</span></article>
+<article class="card"><strong>5.9%</strong><span>Negative-transfer risk · 6/102</span></article></div>
+<p class="campaign-copy">Gated VERDI reaches the first verified positive in 3.83 trials and 105 GPU-h, compared with 11.41 trials and 318 GPU-h for cold start. Of 102 accepted transfers, 68 are positive, 28 null, and 6 harmful. Trial and compute means first average tasks and repeated searches within a campaign–seed unit, then successful units within each backbone, with equal weight across backbones. Full VERDI completes 24/27 campaigns.</p><div class="metric-panel card"><div aria-label="Search efficiency and accepted-transfer outcomes" class="table-scroll" role="region" tabindex="0"><table class="data-table"><caption>Search efficiency and accepted-transfer outcomes</caption><thead><tr><th scope="col">Strategy</th><th scope="col">Trials to first verified positive</th><th scope="col">GPU-h</th><th scope="col">Coverage</th><th scope="col">Negative-transfer risk</th></tr></thead><tbody><tr><th scope="row">Cold start</th><td>11.41 [10.54, 12.33]</td><td>318 [295.4, 342.3]</td><td>—</td><td>—</td></tr><tr><th scope="row">Unconditional reuse</th><td>4.21 [3.83, 4.60]</td><td>123 [110.2, 136.1]</td><td>216/216 = 100%</td><td>73/216 = 33.8%</td></tr><tr><th scope="row">Gated VERDI</th><td>3.83 [3.49, 4.17]</td><td>105 [92.4, 118.4]</td><td>102/216 = 47.2% [44.9%, 50.0%]</td><td>6/102 = 5.9% [2.0%, 10.1%]</td></tr></tbody></table></div></div><div class="metric-panel card"><div aria-label="All nine held-out targets · Appendix Table 9" class="table-scroll" role="region" tabindex="0"><table class="data-table" id="nine-backbone-results"><caption>All nine held-out targets · Appendix Table 9</caption><thead><tr><th scope="col">Held-out target</th><th scope="col">Correct signs / 24</th><th scope="col">Cold trials / GPU-h</th><th scope="col">Unconditional trials / GPU-h</th><th scope="col">Gated trials / GPU-h</th><th scope="col">Accepted (positive / null / harmful)</th><th scope="col">Coverage</th><th scope="col">Risk</th></tr></thead><tbody><tr><th scope="row">Ctrl-World</th><td>17 / 24</td><td>10.1 / 286</td><td>3.8 / 104</td><td>3.3 / 84</td><td>11 (8 / 2 / 1)</td><td>11/24 = 45.8%</td><td>1/11 = 9.1%</td></tr><tr><th scope="row">Cosmos-Predict 2</th><td>21 / 24</td><td>12.4 / 344</td><td>4.5 / 132</td><td>3.9 / 108</td><td>10 (7 / 3 / 0)</td><td>10/24 = 41.7%</td><td>0/10 = 0.0%</td></tr><tr><th scope="row">Cosmos3</th><td>22 / 24</td><td>11.1 / 306</td><td>4.0 / 118</td><td>3.6 / 96</td><td>11 (8 / 2 / 1)</td><td>11/24 = 45.8%</td><td>1/11 = 9.1%</td></tr><tr><th scope="row">IRASim</th><td>21 / 24</td><td>10.7 / 298</td><td>3.6 / 102</td><td>3.5 / 91</td><td>12 (9 / 3 / 0)</td><td>12/24 = 50.0%</td><td>0/12 = 0.0%</td></tr><tr><th scope="row">OccWorld</th><td>17 / 24</td><td>13.2 / 361</td><td>4.8 / 142</td><td>4.4 / 126</td><td>11 (7 / 4 / 0)</td><td>11/24 = 45.8%</td><td>0/11 = 0.0%</td></tr><tr><th scope="row">DreamerV3</th><td>22 / 24</td><td>9.6 / 267</td><td>3.3 / 94</td><td>3.0 / 76</td><td>12 (6 / 5 / 1)</td><td>12/24 = 50.0%</td><td>1/12 = 8.3%</td></tr><tr><th scope="row">TD-MPC2</th><td>19 / 24</td><td>13.8 / 385</td><td>5.2 / 153</td><td>4.5 / 128</td><td>12 (8 / 3 / 1)</td><td>12/24 = 50.0%</td><td>1/12 = 8.3%</td></tr><tr><th scope="row">DINO-WM</th><td>20 / 24</td><td>11.6 / 320</td><td>4.0 / 117</td><td>3.7 / 101</td><td>13 (9 / 4 / 0)</td><td>13/24 = 54.2%</td><td>0/13 = 0.0%</td></tr><tr><th scope="row">V-JEPA 2</th><td>20 / 24</td><td>10.17 / 294</td><td>4.7 / 146</td><td>4.54 / 137</td><td>10 (6 / 2 / 2)</td><td>10/24 = 41.7%</td><td>2/10 = 20.0%</td></tr><tr><th scope="row"><strong>Total / macro mean</strong></th><td><strong>179 / 216 = 82.9%</strong></td><td><strong>11.41 / 318</strong></td><td><strong>4.21 / 123</strong></td><td><strong>3.83 / 105</strong></td><td><strong>102 (68 / 28 / 6)</strong></td><td><strong>102/216 = 47.2%</strong></td><td><strong>6/102 = 5.9%</strong></td></tr></tbody></table></div></div><p class="caption">Effect-sign accuracy measures the direction of utility change. Positive, null, and harmful outcomes are assigned by the frozen verifier using gain thresholds and protected metrics. Intervals resample nine backbone clusters; the full protocol is in Appendix E.1.</p><div class="metric-panel card"><div aria-label="Matched-coverage comparison · Appendix Table 28" class="table-scroll" role="region" tabindex="0"><table class="data-table"><caption>Matched-coverage comparison · Appendix Table 28</caption><thead><tr><th scope="col">Selector</th><th scope="col">Sign accuracy</th><th scope="col">Trials</th><th scope="col">Coverage</th><th scope="col">Harmful / accepted</th><th scope="col">Protected violations</th></tr></thead><tbody><tr><th scope="row">IRG</th><td>179/216 = 0.829</td><td>3.83</td><td>102/216 = 47.2%</td><td>6/102 = 5.9%</td><td>0.03</td></tr><tr><th scope="row">Response-informed RGPE</th><td>171/216 = 0.792</td><td>4.25</td><td>102/216 = 47.2%</td><td>12/102 = 11.8%</td><td>0.08</td></tr><tr><th scope="row">Learned embedding</th><td>160/216 = 0.741</td><td>4.60</td><td>102/216 = 47.2%</td><td>15/102 = 14.7%</td><td>0.10</td></tr></tbody></table></div></div></section><section class="section" id="downstream-section"><div class="section-head"><div><div class="kicker">04 · Downstream evaluations</div><h2>Control, manipulation, and navigation.</h2></div><p class="section-note">DreamerV3, V-JEPA 2, DINO-WM, and TD-MPC2 extend the task-level evidence. The figures correspond to Appendix E.5, Figures 16–19.</p></div><p class="campaign-copy">These standalone evaluations measure task outcomes after VERDI-selected interventions and are separate from the 216 LOBO transfer decisions. The table states each metric and evaluation unit.</p><div class="metric-panel card"><div aria-label="Standalone downstream results · Appendix Table 34" class="table-scroll" role="region" tabindex="0"><table class="data-table"><caption>Standalone downstream results · Appendix Table 34</caption><thead><tr><th scope="col">Backbone, task, and metric</th><th scope="col">Baseline</th><th scope="col">VERDI</th><th scope="col">Change or result</th></tr></thead><tbody><tr><th scope="row">V-JEPA 2 · Pick and Place</th><td>40/100 = 40%</td><td>75/100 = 75%</td><td>+35 pp</td></tr><tr><th scope="row">V-JEPA 2 · Tool Use</th><td>35/100 = 35%</td><td>42/100 = 42%</td><td>+7 pp</td></tr><tr><th scope="row">V-JEPA 2 · Push and Pull</th><td>21/100 = 21%</td><td>34/100 = 34%</td><td>+13 pp</td></tr><tr><th scope="row">V-JEPA 2 · Open and Close</th><td>32/100 = 32%</td><td>56/100 = 56%</td><td>+24 pp</td></tr><tr><th scope="row"><strong>V-JEPA 2 · RoboTwin overall</strong></th><td><strong>128/400 = 32.0%</strong></td><td><strong>207/400 = 51.75%</strong></td><td><strong>+19.75 pp, approximately 61.7% relative improvement</strong></td></tr><tr><th scope="row">DINO-WM · Wall Navigation (Successful trajectories / evaluated trajectories)</th><td>1/6 = 16.7%</td><td>3/6 = 50.0%</td><td>+33.3 pp; 2 additional successful trajectories</td></tr><tr><th scope="row">DINO-WM · Wall Navigation (Mean final distance to goal)</th><td>13.289 grid units</td><td>8.135 grid units</td><td>38.8% reduction</td></tr><tr><th scope="row">DINO-WM · Wall Navigation (Mean distance to goal over the trajectory)</th><td>19.247 grid units</td><td>12.841 grid units</td><td>33.3% reduction</td></tr><tr><th scope="row">DreamerV3 · Walker Walk</th><td>Cumulative return 476.5</td><td>Cumulative return 655.4</td><td>+178.9 (approximately +37.5%)</td></tr><tr><th scope="row">DreamerV3 · Reacher Hard</th><td>Mean fingertip-target distance 7.4 cm</td><td>0.3 cm</td><td>95.9% reduction</td></tr><tr><th scope="row">TD-MPC2 · Nut Assembly</th><td>Before rollout</td><td>VERDI rollout</td><td>Qualitative trajectory comparison in Layouts 1 and 2</td></tr></tbody></table></div></div><nav aria-label="Downstream visualizations" class="figure-jumps"><a href="#dreamerv3-results">DreamerV3</a><a href="#vjepa2-results">V-JEPA 2</a><a href="#dinowm-results">DINO-WM</a><a href="#tdmpc2-results">TD-MPC2</a></nav><article class="downstream-case" id="dreamerv3-results"><h3>DreamerV3 · Walker Walk and Reacher Hard</h3><p class="campaign-copy">VERDI selects teacher-guided policy distillation with DAgger for Walker and ReacherIK with PD-teacher supervision for Reacher. In the displayed trajectories, Walker return rises from 476.5 to 655.4, and Reacher mean fingertip–target distance falls from 7.4 to 0.3 cm.</p><figure class="paper-media card"><a aria-label="Enlarge DreamerV3 · Walker Walk and Reacher Hard" data-lightbox="" href="assets/figures/revision_dreamerv3.png"><div class="asset-frame white-bg"><img alt="DreamerV3 · Walker Walk and Reacher Hard: baseline and VERDI trajectories with corresponding measurements" height="1587" loading="lazy" src="assets/figures/revision_dreamerv3.png" width="2048"/></div></a><figcaption>Figure 16 in the revised manuscript. <a href="assets/figures/revision_dreamerv3.png" rel="noopener" target="_blank">Full resolution ↗</a></figcaption></figure></article><article class="downstream-case" id="vjepa2-results"><h3>V-JEPA 2 · RoboTwin</h3><p class="campaign-copy">VERDI selects Action-MoE and iteratively refines the design before freezing the final configuration. Across four task categories, each with 100 paired episodes per method, success rises from 128/400 (32.0%) to 207/400 (51.75%). The figure shows Pick and Place, Tool Use, and Open and Close; Push and Pull is included in the results table.</p><figure class="paper-media card"><a aria-label="Enlarge V-JEPA 2 · RoboTwin" data-lightbox="" href="assets/figures/revision_vjepa2.png"><div class="asset-frame white-bg"><img alt="V-JEPA 2 · RoboTwin: baseline and VERDI trajectories with corresponding measurements" height="3000" loading="lazy" src="assets/figures/revision_vjepa2.png" width="3200"/></div></a><figcaption>Figure 17 in the revised manuscript. <a href="assets/figures/revision_vjepa2.png" rel="noopener" target="_blank">Full resolution ↗</a></figcaption></figure></article><article class="downstream-case" id="dinowm-results"><h3>DINO-WM · Wall Navigation</h3><p class="campaign-copy">Across six paired start–goal conditions with a shared checkpoint and planning budget, successful trajectories increase from 1/6 to 3/6. Mean final distance falls from 13.289 to 8.135 grid units. Success requires a final distance below 4.5 grid units at control step 100. The two displayed examples illustrate improved navigation; all six paired results are listed below.</p><figure class="paper-media card"><a aria-label="Enlarge DINO-WM · Wall Navigation" data-lightbox="" href="assets/figures/revision_dinowm.png"><div class="asset-frame white-bg"><img alt="DINO-WM · Wall Navigation: baseline and VERDI trajectories with corresponding measurements" height="1700" loading="lazy" src="assets/figures/revision_dinowm.png" width="2200"/></div></a><figcaption>Figure 18 in the revised manuscript. <a href="assets/figures/revision_dinowm.png" rel="noopener" target="_blank">Full resolution ↗</a></figcaption></figure><div class="metric-panel card"><div aria-label="All six paired DINO-WM conditions · Appendix Table 35" class="table-scroll" role="region" tabindex="0"><table class="data-table"><caption>All six paired DINO-WM conditions · Appendix Table 35</caption><thead><tr><th scope="col">Evaluation condition (seed)</th><th scope="col">Baseline final distance</th><th scope="col">VERDI final distance</th><th scope="col">Baseline success</th><th scope="col">VERDI success</th></tr></thead><tbody><tr><th scope="row">10</th><td>14.707</td><td>15.831</td><td>No</td><td>No</td></tr><tr><th scope="row">11</th><td>24.727</td><td>0.337</td><td>No</td><td>Yes</td></tr><tr><th scope="row">12</th><td>5.306</td><td>1.640</td><td>No</td><td>Yes</td></tr><tr><th scope="row">13</th><td>14.439</td><td>15.037</td><td>No</td><td>No</td></tr><tr><th scope="row">14</th><td>18.858</td><td>14.990</td><td>No</td><td>No</td></tr><tr><th scope="row">15</th><td>1.695</td><td>0.973</td><td>Yes</td><td>Yes</td></tr><tr><th scope="row">Mean final distance / success count</th><td>13.289</td><td>8.135</td><td>1/6</td><td>3/6</td></tr></tbody></table></div></div></article><article class="downstream-case" id="tdmpc2-results"><h3>TD-MPC2 · Nut Assembly</h3><p class="campaign-copy">VERDI selects trust-region-constrained MPPI. The paired trajectories and alignment curves show the resulting behavior in two layouts: the baseline remains misaligned during Layout 1 and aligns later in Layout 2.</p><figure class="paper-media card"><a aria-label="Enlarge TD-MPC2 · Nut Assembly" data-lightbox="" href="assets/figures/revision_tdmpc2.png"><div class="asset-frame white-bg"><img alt="TD-MPC2 · Nut Assembly: baseline and VERDI trajectories with corresponding measurements" height="1587" loading="lazy" src="assets/figures/revision_tdmpc2.png" width="2048"/></div></a><figcaption>Figure 19 in the revised manuscript. <a href="assets/figures/revision_tdmpc2.png" rel="noopener" target="_blank">Full resolution ↗</a></figcaption></figure></article></section>
+<section class="section" id="evaluation-section">
+<div class="section-head">
+<div>
+<div class="kicker">05 · Ctrl-World</div>
+<h2>
        Physical consistency with LaMo + drift.
       </h2>
-     </div>
-     <p class="section-note">
+</div>
+<p class="section-note">
       The baseline over-preserves static appearance and under-uses action-conditioned motion. LaMo and drift regularization target this failure while preserving the backbone interface.
      </p>
-    </div>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: Paper figure: Ctrl-World physical-consistency comparison with ground truth, VerdiWM, and Ctrl-World baseline." data-lightbox="" href="assets/figures/paper-ctrlworld-physical-consistency.png">
-      <div class="asset-frame white-bg">
-       <img alt="Paper figure: Ctrl-World physical-consistency comparison with ground truth, VerdiWM, and Ctrl-World baseline." height="756" loading="lazy" src="assets/figures/paper-ctrlworld-physical-consistency.png" width="1152"/>
-      </div>
-     </a>
-     <figcaption>
-      LaMo + drift repair from the paper. VerdiWM diagnoses the Ctrl-World baseline as over-preserving static appearance
+</div>
+<figure class="paper-media card">
+<a aria-label="Enlarge figure: Paper figure: Ctrl-World physical-consistency comparison with ground truth, VERDI, and Ctrl-World baseline." data-lightbox="" href="assets/figures/paper-ctrlworld-physical-consistency.png">
+<div class="asset-frame white-bg">
+<img alt="Paper figure: Ctrl-World physical-consistency comparison with ground truth, VERDI, and Ctrl-World baseline." height="756" loading="lazy" src="assets/figures/paper-ctrlworld-physical-consistency.png" width="1152"/>
+</div>
+</a>
+<figcaption>
+      LaMo + drift repair from the paper. VERDI diagnoses the Ctrl-World baseline as over-preserving static appearance
             and under-using action-conditioned motion. The repair adds a LaMo latent
             motion prior and drift regularization while keeping the backbone interface
             fixed. Motion smoothness rises from 68.75 to 81.53; LPIPS and FID also improve.
       <a href="assets/figures/paper-ctrlworld-physical-consistency.png" rel="noopener" target="_blank">
        Full resolution ↗
       </a>
-     </figcaption>
-    </figure>
-    <h3 class="block-title">
+</figcaption>
+</figure>
+<h3 class="block-title">
      Quantitative results
     </h3>
-    <div class="metric-panel card">
-     <div aria-label="Experiment metric table" class="table-scroll" role="region" tabindex="0">
-      <table class="data-table">
-       <caption class="sr-only">
-        Ctrl-World and VerdiWM metric comparison. Higher is better unless marked ↓.
+<div class="metric-panel card">
+<div aria-label="Experiment metric table" class="table-scroll" role="region" tabindex="0">
+<table class="data-table">
+<caption class="sr-only">
+        Ctrl-World and VERDI metric comparison. Higher is better unless marked ↓.
        </caption>
-       <thead>
-        <tr>
-         <th scope="col">
+<thead>
+<tr>
+<th scope="col">
           Metric
          </th>
-         <th scope="col">
+<th scope="col">
           Ctrl-World
          </th>
-         <th scope="col">
-          VerdiWM
+<th scope="col">
+          VERDI
          </th>
-         <th scope="col">
+<th scope="col">
           Change
          </th>
-        </tr>
-       </thead>
-       <tbody>
-        <tr>
-         <th scope="row">
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">
           Semantic alignment
          </th>
-         <td>
+<td>
           90.70
          </td>
-         <td>
+<td>
           91.30
          </td>
-         <td class="gain">
+<td class="gain">
           +0.60
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Depth accuracy
          </th>
-         <td>
+<td>
           93.28
          </td>
-         <td>
+<td>
           96.16
          </td>
-         <td class="gain">
+<td class="gain">
           +2.88
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Aesthetic quality
          </th>
-         <td>
+<td>
           32.75
          </td>
-         <td>
+<td>
           36.12
          </td>
-         <td class="gain">
+<td class="gain">
           +3.37
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Background consistency
          </th>
-         <td>
+<td>
           86.37
          </td>
-         <td>
+<td>
           85.11
          </td>
-         <td class="tradeoff">
+<td class="tradeoff">
           −1.26
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Dynamic degree
          </th>
-         <td>
+<td>
           45.32
          </td>
-         <td>
+<td>
           43.78
          </td>
-         <td class="tradeoff">
+<td class="tradeoff">
           −1.54
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Flow score
          </th>
-         <td>
+<td>
           26.54
          </td>
-         <td>
+<td>
           30.35
          </td>
-         <td class="gain">
+<td class="gain">
           +3.81
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Motion smoothness
          </th>
-         <td>
+<td>
           68.75
          </td>
-         <td>
+<td>
           81.53
          </td>
-         <td class="gain">
+<td class="gain">
           +12.78
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Subject consistency
          </th>
-         <td>
+<td>
           84.31
          </td>
-         <td>
+<td>
           83.35
          </td>
-         <td class="tradeoff">
+<td class="tradeoff">
           −0.96
          </td>
-        </tr>
-       </tbody>
-      </table>
-     </div>
-    </div>
-    <p class="caption">
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p class="caption">
      WorldArena scores use a 0–100 scale. Background consistency, dynamic degree, and subject consistency remain lower. Tables 1–2 below also include PSNR, SSIM, LPIPS, and FID.
     </p>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: PDF screenshot of paper tables comparing Ctrl-World and VerdiWM metrics." data-lightbox="" href="assets/figures/paper-table-ctrlworld-metrics.png">
-      <div class="asset-frame white-bg">
-       <img alt="PDF screenshot of paper tables comparing Ctrl-World and VerdiWM metrics." height="720" loading="lazy" src="assets/figures/paper-table-ctrlworld-metrics.png" width="1242"/>
-      </div>
-     </a>
-     <figcaption>
-      Direct paper screenshot. The table screenshot is cropped from the VerdiWM PDF rather than redrawn.
-      <a href="assets/figures/paper-table-ctrlworld-metrics.png" rel="noopener" target="_blank">
-       Full resolution ↗
-      </a>
-     </figcaption>
-    </figure>
-    <h3 class="block-title">
+
+<h3 class="block-title">
      Qualitative replay · all four samples
     </h3>
-    <p class="caption">
-     Top row: ground truth. Middle row: VerdiWM. Bottom row: original Ctrl-World.
+<p class="caption">
+     Top row: ground truth. Middle row: VERDI. Bottom row: original Ctrl-World.
     </p>
-    <div class="video-grid">
-     <figure class="video-card card">
-      <figcaption>
-       <strong>
+<div class="video-grid">
+<figure class="video-card card">
+<figcaption>
+<strong>
         Sample 01
        </strong>
-       <p>
-        Ground truth / VerdiWM / Ctrl-World
+<p>
+        Ground truth / VERDI / Ctrl-World
        </p>
-      </figcaption>
-      <div class="native-video">
-       <video aria-label="Sample 01" controls="" height="576" loop="" muted="" playsinline="" poster="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610_poster.jpg" preload="none" style="aspect-ratio:960/576" width="960">
-        <source src="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4"/>
-        <a href="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Sample 01" controls="" height="576" loop="" muted="" playsinline="" poster="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610_poster.jpg" preload="none" style="aspect-ratio:960/576" width="960">
+<source src="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4"/>
+<a href="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4">
          Download video
         </a>
-       </video>
-      </div>
-      <a class="media-download" href="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" rel="noopener" target="_blank">
        Open video ↗
       </a>
-     </figure>
-     <figure class="video-card card">
-      <figcaption>
-       <strong>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
         Sample 02
        </strong>
-       <p>
-        Ground truth / VerdiWM / Ctrl-World
+<p>
+        Ground truth / VERDI / Ctrl-World
        </p>
-      </figcaption>
-      <div class="native-video">
-       <video aria-label="Sample 02" controls="" height="576" loop="" muted="" playsinline="" poster="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows_poster.jpg" preload="none" style="aspect-ratio:960/576" width="960">
-        <source src="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows.mp4" type="video/mp4"/>
-        <a href="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Sample 02" controls="" height="576" loop="" muted="" playsinline="" poster="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows_poster.jpg" preload="none" style="aspect-ratio:960/576" width="960">
+<source src="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows.mp4" type="video/mp4"/>
+<a href="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows.mp4">
          Download video
         </a>
-       </video>
-      </div>
-      <a class="media-download" href="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/sample02_original_ep2799_start14_gt_verdiwm_ctrlworld_three_rows.mp4" rel="noopener" target="_blank">
        Open video ↗
       </a>
-     </figure>
-     <figure class="video-card card">
-      <figcaption>
-       <strong>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
         Sample 03
        </strong>
-       <p>
-        Ground truth / VerdiWM / Ctrl-World
+<p>
+        Ground truth / VERDI / Ctrl-World
        </p>
-      </figcaption>
-      <div class="native-video">
-       <video aria-label="Sample 03" controls="" height="576" loop="" muted="" playsinline="" poster="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610_poster.jpg" preload="none" style="aspect-ratio:960/576" width="960">
-        <source src="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4"/>
-        <a href="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Sample 03" controls="" height="576" loop="" muted="" playsinline="" poster="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610_poster.jpg" preload="none" style="aspect-ratio:960/576" width="960">
+<source src="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4"/>
+<a href="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4">
          Download video
         </a>
-       </video>
-      </div>
-      <a class="media-download" href="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/sample03_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" rel="noopener" target="_blank">
        Open video ↗
       </a>
-     </figure>
-     <figure class="video-card card">
-      <figcaption>
-       <strong>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
         Sample 04
        </strong>
-       <p>
-        Ground truth / VerdiWM / Ctrl-World
+<p>
+        Ground truth / VERDI / Ctrl-World
        </p>
-      </figcaption>
-      <div class="native-video">
-       <video aria-label="Sample 04" controls="" height="576" loop="" muted="" playsinline="" poster="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610_poster.jpg" preload="none" style="aspect-ratio:960/576" width="960">
-        <source src="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4"/>
-        <a href="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Sample 04" controls="" height="576" loop="" muted="" playsinline="" poster="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610_poster.jpg" preload="none" style="aspect-ratio:960/576" width="960">
+<source src="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" type="video/mp4"/>
+<a href="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4">
          Download video
         </a>
-       </video>
-      </div>
-      <a class="media-download" href="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/sample04_gt_verdiwm_ctrlworld_three_rows_seed20260610.mp4" rel="noopener" target="_blank">
        Open video ↗
       </a>
-     </figure>
-    </div>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: Paper figure: multi-view consistency comparison for the Ctrl-World experiment." data-lightbox="" href="assets/figures/paper-ctrlworld-multiview-consistency.png">
-      <div class="asset-frame white-bg">
-       <img alt="Paper figure: multi-view consistency comparison for the Ctrl-World experiment." height="736" loading="lazy" src="assets/figures/paper-ctrlworld-multiview-consistency.png" width="1420"/>
-      </div>
-     </a>
-     <figcaption>
-      Paper figure for the same Ctrl-World campaign: VerdiWM improves two views
+</figure>
+</div>
+<figure class="paper-media card">
+<a aria-label="Enlarge figure: Paper figure: multi-view consistency comparison for the Ctrl-World experiment." data-lightbox="" href="assets/figures/paper-ctrlworld-multiview-consistency.png">
+<div class="asset-frame white-bg">
+<img alt="Paper figure: multi-view consistency comparison for the Ctrl-World experiment." height="736" loading="lazy" src="assets/figures/paper-ctrlworld-multiview-consistency.png" width="1420"/>
+</div>
+</a>
+<figcaption>
+      Paper figure for the same Ctrl-World campaign: VERDI improves two views
             while the paper records the remaining view-specific trade-offs.
       <a href="assets/figures/paper-ctrlworld-multiview-consistency.png" rel="noopener" target="_blank">
        Full resolution ↗
       </a>
-     </figcaption>
-    </figure>
-   </section>
-   <section class="section" id="worldarena-section">
-    <div class="section-head">
-     <div>
-      <div class="kicker">
-       04 · Cosmos-Predict2 REP
-      </div>
-      <h2>
+</figcaption>
+</figure>
+</section>
+<section class="section" id="worldarena-section">
+<div class="section-head">
+<div>
+<div class="kicker">06 · Cosmos-Predict2 REP</div>
+<h2>
        Representation repair and WorldArena evaluation.
       </h2>
-     </div>
-     <p class="section-note">
+</div>
+<p class="section-note">
       DINO representation targets improve object boundaries, scene layout, geometry, and motion; the appearance-consistency trade-offs remain explicit.
      </p>
-    </div>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: Paper figure: Cosmos-Predict2 baseline vs VerdiWM REP qualitative comparison and trend curves." data-lightbox="" href="assets/figures/paper-cosmos-predict-rep.png">
-      <div class="asset-frame white-bg">
-       <img alt="Paper figure: Cosmos-Predict2 baseline vs VerdiWM REP qualitative comparison and trend curves." height="764" loading="lazy" src="assets/figures/paper-cosmos-predict-rep.png" width="1152"/>
-      </div>
-     </a>
-     <figcaption>
-      DINO-REP repair from the paper. VerdiWM identifies unstable object boundaries, scene layout, and semantic
+</div>
+<figure class="paper-media card">
+<a aria-label="Enlarge figure: Paper figure: Cosmos-Predict2 baseline vs VERDI REP qualitative comparison and trend curves." data-lightbox="" href="assets/figures/paper-cosmos-predict-rep.png">
+<div class="asset-frame white-bg">
+<img alt="Paper figure: Cosmos-Predict2 baseline vs VERDI REP qualitative comparison and trend curves." height="764" loading="lazy" src="assets/figures/paper-cosmos-predict-rep.png" width="1152"/>
+</div>
+</a>
+<figcaption>
+      DINO-REP repair from the paper. VERDI identifies unstable object boundaries, scene layout, and semantic
             relations in Cosmos-Predict2, then injects DINO features as higher-level
             representation targets. The repair improves semantic alignment, depth,
             flow, and motion smoothness, while background and subject consistency remain
@@ -593,234 +526,220 @@
       <a href="assets/figures/paper-cosmos-predict-rep.png" rel="noopener" target="_blank">
        Full resolution ↗
       </a>
-     </figcaption>
-    </figure>
-    <figure class="video-card card">
-     <figcaption>
-      <strong>
+</figcaption>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
        REP replay and trends
       </strong>
-      <p>
+<p>
        Qualitative replay for the REP campaign: baseline is shown on the right, while the
-          VerdiWM REP prediction is compared under the same context as the paper figure above.
+          VERDI REP prediction is compared under the same context as the paper figure above.
       </p>
-     </figcaption>
-     <div class="native-video">
-      <video aria-label="REP replay and trends" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/plan2_13024_rep_oracle_with_baseline_right_poster.jpg" preload="none" style="aspect-ratio:1920/480" width="1920">
-       <source src="assets/videos/plan2_13024_rep_oracle_with_baseline_right.mp4" type="video/mp4"/>
-       <a href="assets/videos/plan2_13024_rep_oracle_with_baseline_right.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="REP replay and trends" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/plan2_13024_rep_oracle_with_baseline_right_poster.jpg" preload="none" style="aspect-ratio:1920/480" width="1920">
+<source src="assets/videos/plan2_13024_rep_oracle_with_baseline_right.mp4" type="video/mp4"/>
+<a href="assets/videos/plan2_13024_rep_oracle_with_baseline_right.mp4">
         Download video
        </a>
-      </video>
-     </div>
-     <a class="media-download" href="assets/videos/plan2_13024_rep_oracle_with_baseline_right.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/plan2_13024_rep_oracle_with_baseline_right.mp4" rel="noopener" target="_blank">
       Open video ↗
      </a>
-    </figure>
-    <h3 class="block-title">
+</figure>
+<h3 class="block-title">
      WorldArena · all eight metrics
     </h3>
-    <div class="metric-panel card">
-     <div aria-label="Experiment metric table" class="table-scroll" role="region" tabindex="0">
-      <table class="data-table">
-       <caption class="sr-only">
-        Cosmos-Predict2 and VerdiWM metric comparison. Higher is better unless marked ↓.
+<div class="metric-panel card">
+<div aria-label="Experiment metric table" class="table-scroll" role="region" tabindex="0">
+<table class="data-table">
+<caption class="sr-only">
+        Cosmos-Predict2 and VERDI metric comparison. Higher is better unless marked ↓.
        </caption>
-       <thead>
-        <tr>
-         <th scope="col">
+<thead>
+<tr>
+<th scope="col">
           Metric
          </th>
-         <th scope="col">
+<th scope="col">
           Cosmos-Predict2
          </th>
-         <th scope="col">
-          VerdiWM
+<th scope="col">
+          VERDI
          </th>
-         <th scope="col">
+<th scope="col">
           Change
          </th>
-        </tr>
-       </thead>
-       <tbody>
-        <tr>
-         <th scope="row">
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">
           Semantic alignment
          </th>
-         <td>
+<td>
           90.38
          </td>
-         <td>
+<td>
           90.82
          </td>
-         <td class="gain">
+<td class="gain">
           +0.44
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Depth accuracy
          </th>
-         <td>
+<td>
           95.35
          </td>
-         <td>
+<td>
           97.05
          </td>
-         <td class="gain">
+<td class="gain">
           +1.70
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Aesthetic quality
          </th>
-         <td>
+<td>
           36.05
          </td>
-         <td>
+<td>
           37.30
          </td>
-         <td class="gain">
+<td class="gain">
           +1.25
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Background consistency
          </th>
-         <td>
+<td>
           85.35
          </td>
-         <td>
+<td>
           82.73
          </td>
-         <td class="tradeoff">
+<td class="tradeoff">
           −2.62
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Dynamic degree
          </th>
-         <td>
+<td>
           42.18
          </td>
-         <td>
+<td>
           43.15
          </td>
-         <td class="gain">
+<td class="gain">
           +0.97
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Flow score
          </th>
-         <td>
+<td>
           29.55
          </td>
-         <td>
+<td>
           30.70
          </td>
-         <td class="gain">
+<td class="gain">
           +1.15
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Motion smoothness
          </th>
-         <td>
+<td>
           78.93
          </td>
-         <td>
+<td>
           81.31
          </td>
-         <td class="gain">
+<td class="gain">
           +2.38
          </td>
-        </tr>
-        <tr>
-         <th scope="row">
+</tr>
+<tr>
+<th scope="row">
           Subject consistency
          </th>
-         <td>
+<td>
           83.07
          </td>
-         <td>
+<td>
           81.79
          </td>
-         <td class="tradeoff">
+<td class="tradeoff">
           −1.28
          </td>
-        </tr>
-       </tbody>
-      </table>
-     </div>
-    </div>
-    <div class="contrib-grid three">
-     <article class="contrib card">
-      <b>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="contrib-grid three">
+<article class="contrib card">
+<b>
        REP leads on most WorldArena entries.
       </b>
-      <p>
+<p>
        REP is higher on semantic alignment, depth accuracy, aesthetic quality,
               dynamic degree, flow score, and motion smoothness.
       </p>
-     </article>
-     <article class="contrib card">
-      <b>
+</article>
+<article class="contrib card">
+<b>
        The largest gains are in geometry and temporal behavior.
       </b>
-      <p>
+<p>
        Depth accuracy increases from 95.35 to 97.05, and motion smoothness
               increases from 78.93 to 81.31.
       </p>
-     </article>
-     <article class="contrib card">
-      <b>
+</article>
+<article class="contrib card">
+<b>
        The baseline still keeps stronger identity and background consistency.
       </b>
-      <p>
+<p>
        Background consistency and subject consistency remain lower for REP,
               which is logged as a boundary of the REP repair rather than hidden
               inside a single aggregate score.
       </p>
-     </article>
-    </div>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: PDF screenshot of the paper table comparing Cosmos-Predict2 and VerdiWM REP on WorldArena metrics." data-lightbox="" href="assets/figures/paper-table-cosmos-rep-worldarena.png">
-      <div class="asset-frame white-bg">
-       <img alt="PDF screenshot of the paper table comparing Cosmos-Predict2 and VerdiWM REP on WorldArena metrics." height="444" loading="lazy" src="assets/figures/paper-table-cosmos-rep-worldarena.png" width="1275"/>
-      </div>
-     </a>
-     <figcaption>
-      Paper Table 3. Scores are reported on a 0–100 scale, where higher is better. This image is a direct crop from the paper.
-      <a href="assets/figures/paper-table-cosmos-rep-worldarena.png" rel="noopener" target="_blank">
-       Full resolution ↗
-      </a>
-     </figcaption>
-    </figure>
-   </section>
-   <section class="section" id="robocoin-section">
-    <div class="section-head">
-     <div>
-      <div class="kicker">
-       05 · RoboCOIN
-      </div>
-      <h2>
+</article>
+</div>
+
+</section>
+<section class="section" id="robocoin-section">
+<div class="section-head">
+<div>
+<div class="kicker">07 · RoboCOIN</div>
+<h2>
        Adaptation to a new robot embodiment.
       </h2>
-     </div>
-     <p class="section-note">
+</div>
+<p class="section-note">
       Agilex Cobot Magic · DreamDojo / Cosmos Predict2 · action-conditioned video-to-world
      </p>
-    </div>
-    <p class="campaign-copy">
+</div>
+<p class="campaign-copy">
      This experiment follows the paper's automatic-adaptation setting: given a new
           robot embodiment, action interface, camera layout, and task distribution,
-          VerdiWM constructs the training and replay contract without a hand-written
+          VERDI constructs the training and replay contract without a hand-written
           adapter. The target dataset is
      <a href="https://flagopen.github.io/RoboCOIN-DataManager/" rel="noopener" target="_blank">
       RoboCOIN-DataManager
@@ -842,1251 +761,1089 @@
      </strong>
      weights.
     </p>
-    <div class="contrib-grid three">
-     <article class="contrib card">
-      <b>
+<div class="contrib-grid three">
+<article class="contrib card">
+<b>
        Dataset Parsing
       </b>
-      <p>
+<p>
        RoboCOIN introduces Agilex Cobot Magic rollouts, a new task distribution,
             object layout, and camera setup; the agent maps those signals into the
             training and replay contract.
       </p>
-     </article>
-     <article class="contrib card">
-      <b>
+</article>
+<article class="contrib card">
+<b>
        Base Model Choice
       </b>
-      <p>
+<p>
        The selected structure keeps Cosmos Predict2 video-to-world generation and
             adds action conditioning so predicted future frames respond to robot actions.
       </p>
-     </article>
-     <article class="contrib card">
-      <b>
+</article>
+<article class="contrib card">
+<b>
        Control Check
       </b>
-      <p>
+<p>
        Each video includes a no-action prediction. This checks that the model
             is using action input rather than performing unconditional visual completion.
       </p>
-     </article>
-    </div>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: Paper figure: RoboCOIN action-conditioned adaptation with ground truth, VerdiWM, and no-action injection rows." data-lightbox="" href="assets/figures/paper-robocoin-action-conditioning.png">
-      <div class="asset-frame white-bg">
-       <img alt="Paper figure: RoboCOIN action-conditioned adaptation with ground truth, VerdiWM, and no-action injection rows." height="780" loading="lazy" src="assets/figures/paper-robocoin-action-conditioning.png" width="1300"/>
-      </div>
-     </a>
-     <figcaption>
-      RoboCOIN action-conditioned adaptation with ground truth, VerdiWM, and no-action injection rows.
+</article>
+</div>
+<figure class="paper-media card">
+<a aria-label="Enlarge figure: Paper figure: RoboCOIN action-conditioned adaptation with ground truth, VERDI, and no-action injection rows." data-lightbox="" href="assets/figures/paper-robocoin-action-conditioning.png">
+<div class="asset-frame white-bg">
+<img alt="Paper figure: RoboCOIN action-conditioned adaptation with ground truth, VERDI, and no-action injection rows." height="780" loading="lazy" src="assets/figures/paper-robocoin-action-conditioning.png" width="1300"/>
+</div>
+</a>
+<figcaption>
+      RoboCOIN action-conditioned adaptation with ground truth, VERDI, and no-action injection rows.
       <a href="assets/figures/paper-robocoin-action-conditioning.png" rel="noopener" target="_blank">
        Full resolution ↗
       </a>
-     </figcaption>
-    </figure>
-    <h3 class="block-title">
+</figcaption>
+</figure>
+<h3 class="block-title">
      Action-conditioned replay and no-action controls
     </h3>
-    <p class="caption">
+<p class="caption">
      Left: ground truth. Middle: action-conditioned prediction. Right: no-action prediction.
     </p>
-    <div class="video-stack">
-     <figure class="video-card card">
-      <figcaption>
-       <strong>
+<div class="video-stack">
+<figure class="video-card card">
+<figcaption>
+<strong>
         Open the Green Folder
        </strong>
-       <p>
+<p>
         Chinese task name: 打开绿色的文件夹. The rollout compares ground truth,
               the trained action-conditioned world model, and a no-action prediction.
        </p>
-      </figcaption>
-      <div class="native-video">
-       <video aria-label="Open the Green Folder" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/exp3_robocoin_open_green_folder_poster.jpg" preload="none" style="aspect-ratio:1920/480" width="1920">
-        <source src="assets/videos/exp3_robocoin_open_green_folder_gt_action_zero.mp4" type="video/mp4"/>
-        <a href="assets/videos/exp3_robocoin_open_green_folder_gt_action_zero.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Open the Green Folder" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/exp3_robocoin_open_green_folder_poster.jpg" preload="none" style="aspect-ratio:1920/480" width="1920">
+<source src="assets/videos/exp3_robocoin_open_green_folder_gt_action_zero.mp4" type="video/mp4"/>
+<a href="assets/videos/exp3_robocoin_open_green_folder_gt_action_zero.mp4">
          Download video
         </a>
-       </video>
-      </div>
-      <a class="media-download" href="assets/videos/exp3_robocoin_open_green_folder_gt_action_zero.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp3_robocoin_open_green_folder_gt_action_zero.mp4" rel="noopener" target="_blank">
        Open video ↗
       </a>
-     </figure>
-     <figure class="video-card card">
-      <figcaption>
-       <strong>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
         Open the Red Folder
        </strong>
-       <p>
+<p>
         Chinese task name: 打开红色的文件夹. The same three-column comparison is
               used to verify that action injection changes the predicted trajectory.
        </p>
-      </figcaption>
-      <div class="native-video">
-       <video aria-label="Open the Red Folder" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/exp3_robocoin_open_red_folder_poster.jpg" preload="none" style="aspect-ratio:1920/480" width="1920">
-        <source src="assets/videos/exp3_robocoin_open_red_folder_gt_action_zero.mp4" type="video/mp4"/>
-        <a href="assets/videos/exp3_robocoin_open_red_folder_gt_action_zero.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Open the Red Folder" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/exp3_robocoin_open_red_folder_poster.jpg" preload="none" style="aspect-ratio:1920/480" width="1920">
+<source src="assets/videos/exp3_robocoin_open_red_folder_gt_action_zero.mp4" type="video/mp4"/>
+<a href="assets/videos/exp3_robocoin_open_red_folder_gt_action_zero.mp4">
          Download video
         </a>
-       </video>
-      </div>
-      <a class="media-download" href="assets/videos/exp3_robocoin_open_red_folder_gt_action_zero.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp3_robocoin_open_red_folder_gt_action_zero.mp4" rel="noopener" target="_blank">
        Open video ↗
       </a>
-     </figure>
-     <figure class="video-card card">
-      <figcaption>
-       <strong>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
         Three-View Consistency
        </strong>
-       <p>
-        This mosaic replay stresses cross-view agreement. VerdiWM keeps the
+<p>
+        This mosaic replay stresses cross-view agreement. VERDI keeps the
               object interaction and motion progression coherent across three views,
               showing that the adaptation is not limited to a single camera stream.
        </p>
-      </figcaption>
-      <div class="native-video">
-       <video aria-label="Three-View Consistency" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/exp3_robocoin_three_view_consistency_poster.jpg" preload="none" style="aspect-ratio:1920/480" width="1920">
-        <source src="assets/videos/exp3_robocoin_three_view_consistency_mosaic.mp4" type="video/mp4"/>
-        <a href="assets/videos/exp3_robocoin_three_view_consistency_mosaic.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Three-View Consistency" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/exp3_robocoin_three_view_consistency_poster.jpg" preload="none" style="aspect-ratio:1920/480" width="1920">
+<source src="assets/videos/exp3_robocoin_three_view_consistency_mosaic.mp4" type="video/mp4"/>
+<a href="assets/videos/exp3_robocoin_three_view_consistency_mosaic.mp4">
          Download video
         </a>
-       </video>
-      </div>
-      <a class="media-download" href="assets/videos/exp3_robocoin_three_view_consistency_mosaic.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp3_robocoin_three_view_consistency_mosaic.mp4" rel="noopener" target="_blank">
        Open video ↗
       </a>
-     </figure>
-    </div>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: Paper figure: held-out RoboCOIN task comparisons between ground truth and VerdiWM predictions." data-lightbox="" href="assets/figures/paper-robocoin-heldout-tasks.png">
-      <div class="asset-frame white-bg">
-       <img alt="Paper figure: held-out RoboCOIN task comparisons between ground truth and VerdiWM predictions." height="980" loading="lazy" src="assets/figures/paper-robocoin-heldout-tasks.png" width="1520"/>
-      </div>
-     </a>
-     <figcaption>
-      held-out RoboCOIN task comparisons between ground truth and VerdiWM predictions.
+</figure>
+</div>
+<figure class="paper-media card">
+<a aria-label="Enlarge figure: Paper figure: held-out RoboCOIN task comparisons between ground truth and VERDI predictions." data-lightbox="" href="assets/figures/paper-robocoin-heldout-tasks.png">
+<div class="asset-frame white-bg">
+<img alt="Paper figure: held-out RoboCOIN task comparisons between ground truth and VERDI predictions." height="980" loading="lazy" src="assets/figures/paper-robocoin-heldout-tasks.png" width="1520"/>
+</div>
+</a>
+<figcaption>
+      held-out RoboCOIN task comparisons between ground truth and VERDI predictions.
       <a href="assets/figures/paper-robocoin-heldout-tasks.png" rel="noopener" target="_blank">
        Full resolution ↗
       </a>
-     </figcaption>
-    </figure>
-   </section>
-   <section class="section" id="action-quality-section">
-    <div class="section-head">
-     <div>
-      <div class="kicker">
-       06 · Policy RL
-      </div>
-      <h2>
+</figcaption>
+</figure>
+</section>
+<section class="section" id="action-quality-section">
+<div class="section-head">
+<div>
+<div class="kicker">08 · Policy RL</div>
+<h2>
        Action-quality rollouts in RoboLab120.
       </h2>
-     </div>
-     <p class="section-note">
+</div>
+<p class="section-note">
       Closed-loop success and verified progress ground the reward. Video and VLM checks remain audit evidence.
      </p>
-    </div>
-    <p class="campaign-copy">
+</div>
+<p class="campaign-copy">
      The paper tests whether video-level repair translates into action quality:
           the repaired Cosmos3 policy is evaluated as a closed-loop action generator.
           This block-stacking overview adds a RoboLab120 rollout view, with baseline
           and repaired/RL-updated behavior shown as paired clips.
     </p>
-    <div class="contrib-grid three">
-     <article class="contrib card">
-      <b>
+<div class="contrib-grid three">
+<article class="contrib card">
+<b>
        Environment-Grounded Reward
       </b>
-      <p>
+<p>
        R = 10 * terminal_success + 2 * verified_progress - bounded invalid_action_penalty - bounded trusted_safety_penalty.
       </p>
-     </article>
-     <article class="contrib card">
-      <b>
+</article>
+<article class="contrib card">
+<b>
        Signal Source
       </b>
-      <p>
+<p>
        Terminal success comes from RoboLab, and progress comes only from verified
             subtask/progress fields, matching the paper's rule that video scores do
             not substitute for environment success.
       </p>
-     </article>
-     <article class="contrib card">
-      <b>
+</article>
+<article class="contrib card">
+<b>
        Claim Boundary
       </b>
-      <p>
+<p>
        Failed trajectories are capped below successful trajectories; safety events
             enter the final quality gate; video/VLM checks remain audit-only evidence.
       </p>
-     </article>
-    </div>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: Paper figure: COSMOS3 long-horizon self-forcing comparison with ground truth, VerdiWM, and COSMOS3." data-lightbox="" href="assets/figures/paper-cosmos3-long-horizon-self-forcing.png">
-      <div class="asset-frame white-bg">
-       <img alt="Paper figure: COSMOS3 long-horizon self-forcing comparison with ground truth, VerdiWM, and COSMOS3." height="800" loading="lazy" src="assets/figures/paper-cosmos3-long-horizon-self-forcing.png" width="1152"/>
-      </div>
-     </a>
-     <figcaption>
-      COSMOS3 long-horizon self-forcing comparison with ground truth, VerdiWM, and COSMOS3.
+</article>
+</div>
+<figure class="paper-media card">
+<a aria-label="Enlarge figure: Paper figure: COSMOS3 long-horizon self-forcing comparison with ground truth, VERDI, and COSMOS3." data-lightbox="" href="assets/figures/paper-cosmos3-long-horizon-self-forcing.png">
+<div class="asset-frame white-bg">
+<img alt="Paper figure: COSMOS3 long-horizon self-forcing comparison with ground truth, VERDI, and COSMOS3." height="800" loading="lazy" src="assets/figures/paper-cosmos3-long-horizon-self-forcing.png" width="1152"/>
+</div>
+</a>
+<figcaption>
+      COSMOS3 long-horizon self-forcing comparison with ground truth, VERDI, and COSMOS3.
       <a href="assets/figures/paper-cosmos3-long-horizon-self-forcing.png" rel="noopener" target="_blank">
        Full resolution ↗
       </a>
-     </figcaption>
-    </figure>
-    <div class="video-stack">
-     <figure class="video-card card">
-      <figcaption>
-       <strong>
+</figcaption>
+</figure>
+<div class="video-stack">
+<figure class="video-card card">
+<figcaption>
+<strong>
         Block Stacking: Original vs RL
        </strong>
-       <p>
+<p>
         Four paired rollouts compare the original Cosmos3 behavior with the
               RL-trained policy under the same RoboLab120 task family.
        </p>
-      </figcaption>
-      <div class="native-video">
-       <video aria-label="Block Stacking: Original vs RL" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_4seed_overview_poster.jpg" preload="none" style="aspect-ratio:1728/480" width="1728">
-        <source src="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_4seed_overview.mp4" type="video/mp4"/>
-        <a href="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_4seed_overview.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Block Stacking: Original vs RL" controls="" height="480" loop="" muted="" playsinline="" poster="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_4seed_overview_poster.jpg" preload="none" style="aspect-ratio:1728/480" width="1728">
+<source src="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_4seed_overview.mp4" type="video/mp4"/>
+<a href="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_4seed_overview.mp4">
          Download video
         </a>
-       </video>
-      </div>
-      <a class="media-download" href="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_4seed_overview.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_4seed_overview.mp4" rel="noopener" target="_blank">
        Open video ↗
       </a>
-     </figure>
-     <figure class="video-card card">
-      <figcaption>
-       <strong>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
         Spatial Re-layout Generalization
        </strong>
-       <p>
+<p>
         The scene is kept the same, but the block positions are swapped. The
               RL-trained policy preserves the block-stacking behavior under this
               object re-layout, showing generalization beyond the original placement.
        </p>
-      </figcaption>
-      <div class="native-video">
-       <video aria-label="Spatial Re-layout Generalization" controls="" height="356" loop="" muted="" playsinline="" poster="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_relayout_generalization_poster.jpg" preload="none" style="aspect-ratio:1280/356" width="1280">
-        <source src="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_relayout_generalization.mp4" type="video/mp4"/>
-        <a href="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_relayout_generalization.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Spatial Re-layout Generalization" controls="" height="356" loop="" muted="" playsinline="" poster="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_relayout_generalization_poster.jpg" preload="none" style="aspect-ratio:1280/356" width="1280">
+<source src="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_relayout_generalization.mp4" type="video/mp4"/>
+<a href="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_relayout_generalization.mp4">
          Download video
         </a>
-       </video>
-      </div>
-      <a class="media-download" href="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_relayout_generalization.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp4_cosmos3_droid_policy_rl_blockstack_relayout_generalization.mp4" rel="noopener" target="_blank">
        Open video ↗
       </a>
-     </figure>
-    </div>
-   </section>
-   <section class="section" id="franka-section">
-    <div class="section-head">
-     <div>
-      <div class="kicker">
-       07 · Real robot
-      </div>
-      <h2>
+</figure>
+</div>
+</section>
+<section class="section" id="franka-section">
+<div class="section-head">
+<div>
+<div class="kicker">09 · Real robot</div>
+<h2>
        FRANKA task comparisons.
       </h2>
-     </div>
-     <p class="section-note">
-      Three tasks · paired original and improved COSMOS3 · all clips shown at 4× speed
-     </p>
-    </div>
-    <p class="campaign-copy">
-     Real-robot FRANKA comparisons provide qualitative evidence for the action-quality
-          claim. All clips are shown at 4x speed. The stacking task tests interference
-          handling around a blue bowl, the tablecloth task tests path quality, and the
-          drawer task tests occlusion-aware grasping from inside a bowl.
-    </p>
-    <div class="contrib-grid three">
-     <article class="contrib card">
-      <b>
+</div>
+<p class="section-note">Franka Panda · paired COSMOS3 and improved-policy demonstrations · videos at 4× speed</p>
+</div>
+<p class="campaign-copy">On the two quantitative Franka Panda tasks in Section 4.2, VERDI-selected RL + self-forcing increases average success from 45.0% to 62.5%. The paired videos below additionally illustrate block stacking, tablecloth folding, and an occluded bowl-to-drawer sequence.</p>
+<div class="contrib-grid three">
+<article class="contrib card">
+<b>
        Task Set
       </b>
-      <p>
+<p>
        Stack three blocks, fold the white tablecloth, and move a polyhedron
             from a bowl into a drawer before closing it.
       </p>
-     </article>
-     <article class="contrib card">
-      <b>
+</article>
+<article class="contrib card">
+<b>
        Original COSMOS3
       </b>
-      <p>
+<p>
        The stacking rollout is affected by the blue bowl, the folding rollout
             takes a longer path, and the drawer task fails under bowl occlusion.
       </p>
-     </article>
-     <article class="contrib card">
-      <b>
+</article>
+<article class="contrib card">
+<b>
        Improved COSMOS3
       </b>
-      <p>
-       The improved policy completes the stack, shortens the folding path, and
-            finishes the occluded pick-place-close sequence. These clips complement
-            the paper's closed-loop success-rate comparison rather than replacing it.
-      </p>
-     </article>
-    </div>
-    <div class="paired-group">
-     <div class="pair-toolbar">
-      <h3 class="block-title">
+<p>The improved policy completes the stack, uses a more direct folding path, and completes the occluded pick–place–close sequence in the displayed rollouts.</p>
+</article>
+</div>
+<div class="paired-group">
+<div class="pair-toolbar">
+<h3 class="block-title">
        Stack three blocks
       </h3>
-      <button class="ctrl play-pair" type="button">
+<button class="ctrl play-pair" type="button">
        Play pair
       </button>
-      <span aria-live="polite" class="pair-status">
-      </span>
-     </div>
-     <div class="video-grid">
-      <figure class="video-card card">
-       <figcaption>
-        <strong>
+<span aria-live="polite" class="pair-status">
+</span>
+</div>
+<div class="video-grid">
+<figure class="video-card card">
+<figcaption>
+<strong>
          Stack Three Blocks / Original COSMOS3
         </strong>
-        <p>
+<p>
          Baseline rollout: the policy reaches the late-stage interaction, but
               bowl interference prevents a clean blue-block grasp.
         </p>
-       </figcaption>
-       <div class="native-video">
-        <video aria-label="Stack Three Blocks / Original COSMOS3" controls="" height="544" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_stack_original_poster.jpg" preload="none" style="aspect-ratio:960/544" width="960">
-         <source src="assets/videos/exp5_franka_cosmos3_stack_original.mp4" type="video/mp4"/>
-         <a href="assets/videos/exp5_franka_cosmos3_stack_original.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Stack Three Blocks / Original COSMOS3" controls="" height="544" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_stack_original_poster.jpg" preload="none" style="aspect-ratio:960/544" width="960">
+<source src="assets/videos/exp5_franka_cosmos3_stack_original.mp4" type="video/mp4"/>
+<a href="assets/videos/exp5_franka_cosmos3_stack_original.mp4">
           Download video
          </a>
-        </video>
-       </div>
-       <a class="media-download" href="assets/videos/exp5_franka_cosmos3_stack_original.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp5_franka_cosmos3_stack_original.mp4" rel="noopener" target="_blank">
         Open video ↗
        </a>
-      </figure>
-      <figure class="video-card card">
-       <figcaption>
-        <strong>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
          Stack Three Blocks / Improved COSMOS3
         </strong>
-        <p>
+<p>
          Improved rollout: the policy keeps the grasp sequence stable and
               completes the three-block stacking task.
         </p>
-       </figcaption>
-       <div class="native-video">
-        <video aria-label="Stack Three Blocks / Improved COSMOS3" controls="" height="544" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_stack_improved_poster.jpg" preload="none" style="aspect-ratio:960/544" width="960">
-         <source src="assets/videos/exp5_franka_cosmos3_stack_improved.mp4" type="video/mp4"/>
-         <a href="assets/videos/exp5_franka_cosmos3_stack_improved.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Stack Three Blocks / Improved COSMOS3" controls="" height="544" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_stack_improved_poster.jpg" preload="none" style="aspect-ratio:960/544" width="960">
+<source src="assets/videos/exp5_franka_cosmos3_stack_improved.mp4" type="video/mp4"/>
+<a href="assets/videos/exp5_franka_cosmos3_stack_improved.mp4">
           Download video
          </a>
-        </video>
-       </div>
-       <a class="media-download" href="assets/videos/exp5_franka_cosmos3_stack_improved.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp5_franka_cosmos3_stack_improved.mp4" rel="noopener" target="_blank">
         Open video ↗
        </a>
-      </figure>
-     </div>
-    </div>
-    <div class="paired-group">
-     <div class="pair-toolbar">
-      <h3 class="block-title">
+</figure>
+</div>
+</div>
+<div class="paired-group">
+<div class="pair-toolbar">
+<h3 class="block-title">
        Fold the white tablecloth
       </h3>
-      <button class="ctrl play-pair" type="button">
+<button class="ctrl play-pair" type="button">
        Play pair
       </button>
-      <span aria-live="polite" class="pair-status">
-      </span>
-     </div>
-     <div class="video-grid">
-      <figure class="video-card card">
-       <figcaption>
-        <strong>
+<span aria-live="polite" class="pair-status">
+</span>
+</div>
+<div class="video-grid">
+<figure class="video-card card">
+<figcaption>
+<strong>
          Fold the White Tablecloth / Original COSMOS3
         </strong>
-        <p>
+<p>
          Baseline rollout: the task is eventually approached through a long,
               inefficient trajectory, exposing weak path planning on deformable-object
               manipulation.
         </p>
-       </figcaption>
-       <div class="native-video">
-        <video aria-label="Fold the White Tablecloth / Original COSMOS3" controls="" height="544" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_fold_original_poster.jpg" preload="none" style="aspect-ratio:960/544" width="960">
-         <source src="assets/videos/exp5_franka_cosmos3_fold_original.mp4" type="video/mp4"/>
-         <a href="assets/videos/exp5_franka_cosmos3_fold_original.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Fold the White Tablecloth / Original COSMOS3" controls="" height="544" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_fold_original_poster.jpg" preload="none" style="aspect-ratio:960/544" width="960">
+<source src="assets/videos/exp5_franka_cosmos3_fold_original.mp4" type="video/mp4"/>
+<a href="assets/videos/exp5_franka_cosmos3_fold_original.mp4">
           Download video
          </a>
-        </video>
-       </div>
-       <a class="media-download" href="assets/videos/exp5_franka_cosmos3_fold_original.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp5_franka_cosmos3_fold_original.mp4" rel="noopener" target="_blank">
         Open video ↗
        </a>
-      </figure>
-      <figure class="video-card card">
-       <figcaption>
-        <strong>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
          Fold the White Tablecloth / Improved COSMOS3
         </strong>
-        <p>
+<p>
          Improved rollout: the motion plan is shorter and cleaner, showing a
               clear gain in path planning after the COSMOS3 update.
         </p>
-       </figcaption>
-       <div class="native-video">
-        <video aria-label="Fold the White Tablecloth / Improved COSMOS3" controls="" height="720" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_fold_improved_poster.jpg" preload="none" style="aspect-ratio:1280/720" width="1280">
-         <source src="assets/videos/exp5_franka_cosmos3_fold_improved.mp4" type="video/mp4"/>
-         <a href="assets/videos/exp5_franka_cosmos3_fold_improved.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Fold the White Tablecloth / Improved COSMOS3" controls="" height="720" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_fold_improved_poster.jpg" preload="none" style="aspect-ratio:1280/720" width="1280">
+<source src="assets/videos/exp5_franka_cosmos3_fold_improved.mp4" type="video/mp4"/>
+<a href="assets/videos/exp5_franka_cosmos3_fold_improved.mp4">
           Download video
          </a>
-        </video>
-       </div>
-       <a class="media-download" href="assets/videos/exp5_franka_cosmos3_fold_improved.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp5_franka_cosmos3_fold_improved.mp4" rel="noopener" target="_blank">
         Open video ↗
        </a>
-      </figure>
-     </div>
-    </div>
-    <div class="paired-group">
-     <div class="pair-toolbar">
-      <h3 class="block-title">
+</figure>
+</div>
+</div>
+<div class="paired-group">
+<div class="pair-toolbar">
+<h3 class="block-title">
        Bowl-to-drawer polyhedron
       </h3>
-      <button class="ctrl play-pair" type="button">
+<button class="ctrl play-pair" type="button">
        Play pair
       </button>
-      <span aria-live="polite" class="pair-status">
-      </span>
-     </div>
-     <div class="video-grid">
-      <figure class="video-card card">
-       <figcaption>
-        <strong>
+<span aria-live="polite" class="pair-status">
+</span>
+</div>
+<div class="video-grid">
+<figure class="video-card card">
+<figcaption>
+<strong>
          Bowl-to-Drawer Polyhedron / Original COSMOS3
         </strong>
-        <p>
+<p>
          Baseline rollout: the polyhedron is occluded inside the bowl, and the
               policy cannot establish a reliable grasp before the drawer step.
         </p>
-       </figcaption>
-       <div class="native-video">
-        <video aria-label="Bowl-to-Drawer Polyhedron / Original COSMOS3" controls="" height="720" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_drawer_pick_original_poster.jpg" preload="none" style="aspect-ratio:1280/720" width="1280">
-         <source src="assets/videos/exp5_franka_cosmos3_drawer_pick_original.mp4" type="video/mp4"/>
-         <a href="assets/videos/exp5_franka_cosmos3_drawer_pick_original.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Bowl-to-Drawer Polyhedron / Original COSMOS3" controls="" height="720" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_drawer_pick_original_poster.jpg" preload="none" style="aspect-ratio:1280/720" width="1280">
+<source src="assets/videos/exp5_franka_cosmos3_drawer_pick_original.mp4" type="video/mp4"/>
+<a href="assets/videos/exp5_franka_cosmos3_drawer_pick_original.mp4">
           Download video
          </a>
-        </video>
-       </div>
-       <a class="media-download" href="assets/videos/exp5_franka_cosmos3_drawer_pick_original.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp5_franka_cosmos3_drawer_pick_original.mp4" rel="noopener" target="_blank">
         Open video ↗
        </a>
-      </figure>
-      <figure class="video-card card">
-       <figcaption>
-        <strong>
+</figure>
+<figure class="video-card card">
+<figcaption>
+<strong>
          Bowl-to-Drawer Polyhedron / Improved COSMOS3
         </strong>
-        <p>
+<p>
          Improved rollout: the policy grasps the occluded object, places it
               into the drawer, and closes the drawer to complete the task.
         </p>
-       </figcaption>
-       <div class="native-video">
-        <video aria-label="Bowl-to-Drawer Polyhedron / Improved COSMOS3" controls="" height="544" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_drawer_pick_improved_poster.jpg" preload="none" style="aspect-ratio:960/544" width="960">
-         <source src="assets/videos/exp5_franka_cosmos3_drawer_pick_improved.mp4" type="video/mp4"/>
-         <a href="assets/videos/exp5_franka_cosmos3_drawer_pick_improved.mp4">
+</figcaption>
+<div class="native-video">
+<video aria-label="Bowl-to-Drawer Polyhedron / Improved COSMOS3" controls="" height="544" loop="" muted="" playsinline="" poster="assets/videos/exp5_franka_cosmos3_drawer_pick_improved_poster.jpg" preload="none" style="aspect-ratio:960/544" width="960">
+<source src="assets/videos/exp5_franka_cosmos3_drawer_pick_improved.mp4" type="video/mp4"/>
+<a href="assets/videos/exp5_franka_cosmos3_drawer_pick_improved.mp4">
           Download video
          </a>
-        </video>
-       </div>
-       <a class="media-download" href="assets/videos/exp5_franka_cosmos3_drawer_pick_improved.mp4" rel="noopener" target="_blank">
+</video>
+</div>
+<a class="media-download" href="assets/videos/exp5_franka_cosmos3_drawer_pick_improved.mp4" rel="noopener" target="_blank">
         Open video ↗
        </a>
-      </figure>
-     </div>
-    </div>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: Paper figure: real-robot Franka head-to-head rollouts comparing COSMOS3 and VerdiWM." data-lightbox="" href="assets/figures/paper-cosmos3-real-robot-rollouts.png">
-      <div class="asset-frame white-bg">
-       <img alt="Paper figure: real-robot Franka head-to-head rollouts comparing COSMOS3 and VerdiWM." height="960" loading="lazy" src="assets/figures/paper-cosmos3-real-robot-rollouts.png" width="1620"/>
-      </div>
-     </a>
-     <figcaption>
-      real-robot Franka head-to-head rollouts comparing COSMOS3 and VerdiWM.
+</figure>
+</div>
+</div>
+<figure class="paper-media card">
+<a aria-label="Enlarge figure: Paper figure: real-robot Franka head-to-head rollouts comparing COSMOS3 and VERDI." data-lightbox="" href="assets/figures/paper-cosmos3-real-robot-rollouts.png">
+<div class="asset-frame white-bg">
+<img alt="Paper figure: real-robot Franka head-to-head rollouts comparing COSMOS3 and VERDI." height="960" loading="lazy" src="assets/figures/paper-cosmos3-real-robot-rollouts.png" width="1620"/>
+</div>
+</a>
+<figcaption>
+      real-robot Franka head-to-head rollouts comparing COSMOS3 and VERDI.
       <a href="assets/figures/paper-cosmos3-real-robot-rollouts.png" rel="noopener" target="_blank">
        Full resolution ↗
       </a>
-     </figcaption>
-    </figure>
-    <div class="metric-panel card">
-     <div aria-label="Experiment metric table" class="table-scroll" role="region" tabindex="0">
-      <table class="data-table">
-       <caption>
-        Closed-loop manipulation success rates · paper Table 4
-       </caption>
-       <thead>
-        <tr>
-         <th>
-          Environment
-         </th>
-         <th>
-          Task
-         </th>
-         <th>
-          Avg. steps
-         </th>
-         <th>
-          COSMOS3
-         </th>
-         <th>
-          VerdiWM
-         </th>
-         <th>
-          Δ
-         </th>
-        </tr>
-       </thead>
-       <tbody>
-        <tr>
-         <th rowspan="3" scope="rowgroup">
-          Simulation
-          <br/>
-          <small>
-           n = 50
-          </small>
-         </th>
-         <th scope="row">
-          Pick-and-place
-         </th>
-         <td>
-          8
-         </td>
-         <td>
-          62%
-         </td>
-         <td>
-          74%
-         </td>
-         <td class="gain">
-          +12 pts
-         </td>
-        </tr>
-        <tr>
-         <th scope="row">
-          Drawer opening
-         </th>
-         <td>
-          11
-         </td>
-         <td>
-          41%
-         </td>
-         <td>
-          59%
-         </td>
-         <td class="gain">
-          +18 pts
-         </td>
-        </tr>
-        <tr>
-         <th scope="row">
-          Peg insertion
-         </th>
-         <td>
-          14
-         </td>
-         <td>
-          28%
-         </td>
-         <td>
-          52%
-         </td>
-         <td class="gain">
-          +24 pts
-         </td>
-        </tr>
-        <tr>
-         <th rowspan="2" scope="rowgroup">
-          Real robot
-          <br/>
-          <small>
-           n = 20
-          </small>
-         </th>
-         <th scope="row">
-          Pick-and-place
-         </th>
-         <td>
-          8
-         </td>
-         <td>
-          55%
-         </td>
-         <td>
-          70%
-         </td>
-         <td class="gain">
-          +15 pts
-         </td>
-        </tr>
-        <tr>
-         <th scope="row">
-          Drawer opening
-         </th>
-         <td>
-          11
-         </td>
-         <td>
-          35%
-         </td>
-         <td>
-          55%
-         </td>
-         <td class="gain">
-          +20 pts
-         </td>
-        </tr>
-       </tbody>
-      </table>
-     </div>
-    </div>
-    <p class="caption">
-     Paper Table 4 reports its own task set and sample sizes; individual demonstrations are qualitative evidence. Simulation uses paired initial-state seeds.
-    </p>
-    <figure class="paper-media card">
-     <a aria-label="Enlarge figure: PDF screenshot of the paper table reporting closed-loop manipulation success rates." data-lightbox="" href="assets/figures/paper-table-robot-success.png">
-      <div class="asset-frame white-bg">
-       <img alt="PDF screenshot of the paper table reporting closed-loop manipulation success rates." height="327" loading="lazy" src="assets/figures/paper-table-robot-success.png" width="1251"/>
-      </div>
-     </a>
-     <figcaption>
-      PDF screenshot of the paper table reporting closed-loop manipulation success rates.
-      <a href="assets/figures/paper-table-robot-success.png" rel="noopener" target="_blank">
-       Full resolution ↗
-      </a>
-     </figcaption>
-    </figure>
-   </section>
-   <section class="section" id="memory-graph-section">
-    <div class="section-head">
-     <div>
-      <div class="kicker">
-       08 · Research memory
-      </div>
-      <h2>
+</figcaption>
+</figure>
+<div class="metric-panel card"><div aria-label="Franka Panda task success · Section 4.2 and Figure 4" class="table-scroll" role="region" tabindex="0"><table class="data-table" id="real-robot-results"><caption>Franka Panda task success · Section 4.2 and Figure 4</caption><thead><tr><th scope="col">Real-robot task</th><th scope="col">Baseline COSMOS3</th><th scope="col">COSMOS3 with VERDI-selected operator</th><th scope="col">Improvement</th></tr></thead><tbody><tr><th scope="row">Pick-and-place</th><td>11/20 = 55%</td><td>14/20 = 70%</td><td>+15 pp</td></tr><tr><th scope="row">Drawer opening</th><td>7/20 = 35%</td><td>11/20 = 55%</td><td>+20 pp</td></tr><tr><th scope="row"><strong>Mean across the two tasks</strong></th><td><strong>45.0%</strong></td><td><strong>62.5%</strong></td><td><strong>+17.5 pp</strong></td></tr></tbody></table></div></div><div class="metric-panel card"><div aria-label="Simulated control · Table 1(b) and Appendix Table 23" class="table-scroll" role="region" tabindex="0"><table class="data-table"><caption>Simulated control · Table 1(b) and Appendix Table 23</caption><thead><tr><th scope="col">Simulation task</th><th scope="col">Baseline COSMOS3</th><th scope="col">COSMOS3 with VERDI-selected operator</th><th scope="col">Improvement</th></tr></thead><tbody><tr><th scope="row">Pick-and-place</th><td>62%</td><td>74%</td><td>+12 pp</td></tr><tr><th scope="row">Drawer opening</th><td>41%</td><td>59%</td><td>+18 pp</td></tr><tr><th scope="row">Peg insertion</th><td>28%</td><td>52%</td><td>+24 pp</td></tr></tbody></table></div></div>
+<p class="caption">Real-robot success uses 20 trials per method and task. Simulation uses 50 episodes per seed, method, and task; reported percentages are means across seeds. The three paired video demonstrations above provide additional qualitative examples.</p>
+
+</section>
+<section class="section" id="memory-graph-section">
+<div class="section-head">
+<div>
+<div class="kicker">10 · Research memory</div>
+<h2>
        Repair recipes, evidence, and claim boundaries.
       </h2>
-     </div>
-     <p class="section-note">
+</div>
+<p class="section-note">
       Each memory links model context, intervention, supporting evidence, and the documents that make the repair reusable.
      </p>
-    </div>
-    <div class="memory-map card">
-     <a href="#memory-core">
+</div>
+<div class="memory-map card">
+<a href="#memory-core">
       Evidence-licensed memory
      </a>
-     <div class="memory-branches">
-      <a href="#memory-ctrlworld-lamo">
+<div class="memory-branches">
+<a href="#memory-ctrlworld-lamo">
        Ctrl-World LaMo Repair
       </a>
-      <a href="#memory-dino-rep">
+<a href="#memory-dino-rep">
        Cosmos-Predict2 REP Repair
       </a>
-      <a href="#memory-robocoin">
+<a href="#memory-robocoin">
        RoboCOIN Transfer
       </a>
-      <a href="#memory-robolab-rl">
+<a href="#memory-robolab-rl">
        Action-Quality Rollouts
       </a>
-      <a href="#memory-franka-real">
+<a href="#memory-franka-real">
        FRANKA Real-Robot Trials
       </a>
-     </div>
-     <a href="#memory-claim-gate">
+</div>
+<a href="#memory-claim-gate">
       Frozen verification → claim frontier
      </a>
-    </div>
-    <div class="resource-grid">
-     <article class="resource-panel card" id="memory-core">
-      <h3>
+</div>
+<div class="resource-grid">
+<article class="resource-panel card" id="memory-core">
+<h3>
        Evidence-Licensed Memory
       </h3>
-      <p>
-       VerdiWM stores actions, receipts, model context, validity gates, and claim boundaries so repairs are reused only when evidence licenses transfer.
+<p>
+       VERDI stores actions, receipts, model context, validity gates, and claim boundaries so repairs are reused only when evidence licenses transfer.
       </p>
-      <dl class="memory-facts">
-       <div>
-        <dt>
+<dl class="memory-facts">
+<div>
+<dt>
          Model / architecture
         </dt>
-        <dd>
+<dd>
          Operational and epistemic control planes over world-model repair campaigns
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Data / embodiment
         </dt>
-        <dd>
+<dd>
          Run receipts, paired probes, replay artifacts, metrics, and verifier outputs
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Intervention
         </dt>
-        <dd>
+<dd>
          Claim-licensed repair memory and certified transfer
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Evidence
         </dt>
-        <dd>
+<dd>
          Action -&gt; receipt -&gt; settlement vector -&gt; claim-frontier update
         </dd>
-       </div>
-      </dl>
-      <div class="resource-list">
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/verdiwm-memory-graph.md" rel="noopener" target="_blank">
-         <div>
-          <b>
-           VerdiWM Research Memory Graph
+</div>
+</dl>
+<div class="resource-list">
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/verdiwm-memory-graph.md" rel="noopener" target="_blank">
+<div>
+<b>
+           VERDI Research Memory Graph
           </b>
-          <small>
+<small>
            Defines each node as a bounded repair episode with time, model, dataset, intervention, gate status, and claim scope.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Indexes model changes by claim scope rather than by loose chat history.
          </li>
-         <li>
+<li>
           Connects experiment artifacts to reusable repair decisions.
          </li>
-         <li>
+<li>
           Keeps the page-level visualization aligned with the evidence contract.
          </li>
-        </ul>
-       </div>
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/verdiwm-claim-gate-skill.md" rel="noopener" target="_blank">
-         <div>
-          <b>
+</ul>
+</div>
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/verdiwm-claim-gate-skill.md" rel="noopener" target="_blank">
+<div>
+<b>
            Evidence Claim Gate Skill
           </b>
-          <small>
-           Defines when a VerdiWM result is allowed to become a reusable repair claim.
+<small>
+           Defines when a VERDI result is allowed to become a reusable repair claim.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Separates environment success from video or VLM audit evidence.
          </li>
-         <li>
+<li>
           Requires action requests, execution receipts, and verification artifacts.
          </li>
-         <li>
+<li>
           Updates the claim frontier only when evidence is sufficient.
          </li>
-        </ul>
-       </div>
-      </div>
-     </article>
-     <article class="resource-panel card" id="memory-ctrlworld-lamo">
-      <h3>
+</ul>
+</div>
+</div>
+</article>
+<article class="resource-panel card" id="memory-ctrlworld-lamo">
+<h3>
        Ctrl-World LaMo Repair
       </h3>
-      <p>
+<p>
        A physical-consistency diagnosis found copy-current-frame behavior and weak action-driven latent transition.
       </p>
-      <dl class="memory-facts">
-       <div>
-        <dt>
+<dl class="memory-facts">
+<div>
+<dt>
          Model / architecture
         </dt>
-        <dd>
+<dd>
          Ctrl-World SVD-UNet with action encoder
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Data / embodiment
         </dt>
-        <dd>
+<dd>
          Ctrl-World action-conditioned rollout data
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Intervention
         </dt>
-        <dd>
+<dd>
          LaMo latent motion prior, drift loss, frozen SVD/VAE parts, hierarchical LR
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Evidence
         </dt>
-        <dd>
+<dd>
          WorldArena metrics, PSNR/SSIM/LPIPS/FID, qualitative replay, and validity-gate annotations
         </dd>
-       </div>
-      </dl>
-      <div class="resource-list">
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/Lamo_SKILL.md" rel="noopener" target="_blank">
-         <div>
-          <b>
+</div>
+</dl>
+<div class="resource-list">
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/Lamo_SKILL.md" rel="noopener" target="_blank">
+<div>
+<b>
            Ctrl-World + LaMo Fusion Training Skill
           </b>
-          <small>
+<small>
            A concrete architecture and training recipe for adding latent motion priors to Ctrl-World.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Adds a motion-prior branch and drift readout in latent space.
          </li>
-         <li>
+<li>
           Keeps stable SVD/VAE components frozen while training action-sensitive layers.
          </li>
-         <li>
+<li>
           Uses targeted ablations to test whether motion is action-conditioned.
          </li>
-        </ul>
-       </div>
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/verdiwm-claim-gate-skill.md" rel="noopener" target="_blank">
-         <div>
-          <b>
+</ul>
+</div>
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/verdiwm-claim-gate-skill.md" rel="noopener" target="_blank">
+<div>
+<b>
            Evidence Claim Gate Skill
           </b>
-          <small>
+<small>
            Records how the LaMo intervention should be promoted only after evidence clears the claim gate.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Do not treat a lower scalar loss as sufficient mechanism evidence.
          </li>
-         <li>
+<li>
           Require replay or latent-separation checks before widening the claim.
          </li>
-         <li>
+<li>
           Keep the intervention scoped to the Ctrl-World physical-consistency failure mode.
          </li>
-        </ul>
-       </div>
-      </div>
-     </article>
-     <article class="resource-panel card" id="memory-dino-rep">
-      <h3>
+</ul>
+</div>
+</div>
+</article>
+<article class="resource-panel card" id="memory-dino-rep">
+<h3>
        Cosmos-Predict2 REP Repair
       </h3>
-      <p>
+<p>
        REP uses representation signals to improve structure, geometry, and motion while exposing an appearance-consistency boundary.
       </p>
-      <dl class="memory-facts">
-       <div>
-        <dt>
+<dl class="memory-facts">
+<div>
+<dt>
          Model / architecture
         </dt>
-        <dd>
+<dd>
          Cosmos-Predict2 video-to-world rollout model
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Data / embodiment
         </dt>
-        <dd>
+<dd>
          BridgeData replay set with WorldArena-style metrics
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Intervention
         </dt>
-        <dd>
+<dd>
          Train-test aligned DINO-REP conditioning
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Evidence
         </dt>
-        <dd>
+<dd>
          Semantic alignment, depth, flow, motion smoothness, qualitative replay, and gate-limited claim scope
         </dd>
-       </div>
-      </dl>
-      <div class="resource-list">
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/verdiwm-dino-rep-skill.md" rel="noopener" target="_blank">
-         <div>
-          <b>
+</div>
+</dl>
+<div class="resource-list">
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/verdiwm-dino-rep-skill.md" rel="noopener" target="_blank">
+<div>
+<b>
            DINO-REP Cosmos-Predict2 Repair Skill
           </b>
-          <small>
+<small>
            Encodes the REP intervention and the next-patch rule for appearance-consistency boundaries.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Treats depth and motion gains separately from appearance consistency.
          </li>
-         <li>
+<li>
           Uses metric deltas to route the next patch rather than stopping at a score.
          </li>
-         <li>
+<li>
           Targets REP injection position and appearance retention when needed.
          </li>
-        </ul>
-       </div>
-      </div>
-     </article>
-     <article class="resource-panel card" id="memory-robocoin">
-      <h3>
+</ul>
+</div>
+</div>
+</article>
+<article class="resource-panel card" id="memory-robocoin">
+<h3>
        RoboCOIN Transfer
       </h3>
-      <p>
+<p>
        The agent selected a compatible action-conditioned video-to-world setup from dataset structure, embodiment, viewpoint, and action interface.
       </p>
-      <dl class="memory-facts">
-       <div>
-        <dt>
+<dl class="memory-facts">
+<div>
+<dt>
          Model / architecture
         </dt>
-        <dd>
+<dd>
          DreamDojo/Cosmos Predict2 action-conditioned video-to-world
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Data / embodiment
         </dt>
-        <dd>
+<dd>
          RoboCOIN-DataManager / Agilex Cobot Magic
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Intervention
         </dt>
-        <dd>
+<dd>
          Dataset adapter, embodiment-aware base-model selection, no-action control replay
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Evidence
         </dt>
-        <dd>
+<dd>
          Green-folder, red-folder, and three-view consistency qualitative comparisons
         </dd>
-       </div>
-      </dl>
-      <div class="resource-list">
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/verdiwm-robocoin-transfer-skill.md" rel="noopener" target="_blank">
-         <div>
-          <b>
+</div>
+</dl>
+<div class="resource-list">
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/verdiwm-robocoin-transfer-skill.md" rel="noopener" target="_blank">
+<div>
+<b>
            RoboCOIN Transfer Adapter Skill
           </b>
-          <small>
+<small>
            Documents how the transfer node maps dataset and robot metadata into a model adaptation decision.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Uses embodiment and camera metadata before choosing the base model.
          </li>
-         <li>
+<li>
           Keeps no-action prediction as an overfitting control.
          </li>
-         <li>
+<li>
           Scopes the claim to selected RoboCOIN tasks and replay evidence.
          </li>
-        </ul>
-       </div>
-      </div>
-     </article>
-     <article class="resource-panel card" id="memory-robolab-rl">
-      <h3>
+</ul>
+</div>
+</div>
+</article>
+<article class="resource-panel card" id="memory-robolab-rl">
+<h3>
        Action-Quality Rollouts
       </h3>
-      <p>
+<p>
        The action-quality node checks whether long-horizon world-model repair improves policy rollouts under environment-grounded success criteria.
       </p>
-      <dl class="memory-facts">
-       <div>
-        <dt>
+<dl class="memory-facts">
+<div>
+<dt>
          Model / architecture
         </dt>
-        <dd>
+<dd>
          Cosmos3-DROID policy
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Data / embodiment
         </dt>
-        <dd>
+<dd>
          RoboLab120 block-stacking rollouts
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Intervention
         </dt>
-        <dd>
+<dd>
          Reward-bounded RL with safety and invalid-action penalties
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Evidence
         </dt>
-        <dd>
+<dd>
          Block-stack original-vs-RL paired rollouts and reward contract
         </dd>
-       </div>
-      </dl>
-      <div class="resource-list">
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/verdiwm-robolab-rl-skill.md" rel="noopener" target="_blank">
-         <div>
-          <b>
+</div>
+</dl>
+<div class="resource-list">
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/verdiwm-robolab-rl-skill.md" rel="noopener" target="_blank">
+<div>
+<b>
            RoboLab120 Policy-RL Reward Skill
           </b>
-          <small>
+<small>
            Defines the RL reward and its constraints so progress cannot fake terminal success.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Terminal success comes from RoboLab, not VLM scoring.
          </li>
-         <li>
+<li>
           Failed trajectories are capped below successful trajectories.
          </li>
-         <li>
+<li>
           Video and VLM checks remain audit-only.
          </li>
-        </ul>
-       </div>
-      </div>
-     </article>
-     <article class="resource-panel card" id="memory-franka-real">
-      <h3>
+</ul>
+</div>
+</div>
+</article>
+<article class="resource-panel card" id="memory-franka-real">
+<h3>
        FRANKA Real-Robot Trials
       </h3>
-      <p>
+<p>
        The real-robot node compares original Cosmos3 and repaired Cosmos3 on stack, fold, and occluded drawer manipulation.
       </p>
-      <dl class="memory-facts">
-       <div>
-        <dt>
+<dl class="memory-facts">
+<div>
+<dt>
          Model / architecture
         </dt>
-        <dd>
+<dd>
          Repaired Cosmos3 real-robot policy stack
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Data / embodiment
         </dt>
-        <dd>
+<dd>
          FRANKA real-world task videos
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Intervention
         </dt>
-        <dd>
+<dd>
          Real-robot transfer with improved grasping, path planning, and occlusion handling
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Evidence
         </dt>
-        <dd>
+<dd>
          4x H.264 comparison videos for stack, tablecloth, and drawer tasks
         </dd>
-       </div>
-      </dl>
-      <div class="resource-list">
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/verdiwm-franka-real-robot-skill.md" rel="noopener" target="_blank">
-         <div>
-          <b>
+</div>
+</dl>
+<div class="resource-list">
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/verdiwm-franka-real-robot-skill.md" rel="noopener" target="_blank">
+<div>
+<b>
            FRANKA Real-Robot Transfer Skill
           </b>
-          <small>
+<small>
            Summarizes the task set, observed original failures, and repaired Cosmos3 behavior.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Tracks stack, fold, and drawer tasks under the same real-robot section.
          </li>
-         <li>
+<li>
           Uses accelerated public videos for presentation, not for changing task labels.
          </li>
-         <li>
+<li>
           Links each qualitative claim to a visible comparison artifact.
          </li>
-        </ul>
-       </div>
-      </div>
-     </article>
-     <article class="resource-panel card" id="memory-claim-gate">
-      <h3>
+</ul>
+</div>
+</div>
+</article>
+<article class="resource-panel card" id="memory-claim-gate">
+<h3>
        Frozen Verifier
       </h3>
-      <p>
+<p>
        The verifier node prevents the memory graph from turning every observation into a broad claim.
       </p>
-      <dl class="memory-facts">
-       <div>
-        <dt>
+<dl class="memory-facts">
+<div>
+<dt>
          Model / architecture
         </dt>
-        <dd>
+<dd>
          Model-agnostic claim policy
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Data / embodiment
         </dt>
-        <dd>
+<dd>
          Execution receipts, metrics, replays, and environment outcomes
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Intervention
         </dt>
-        <dd>
+<dd>
          Independent verification before claim-frontier update
         </dd>
-       </div>
-       <div>
-        <dt>
+</div>
+<div>
+<dt>
          Evidence
         </dt>
-        <dd>
+<dd>
          Pass/fail gates and bounded claim scopes
         </dd>
-       </div>
-      </dl>
-      <div class="resource-list">
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/verdiwm-claim-gate-skill.md" rel="noopener" target="_blank">
-         <div>
-          <b>
+</div>
+</dl>
+<div class="resource-list">
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/verdiwm-claim-gate-skill.md" rel="noopener" target="_blank">
+<div>
+<b>
            Evidence Claim Gate Skill
           </b>
-          <small>
+<small>
            Defines the gate logic for promoting a result into a reusable memory.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Record the proposed intervention and execution receipt.
          </li>
-         <li>
+<li>
           Verify success with the authority appropriate for the claim.
          </li>
-         <li>
+<li>
           Keep video/VLM audit evidence separate from environment success.
          </li>
-        </ul>
-       </div>
-       <div class="memory-document">
-        <a class="resource-item" href="assets/docs/verdiwm-memory-graph.md" rel="noopener" target="_blank">
-         <div>
-          <b>
-           VerdiWM Research Memory Graph
+</ul>
+</div>
+<div class="memory-document">
+<a class="resource-item" href="assets/docs/verdiwm-memory-graph.md" rel="noopener" target="_blank">
+<div>
+<b>
+           VERDI Research Memory Graph
           </b>
-          <small>
+<small>
            Explains how the graph indexes evidence by model, dataset, intervention, and claim scope.
           </small>
-         </div>
-         <span aria-hidden="true">
+</div>
+<span aria-hidden="true">
           ↗
          </span>
-        </a>
-        <ul>
-         <li>
+</a>
+<ul>
+<li>
           Prevents score-only memory from hiding mechanism failures.
          </li>
-         <li>
+<li>
           Makes prior patches inspectable before selecting the next action.
          </li>
-         <li>
+<li>
           Connects knowledge nodes to concrete skill documents.
          </li>
-        </ul>
-       </div>
-      </div>
-     </article>
-    </div>
-   </section>
-  </main>
-  <button class="back-top" id="backTop">
-   ↑ Back to top · VerdiWM
+</ul>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<button class="back-top" id="backTop">
+   ↑ Back to top · VERDI
   </button>
-  <div class="footer-note">
-   VerdiWM · Anonymous authors
+<div class="footer-note">
+   VERDI · Anonymous authors
    <br/>
    Page template adapted from
    <a href="https://github.com/ConfAL-WM/ConfAL-WM.github.io" rel="noopener" target="_blank">
@@ -2094,16 +1851,16 @@
    </a>
    .
   </div>
-  <dialog aria-label="Enlarged research figure" id="figureDialog">
-   <div class="dialog-bar">
-    <a id="figureOriginal" rel="noopener" target="_blank">
+<dialog aria-label="Enlarged research figure" id="figureDialog">
+<div class="dialog-bar">
+<a id="figureOriginal" rel="noopener" target="_blank">
      Open original ↗
     </a>
-    <button class="ctrl" id="closeFigure">
+<button class="ctrl" id="closeFigure">
      Close ×
     </button>
-   </div>
-   <img alt="" id="figureImage"/>
-  </dialog>
- </body>
+</div>
+<img alt="" id="figureImage"/>
+</dialog>
+</body>
 </html>
