@@ -14,6 +14,8 @@ The upstream CSS is retained verbatim in `assets/confal-template.css`;
 The upstream repository did not include a standalone LICENSE file at that revision.
 All research content, metrics, figures, and videos shown here belong to VERDI.
 
-The page includes the revised nine-backbone LOBO results, all four added downstream visualizations, and the original 16 replay videos. The downloadable revised manuscript and figure references use the ICLR revision. Real-robot results reproduce Section 4.2; the paired FRANKA demonstrations retain their original task labels and 4× playback speed.
+The page includes the revised nine-backbone LOBO results, all four added downstream visualizations, seven downstream comparison videos, and the original 16 replay videos. The downloadable revised manuscript and figure references use the ICLR revision. Real-robot results reproduce Section 4.2; the paired FRANKA demonstrations retain their original task labels and 4× playback speed.
 
 The page preserves native media aspect ratios. Wide tables scroll horizontally on small screens; figures open at full resolution.
+
+The downstream videos cover DreamerV3 Walker and Reacher, TD-MPC2 Nut Assembly, DINO-WM Wall Navigation, and three paired V-JEPA 2 RoboTwin tasks. In the V-JEPA 2 videos, the baseline is on the left and VERDI is on the right. Source playback timing is preserved; shorter clips retain their final frame with an on-screen label. Video metadata is stripped before publication. Trajectory figures remain available in expandable panels.

@@ -32,6 +32,18 @@
     if(entry.isIntersecting){loadVideo(entry.target);mediaObserver.unobserve(entry.target);}
   }),{rootMargin:'300px'});
   $$('video').forEach(video=>mediaObserver.observe(video));
+  $$('.play-demo').forEach(button=>{
+    const card=button.closest('.video-card'),video=card.querySelector('video'),status=card.querySelector('.demo-status');
+    const label=button.getAttribute('aria-label').replace(/^Play /,'');
+    const reflect=()=>{button.textContent=video.paused?'Play video':'Pause video';button.setAttribute('aria-label',`${video.paused?'Play':'Pause'} ${label}`);};
+    video.addEventListener('play',reflect);video.addEventListener('pause',reflect);
+    button.addEventListener('click',async()=>{
+      if(!video.paused){video.pause();return;}
+      status.textContent='';loadVideo(video);
+      try{await video.play();}catch{status.textContent='Use the video controls to start playback.';}
+      reflect();
+    });
+  });
   $$('.play-pair').forEach(button=>{
     const group=button.closest('.paired-group'), videos=[...group.querySelectorAll('video')], status=group.querySelector('.pair-status');
     const reflect=()=>{button.textContent=videos.some(video=>!video.paused)?'Pause pair':'Play pair';};
