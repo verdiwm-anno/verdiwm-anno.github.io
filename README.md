@@ -19,3 +19,5 @@ The page includes the revised nine-backbone LOBO results, all four added downstr
 The page preserves native media aspect ratios. Wide tables scroll horizontally on small screens; figures open at full resolution.
 
 The downstream videos cover DreamerV3 Walker and Reacher, TD-MPC2 Nut Assembly, DINO-WM Wall Navigation, and three paired V-JEPA 2 RoboTwin tasks. In the V-JEPA 2 videos, the baseline is on the left and VERDI is on the right. Source playback timing is preserved; shorter clips retain their final frame with an on-screen label. Video metadata is stripped before publication. Trajectory figures remain available in expandable panels.
+
+The Experiments index links to every model with visual demonstrations: Ctrl-World, Cosmos-Predict 2, Cosmos3, DreamerV3, V-JEPA 2, DINO-WM, and TD-MPC2. The original Ctrl-World/Cosmos experiments, including RoboCOIN adaptation and real-robot trials, precede the four additional downstream evaluations. All existing section URLs remain valid.
